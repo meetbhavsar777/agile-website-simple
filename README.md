@@ -20,3 +20,7 @@ npx serve .
 ## Publish with GitHub Pages
 
 In the repository on GitHub: Settings → Pages → Source "Deploy from a branch" → branch `main`, folder `/ (root)`.
+
+## Hero options
+
+`hero-options.html` shows nine alternative hero designs for comparison. Switch with the bar at the bottom or the left/right arrow keys. Its styles are in `hero-options.css`.
