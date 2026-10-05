@@ -1,0 +1,65 @@
+/* Product catalogue page – loaded by products.html after styles.css and home-2.css */
+.catalog .site-header.always { transform: none; opacity: 1; visibility: visible; pointer-events: auto; }
+.cat-hero { padding: 132px 0 34px; background: radial-gradient(900px 500px at 82% 0%, #fff 0%, rgba(255, 255, 255, 0) 70%), linear-gradient(180deg, #F6F8FE 0%, #E6ECFA 100%); }
+.cat-hero h1 { font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif; font-weight: 800; font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -.04em; line-height: 1.04; margin: 14px 0 14px; }
+.cat-hero h1 .grad { display: inline-block; padding-bottom: .1em; }
+.cat-sub { font-size: 16.5px; color: var(--slate); max-width: 620px; }
+.cat-tools { display: grid; gap: 16px; margin-top: 30px; }
+.cat-search { display: flex; align-items: center; gap: 12px; max-width: 560px; height: 54px; padding: 0 20px; border-radius: 16px; background: #fff; border: 1px solid #DCE4F3; box-shadow: 0 10px 30px rgba(13, 26, 69, .07); color: var(--slate); }
+.cat-search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47, 84, 184, .14); }
+.cat-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font: inherit; font-size: 15px; color: var(--navy); }
+.cat-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-filters button { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 999px; background: #fff; border: 1px solid #DCE4F3; font-size: 13.5px; color: var(--navy); transition: background .2s, color .2s, border-color .2s; }
+.cat-filters button i { font-style: normal; font-size: 11px; padding: 2px 7px; border-radius: 999px; background: #EEF2FB; color: var(--slate); }
+.cat-filters button:hover { border-color: var(--brand); }
+.cat-filters button.on { background: var(--brand); border-color: var(--brand); color: #fff; }
+.cat-filters button.on i { background: rgba(255, 255, 255, .2); color: #fff; }
+.cat-body { padding: 26px 0 80px; background: #fff; }
+.cat-count { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.cat-empty { padding: 60px 0; text-align: center; color: var(--slate); }
+.cat-sec { padding-top: 34px; }
+.cat-sec-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid #E3E9F6; }
+.cat-sec-head img { height: 34px; width: auto; max-width: 200px; object-fit: contain; }
+.cat-sec-head span { font-size: 12.5px; color: var(--muted); }
+.pc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pc { display: flex; flex-direction: column; text-align: left; padding: 14px 14px 18px; border-radius: 20px; background: #fff; border: 1px solid #E3E9F6; transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .25s; }
+.pc-pic { position: relative; display: block; aspect-ratio: 4 / 3; border-radius: 14px; background: linear-gradient(160deg, #EEF3FC, #F8FAFE); margin-bottom: 14px; overflow: hidden; }
+.pc-pic img { position: absolute; inset: 8%; width: 84%; height: 84%; object-fit: contain; transition: transform .5s var(--ease); }
+.pc.no-img .pc-pic img { inset: 28% 18%; width: 64%; height: 44%; opacity: .75; }
+.pc small { font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); padding: 0 6px; }
+.pc strong { font-size: 16.5px; font-weight: 600; line-height: 1.25; margin: 5px 0 6px; padding: 0 6px; color: var(--navy); }
+.pc-desc { font-size: 13px; line-height: 1.5; color: var(--slate); padding: 0 6px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.pc em { font-style: normal; font-size: 13px; font-weight: 500; color: var(--blue); padding: 12px 6px 0; }
+.pc:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: #C3D0EE; }
+.pc:hover .pc-pic img { transform: scale(1.06); }
+
+.pd { width: min(940px, calc(100vw - 28px)); max-height: calc(100vh - 28px); padding: 0; border: 0; border-radius: 26px; overflow: auto; color: var(--navy); box-shadow: 0 40px 100px rgba(8, 18, 55, .4); }
+.pd[open] { display: grid; grid-template-columns: 1fr 1.05fr; animation: rise .4s var(--ease) both; }
+.pd::backdrop { background: rgba(10, 20, 56, .6); backdrop-filter: blur(4px); }
+.pd-pic { position: relative; min-height: 380px; background: linear-gradient(160deg, #E4EBFA, #F6F8FE); }
+.pd-pic img { position: absolute; inset: 9%; width: 82%; height: 82%; object-fit: contain; }
+.pd-pic.no-img img { inset: 34% 22%; width: 56%; height: 32%; }
+.pd-txt { padding: 40px 40px 36px; }
+.pd-logo { height: 26px; width: auto; margin-bottom: 18px; }
+.pd-txt small { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.pd-txt h2 { font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 6px 0 12px; }
+.pd-txt p { font-size: 15px; line-height: 1.65; color: var(--slate); }
+.pd-txt ul { display: grid; gap: 8px; margin: 18px 0 26px; }
+.pd-txt li { position: relative; padding-left: 22px; font-size: 14px; }
+.pd-txt li::before { content: ''; position: absolute; left: 0; top: .5em; width: 10px; height: 6px; border-left: 2px solid var(--blue); border-bottom: 2px solid var(--blue); transform: rotate(-45deg); }
+.pd-close { position: absolute; right: 14px; top: 12px; z-index: 2; width: 38px; height: 38px; border-radius: 50%; background: #fff; font-size: 24px; line-height: 1; color: var(--navy); box-shadow: 0 4px 14px rgba(13, 26, 69, .15); }
+.btn-line { border: 1px solid #B9C9DC; color: var(--navy); background: #fff; }
+.btn-line:hover { border-color: var(--navy); }
+@media (max-width: 1100px) { .pc-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) {
+  .pc-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .pd[open] { grid-template-columns: 1fr; }
+  .pd-pic { min-height: 240px; }
+  .pd-txt { padding: 26px 22px; }
+  .pd-txt h2 { font-size: 24px; }
+  .cat-hero { padding-top: 110px; }
+}
+@media (max-width: 420px) { .pc-grid { grid-template-columns: 1fr; } }
+
+/* white-background photos blend into the card */
+.pc-pic img, .pd-pic img { mix-blend-mode: multiply; }

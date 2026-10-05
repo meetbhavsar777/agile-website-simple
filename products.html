@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Agile SciTech</title>
+<meta name="description" content="Product catalogue: instruments, columns and consumables from Inscinstech, RainSure, Welch Materials, Bio-Techne, Unchained Labs and FlowCam, supplied and supported by Agile SciTech.">
+<meta name="theme-color" content="#0B1E46">
+<link rel="icon" type="image/png" href="images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/products/fplc.webp">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home-2.css">
+<link rel="stylesheet" href="products.css">
+</head>
+<body class="hv-light catalog">
+
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="ic-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 10 10"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header stuck always" id="siteHeader">
+  <div class="container header-inner">
+    <a href="home-2.html#top" class="logo" aria-label="Agile SciTech home">
+      <img class="logo-dark" src="images/brand/logo.png" alt="Agile SciTech – Advancing Science, Delivering Excellence" width="537" height="280">
+      <img class="logo-light" src="images/brand/logo-white.png" alt="" width="546" height="292">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <div class="nav-item">
+        <a href="products.html" class="nav-link">Products <svg><use href="#ic-chev"/></svg></a>
+        <div class="dropdown"><a href="products.html">Chromatography Columns</a><a href="products.html">Bio Instruments</a><a href="products.html">Preparative HPLC &amp; DAC Column</a><a href="products.html">Oligonucleotide Synthesizer</a><a href="products.html">Flash Chromatography</a><a href="products.html">Protein Purification System (FPLC)</a></div>
+      </div>
+      <div class="nav-item">
+        <a href="home-2.html#categories" class="nav-link">Applications <svg><use href="#ic-chev"/></svg></a>
+        <div class="dropdown"><a href="home-2.html#categories">Chromatography Columns &amp; Consumables</a><a href="home-2.html#categories">Life Science Reagents &amp; ELISA Kits</a><a href="home-2.html#categories">Analytical &amp; Bioprocess Instruments</a><a href="home-2.html#categories">Imaging &amp; Molecular Systems</a><a href="home-2.html#categories">Sample Preparation &amp; Filtration Systems</a><a href="home-2.html#categories">Custom Solution &amp; OEM Suppliers</a></div>
+      </div>
+      <div class="nav-item">
+        <a href="home-2.html#partners" class="nav-link">Partners <svg><use href="#ic-chev"/></svg></a>
+        <div class="dropdown"><a href="home-2.html#partners">Inscinstech</a><a href="home-2.html#partners">RainSure</a><a href="home-2.html#partners">Welch Materials</a><a href="home-2.html#partners">Bio-Techne</a><a href="home-2.html#partners">Unchained Labs</a><a href="home-2.html#partners">FlowCam</a></div>
+      </div>
+      <div class="nav-item">
+        <a href="home-2.html#about" class="nav-link">About <svg><use href="#ic-chev"/></svg></a>
+        <div class="dropdown"><a href="home-2.html#about">About Agile SciTech</a><a href="home-2.html#top">Our Clients</a><a href="home-2.html#contact">Contact Us</a></div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="home-2.html#contact" class="btn btn-primary">Request a quote <svg><use href="#ic-arrow"/></svg></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+
+<main id="top">
+<section class="cat-hero">
+  <div class="container">
+    <p class="eyebrow num"><b>69</b> products · 6 partners</p>
+    <h1>Product <span class="grad">catalogue.</span></h1>
+    <p class="cat-sub">Instruments, columns and consumables from the manufacturers we represent in India. Choose a partner or search by name.</p>
+    <div class="cat-tools">
+      <label class="cat-search"><svg viewBox="0 0 20 20" width="18" height="18"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input type="search" id="catSearch" placeholder="Search products, for example “PCR” or “column”" aria-label="Search products"></label>
+      <div class="cat-filters" id="catFilters" role="group" aria-label="Filter by partner"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cat-body">
+  <div class="container">
+    <p class="cat-count" id="catCount" aria-live="polite"></p>
+    <div id="catList"></div>
+    <p class="cat-empty" id="catEmpty" hidden>No products match. Try a different word or choose “All”.</p>
+  </div>
+</section>
+</main>
+
+<dialog class="pd" id="pd" aria-labelledby="pdName">
+  <button class="pd-close" id="pdClose" type="button" aria-label="Close">&times;</button>
+  <div class="pd-pic"><img id="pdImg" alt=""></div>
+  <div class="pd-txt">
+    <img class="pd-logo" id="pdLogo" alt="">
+    <small id="pdGroup"></small>
+    <h2 id="pdName"></h2>
+    <p id="pdDesc"></p>
+    <ul id="pdPoints"></ul>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-lg" id="pdQuote" href="#">Request a quote <svg><use href="#ic-arrow"/></svg></a>
+      <a class="btn btn-line btn-lg" id="pdSource" href="#" target="_blank" rel="noopener">Manufacturer page</a>
+    </div>
+  </div>
+</dialog>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="images/brand/logo.png" alt="Agile SciTech" width="1074" height="560" loading="lazy">
+      <p>Authorised partner in India for Welch Materials, Inscinstech, RainSure, FlowCam, Unchained Labs and Bio-Techne.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h3>Explore</h3>
+      <a href="products.html">Products</a>
+      <a href="home-2.html#categories">Solutions</a>
+      <a href="home-2.html#partners">Technology Partners</a>
+      <a href="home-2.html#about">Services</a>
+    </nav>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <a href="tel:+918866101022">+91 88661 01022</a>
+      <a href="mailto:sales@agilescitech.in">sales@agilescitech.in</a>
+      <a href="mailto:info@agilescitech.in">info@agilescitech.in</a>
+    </div>
+    <div class="footer-col">
+      <h3>Visit</h3>
+      <address>B-402, S.G. Business Hub,<br> Near Gota Overbridge, S.G. Highway,<br> Gota, Ahmedabad, Gujarat</address>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year">2026</span> Agile SciTech. All rights reserved.</span>
+    <span>Advancing Science, Delivering Excellence</span>
+  </div>
+</footer>
+
+<script src="products-data.js"></script>
+<script>
+(function () {
+  var LOGO = { 'Inscinstech': 'inscinstech', 'RainSure': 'rainsure', 'Welch Materials': 'welch', 'Bio-Techne': 'biotechne', 'Unchained Labs': 'unchained-labs', 'FlowCam': 'flowcam' };
+  var ORDER = ['Inscinstech', 'RainSure', 'Welch Materials', 'Unchained Labs', 'FlowCam', 'Bio-Techne'];
+  var all = window.PRODUCTS || [], partner = 'All', q = '';
+  var list = document.getElementById('catList'), filters = document.getElementById('catFilters');
+  function logo(p) { return 'images/partners/' + LOGO[p] + '.png'; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  ['All'].concat(ORDER).forEach(function (p) {
+    var b = el('button', p === 'All' ? 'on' : '', p + ' ');
+    b.type = 'button';
+    b.appendChild(el('i', '', p === 'All' ? all.length : all.filter(function (x) { return x.partner === p; }).length));
+    b.addEventListener('click', function () { partner = p; filters.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); }); render(); });
+    filters.appendChild(b);
+  });
+
+  function card(it) {
+    var a = el('button', 'pc' + (it.image ? '' : ' no-img')); a.type = 'button';
+    var pic = el('span', 'pc-pic'); var im = document.createElement('img');
+    im.src = it.image || logo(it.partner); im.alt = ''; im.loading = 'lazy'; pic.appendChild(im); a.appendChild(pic);
+    a.appendChild(el('small', '', it.group)); a.appendChild(el('strong', '', it.name)); a.appendChild(el('span', 'pc-desc', it.desc));
+    a.appendChild(el('em', '', 'View details'));
+    a.addEventListener('click', function () { open(it); });
+    return a;
+  }
+  function render() {
+    list.textContent = ''; var shown = 0, words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    ORDER.forEach(function (p) {
+      if (partner !== 'All' && partner !== p) return;
+      var rows = all.filter(function (it) {
+        if (it.partner !== p) return false;
+        var hay = (it.name + ' ' + it.group + ' ' + it.desc + ' ' + it.partner + ' ' + it.points.join(' ')).toLowerCase();
+        return words.every(function (w) { return hay.indexOf(w) > -1; });
+      });
+      if (!rows.length) return;
+      shown += rows.length;
+      var sec = el('section', 'cat-sec'); var h = el('div', 'cat-sec-head');
+      var lg = document.createElement('img'); lg.src = logo(p); lg.alt = p; h.appendChild(lg); h.appendChild(el('span', '', rows.length + (rows.length === 1 ? ' product' : ' products')));
+      sec.appendChild(h); var grid = el('div', 'pc-grid'); rows.forEach(function (it) { grid.appendChild(card(it)); }); sec.appendChild(grid); list.appendChild(sec);
+    });
+    document.getElementById('catCount').textContent = 'Showing ' + shown + ' of ' + all.length + ' products';
+    document.getElementById('catEmpty').hidden = shown > 0;
+  }
+  document.getElementById('catSearch').addEventListener('input', function (e) { q = e.target.value; render(); });
+
+  var pd = document.getElementById('pd');
+  function open(it) {
+    var im = document.getElementById('pdImg'); im.src = it.image || logo(it.partner); im.alt = it.name; im.parentElement.classList.toggle('no-img', !it.image);
+    var lg = document.getElementById('pdLogo'); lg.src = logo(it.partner); lg.alt = it.partner;
+    document.getElementById('pdGroup').textContent = it.group;
+    document.getElementById('pdName').textContent = it.name;
+    document.getElementById('pdDesc').textContent = it.desc;
+    var ul = document.getElementById('pdPoints'); ul.textContent = ''; it.points.forEach(function (p) { ul.appendChild(el('li', '', p)); });
+    document.getElementById('pdQuote').href = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent('Quote request: ' + it.partner + ' ' + it.name);
+    document.getElementById('pdSource').href = it.source;
+    history.replaceState(null, '', '#' + it.id);
+    if (pd.showModal) pd.showModal(); else pd.setAttribute('open', '');
+  }
+  function close() { pd.close ? pd.close() : pd.removeAttribute('open'); }
+  document.getElementById('pdClose').addEventListener('click', close);
+  pd.addEventListener('click', function (e) { if (e.target === pd) close(); });
+  pd.addEventListener('close', function () { history.replaceState(null, '', location.pathname); });
+
+  var want = new URLSearchParams(location.search).get('partner');
+  if (want) { var fb = [].filter.call(filters.querySelectorAll('button'), function (b) { return b.firstChild.textContent.trim() === want; })[0]; if (fb) fb.click(); }
+  render();
+  var start = all.filter(function (x) { return x.id === location.hash.slice(1); })[0];
+  if (start) open(start);
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var t = document.getElementById('menuToggle'), nav = document.getElementById('mainNav');
+  t.addEventListener('click', function () { var o = nav.classList.toggle('open'); t.setAttribute('aria-expanded', String(o)); });
+})();
+</script>
+</body>
+</html>

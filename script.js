@@ -103,7 +103,7 @@
   });
 
   // Reveal on scroll
-  var revealEls = document.querySelectorAll('.section-head, .card-row, .partners-inner, .services-head, .steps, .cta-inner');
+  var revealEls = document.querySelectorAll('.section-head, .card-row, .partners-inner, .services-head, .apps-grid, .about-inner, .svc-grid, .contact-inner, .sec-head, .prod-grid, .cat-grid, .partner-list, .bento, .pt-tabs, .pt-panels, .pg-row, .pp, .kc, .ab, .pl');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -114,6 +114,20 @@
       });
     }, { threshold: 0.12 });
     revealEls.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  }
+
+  // Enquiry form: opens the visitor's email app with the message filled in
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var f = form.elements;
+      var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value,
+                  'Interested in: ' + f.interest.value, '', f.message.value].join('\n');
+      window.location.href = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent('Enquiry: ' + f.interest.value) + '&body=' + encodeURIComponent(body);
+      document.getElementById('formNote').textContent = 'Your email app should now be open. If it is not, write to sales@agilescitech.in.';
+    });
   }
 
   document.getElementById('year').textContent = new Date().getFullYear();

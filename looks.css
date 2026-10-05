@@ -1,0 +1,136 @@
+/* Three visual directions for home page 2. Loaded only by looks.html.
+   Each look is a set of overrides switched on by a class on <body>. */
+
+.look-switch {
+  position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 90;
+  display: flex; align-items: center; gap: 4px; padding: 6px; max-width: calc(100vw - 24px);
+  background: rgba(13, 26, 69, .95); border-radius: 999px; box-shadow: 0 14px 40px rgba(13, 26, 69, .4); backdrop-filter: blur(8px);
+}
+.look-switch span { color: rgba(255, 255, 255, .6); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 0 10px 0 14px; white-space: nowrap; }
+.look-switch button { color: #fff; font-size: 13px; font-weight: 500; padding: 9px 16px; border-radius: 999px; white-space: nowrap; transition: background .2s, color .2s; }
+.look-switch button:hover { background: rgba(255, 255, 255, .12); }
+.look-switch button.on { background: #fff; color: #14265C; }
+@media (max-width: 700px) { .look-switch span { display: none; } .look-switch button { padding: 9px 12px; font-size: 12px; } }
+
+/* =====================================================
+   LOOK 1 · Glass & glow – dark page, frosted cards
+   ===================================================== */
+body.look-glass { background: #0A1438; color: #fff; }
+.look-glass .section, .look-glass .section-tint, .look-glass .clients { position: relative; background: transparent; border-color: rgba(255, 255, 255, .1); }
+.look-glass .section::before { content: ''; position: absolute; z-index: 0; width: 720px; height: 720px; border-radius: 50%; right: -10%; top: 4%; background: radial-gradient(circle, rgba(63, 100, 204, .5), rgba(63, 100, 204, 0) 68%); pointer-events: none; }
+.look-glass .section:nth-of-type(even)::before { right: auto; left: -12%; top: 22%; background: radial-gradient(circle, rgba(91, 128, 224, .38), rgba(91, 128, 224, 0) 68%); }
+.look-glass .section > .container { position: relative; z-index: 1; }
+.look-glass .sec-head h2, .look-glass .section-head h2, .look-glass .h2-sm, .look-glass .pc-panel h3 { color: #fff; }
+.look-glass .grad { background: linear-gradient(90deg, #9DB4F8, #E3EAFF); -webkit-background-clip: text; background-clip: text; }
+.look-glass .eyebrow, .look-glass .clients-title { color: rgba(255, 255, 255, .68); }
+.look-glass .eyebrow.num b, .look-glass .about-tag, .look-glass .b-card small, .look-glass .pc-panel small { color: #A9BEFA; }
+.look-glass .sec-head p.intro, .look-glass .section-intro, .look-glass .about-copy p.lead, .look-glass .b-card p, .look-glass .pc-panel p, .look-glass .about-stats span { color: rgba(255, 255, 255, .74); }
+.look-glass .marquee img { filter: brightness(0) invert(1); opacity: .55; }
+.look-glass .marquee img:hover { filter: brightness(0) invert(1); opacity: 1; }
+.look-glass .b-card, .look-glass .wf-card, .look-glass .pc-panels { background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .16); backdrop-filter: blur(16px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12); }
+.look-glass .b-card strong, .look-glass .wf-foot { color: #fff; }
+.look-glass .b-card:hover, .look-glass .wf-card:hover { border-color: rgba(255, 255, 255, .42); box-shadow: 0 24px 60px rgba(0, 0, 0, .4), 0 0 0 1px rgba(169, 190, 250, .25); }
+.look-glass .b-card .pic img { filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .5)); }
+.look-glass .b-card .pic.photo img { mix-blend-mode: normal; border-radius: 12px; }
+.look-glass .b-hero { background: radial-gradient(460px 420px at 72% 34%, rgba(120, 150, 240, .6), rgba(91, 128, 224, 0) 70%), rgba(255, 255, 255, .07); }
+.look-glass .b-cta { background: linear-gradient(135deg, rgba(63, 100, 204, .9), rgba(120, 150, 240, .6)); }
+.look-glass .arrow-btn { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .25); color: #fff; box-shadow: none; }
+.look-glass .wf-card.active { background: rgba(255, 255, 255, .14); border-color: #A9BEFA; box-shadow: 0 0 40px rgba(120, 150, 240, .35); }
+.look-glass .about-stats { border-color: rgba(255, 255, 255, .16); }
+.look-glass .about-stats strong { color: #fff; }
+.look-glass .awards li { color: rgba(255, 255, 255, .88); }
+.look-glass .awards svg { stroke: #A9BEFA; }
+.look-glass .about-photo img { box-shadow: 0 0 0 1px rgba(255, 255, 255, .2), 0 40px 80px rgba(0, 0, 0, .5); }
+.look-glass .about-badge { background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .3); backdrop-filter: blur(14px); }
+.look-glass .about-copy .btn-primary, .look-glass .about-copy .btn-primary:hover { background: #fff; color: #14265C; }
+.look-glass .arrow-btn svg { color: #fff; }
+.look-glass .sec-dark, .look-glass .contact { background: transparent; }
+.look-glass .contact-form { background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .2); backdrop-filter: blur(20px); color: #fff; }
+.look-glass .contact-form label, .look-glass .contact-form .form-note { color: rgba(255, 255, 255, .7); }
+.look-glass .contact-form input, .look-glass .contact-form select, .look-glass .contact-form textarea { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .2); color: #fff; }
+.look-glass .contact-form option { color: #14265C; }
+.look-glass .contact-form .btn-primary { background: #fff; color: #14265C; }
+.look-glass .site-footer { background: rgba(0, 0, 0, .25); }
+.look-glass .site-header.over.scrolled { background: rgba(10, 20, 56, .78); backdrop-filter: blur(16px); box-shadow: 0 1px 0 rgba(255, 255, 255, .1); }
+.look-glass .site-header.over.scrolled .logo-dark { display: none; }
+.look-glass .site-header.over.scrolled .logo-light { display: block; }
+.look-glass .site-header.over.scrolled .icon-btn { color: #fff; }
+.look-glass .site-header.over.scrolled .btn-primary { background: #fff; color: #14265C; }
+.look-glass .site-header.over.scrolled .menu-toggle span { background: #fff; }
+@media (min-width: 981px) { .look-glass .site-header.over.scrolled .nav-link { color: rgba(255, 255, 255, .88); } }
+
+/* =====================================================
+   LOOK 2 · Rounded panels – soft, stacked cards
+   ===================================================== */
+body.look-panels { background: #E6EBF6; }
+.look-panels main > section, .look-panels .site-footer { margin: 14px; border-radius: 40px; overflow: hidden; }
+.look-panels .section, .look-panels .section-tint, .look-panels .clients { background: #fff; border: 0; }
+.look-panels .section-tint { background: #F5F8FE; }
+.look-panels .section { padding: 76px 0; }
+.look-panels .btn { border-radius: 999px; padding-left: 24px; padding-right: 8px; }
+.look-panels .btn svg { width: 30px; height: 30px; padding: 8px; border-radius: 50%; background: rgba(255, 255, 255, .18); }
+.look-panels .btn-light svg, .look-panels .site-header.over:not(.scrolled) .btn-primary svg { background: #E6ECFA; }
+.look-panels .btn-ghost, .look-panels .btn-line { padding-right: 24px; }
+.look-panels .b-card { border-radius: 32px; border: 0; box-shadow: none; }
+.look-panels .b-card:not(.b-hero):not(.b-cta) { background: #F3F6FD; }
+.look-panels .b-card:not(.b-hero):not(.b-cta):hover { background: #fff; box-shadow: 0 30px 70px rgba(13, 26, 69, .16); }
+.look-panels .b-3 .pic::before { content: ''; position: absolute; left: 50%; top: 50%; width: 74%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); background: #DCE6FA; }
+.look-panels .b-3:nth-child(3) .pic::before { background: #E3DFFA; }
+.look-panels .b-3:nth-child(4) .pic::before { background: #D6EBF7; }
+.look-panels .b-3:nth-child(5) .pic::before { background: #E6E9F2; }
+.look-panels .b-card .pic img { z-index: 1; }
+.look-panels .b-hero, .look-panels .b-cta { border-radius: 32px; }
+.look-panels .cat-card { border-radius: 32px; border: 0; }
+.look-panels .wf-card { border-radius: 28px; box-shadow: 0 10px 30px rgba(13, 26, 69, .07); }
+.look-panels .pc-logo { margin: 10px 10px 0; border-radius: 20px; }
+.look-panels .pc-panels { border-radius: 32px; border: 0; box-shadow: 0 20px 50px rgba(13, 26, 69, .08); }
+.look-panels .about-photo img { border-radius: 200px 200px 36px 36px; aspect-ratio: 1 / 1.05; }
+.look-panels .about-badge { border-radius: 999px; padding: 16px 28px; }
+.look-panels .about-stats { border: 0; gap: 12px; }
+.look-panels .about-stats > div { flex: 1; padding: 18px 20px; border-radius: 24px; background: #F3F6FD; }
+.look-panels .contact-form { border-radius: 36px; }
+.look-panels .contact-form input, .look-panels .contact-form select, .look-panels .contact-form textarea { border-radius: 16px; }
+.look-panels .arrow-btn { box-shadow: 0 6px 16px rgba(13, 26, 69, .1); }
+.look-panels .sp-rail button:first-child { border-radius: 0 0 0 20px; }
+
+/* =====================================================
+   LOOK 3 · Technical lines – precise, drawn, flat
+   ===================================================== */
+body.look-lines { background: #fff linear-gradient(90deg, rgba(33, 58, 130, .055) 1px, transparent 1px) 0 0 / 80px 80px; }
+.look-lines .section, .look-lines .section-tint, .look-lines .clients { background: transparent; border-top: 1px solid #C5D0E8; }
+.look-lines .section > .container { position: relative; }
+.look-lines .section > .container::before, .look-lines .section > .container::after { content: '+'; position: absolute; top: -78px; font-size: 22px; font-weight: 300; line-height: 1; color: #213A82; }
+.look-lines .section > .container::before { left: calc(var(--pad) - 6px); }
+.look-lines .section > .container::after { right: calc(var(--pad) - 6px); }
+.look-lines .eyebrow, .look-lines .clients-title, .look-lines .b-card small, .look-lines .pc-panel small, .look-lines .sp-rail small { font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace; letter-spacing: .12em; }
+.look-lines .eyebrow.num { align-items: flex-end; }
+.look-lines .eyebrow.num b { font-family: 'Outfit', sans-serif; font-size: 72px; line-height: .8; letter-spacing: -.03em; color: transparent; -webkit-text-stroke: 1.2px #213A82; }
+.look-lines .sec-dark .eyebrow.num b { -webkit-text-stroke-color: #A9BEFA; }
+.look-lines .btn, .look-lines .arrow-btn, .look-lines .b-card, .look-lines .cat-card, .look-lines .wf-card, .look-lines .pc-panels, .look-lines .contact-form,
+.look-lines .about-photo img, .look-lines .about-badge, .look-lines .sp-chip, .look-lines .sp-brand, .look-lines .contact-form input, .look-lines .contact-form select, .look-lines .contact-form textarea { border-radius: 0; }
+.look-lines .btn { text-transform: uppercase; letter-spacing: .08em; font-size: 11.5px; box-shadow: none; }
+.look-lines .b-card, .look-lines .wf-card, .look-lines .pc-panels { box-shadow: none; border: 1px solid #B4C2E0; background: #fff; }
+.look-lines .b-card:hover, .look-lines .wf-card:hover { transform: none; box-shadow: 6px 6px 0 #213A82; border-color: #213A82; }
+.look-lines .b-hero, .look-lines .b-cta { background: #213A82; border-color: #213A82; }
+.look-lines .b-card:not(.b-hero):not(.b-cta):not(.b-wide) .pic { background: linear-gradient(#DDE5F5, #DDE5F5) 50% 100% / 100% 1px no-repeat; }
+.look-lines .arrow-btn { box-shadow: none; border-color: #213A82; }
+.look-lines .cat-card { border: 1px solid rgba(255, 255, 255, .4); }
+.look-lines .cat-card img { filter: grayscale(1) contrast(1.05); mix-blend-mode: luminosity; opacity: .6; }
+.look-lines .cat-card::after { background: linear-gradient(180deg, rgba(33, 58, 130, .35), rgba(13, 26, 69, .92)); }
+.look-lines .cat-card:hover { transform: none; box-shadow: 6px 6px 0 #A9BEFA; }
+.look-lines .aurora i { display: none; }
+.look-lines .aurora::after { -webkit-mask-image: none; mask-image: none; background-size: 80px 80px; background-image: linear-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px); }
+.look-lines .sp, .look-lines .sec-dark, .look-lines .contact { background: #14265C; }
+.look-lines .sp h1 .grad { background: none; color: transparent; -webkit-text-stroke: 1px #C9D6FB; paint-order: stroke fill; }
+.look-lines .sp-glow, .look-lines .sp-beam { display: none; }
+.look-lines .sp-ring { border-style: dashed; border-color: rgba(201, 214, 251, .5); }
+.look-lines .sp-stage::before, .look-lines .sp-stage::after { content: ''; position: absolute; background: rgba(201, 214, 251, .3); }
+.look-lines .sp-stage::before { left: 50%; top: -6%; bottom: 8%; width: 1px; }
+.look-lines .sp-stage::after { top: 47%; left: -8%; right: -8%; height: 1px; }
+.look-lines .sp-chip { background: #14265C; backdrop-filter: none; border-color: rgba(201, 214, 251, .6); }
+.look-lines .about-photo img { box-shadow: 12px 12px 0 #213A82; filter: grayscale(.25); }
+.look-lines .about-stats strong { color: transparent; -webkit-text-stroke: 1.2px #213A82; font-size: 52px; }
+.look-lines .about-stats strong span { -webkit-text-stroke: inherit; }
+.look-lines .wf-card.active { box-shadow: 6px 6px 0 #213A82; border-color: #213A82; background: #fff; }
+.look-lines .contact-form { box-shadow: 12px 12px 0 rgba(169, 190, 250, .5); }
+.look-lines .marquee img { filter: grayscale(1) contrast(1.2); }

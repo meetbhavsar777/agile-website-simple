@@ -471,3 +471,116 @@ button.arrow-btn:hover { background: var(--navy); color: #fff; border-color: var
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+
+/* ############################################################
+   Home page v2 – clients, applications, about, services, contact
+   ############################################################ */
+.hero-inner { padding-bottom: 44px; }
+
+/* ---------- Clients ---------- */
+.clients { padding: 34px 0 38px; border-bottom: 1px solid #E6ECF6; overflow: hidden; }
+.clients-title { text-align: center; font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--slate); margin-bottom: 22px; }
+.marquee { position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee + .marquee { margin-top: 18px; }
+.marquee-track { display: flex; align-items: center; gap: 64px; width: max-content; padding: 0 32px; animation: marquee 60s linear infinite; }
+.marquee.rev .marquee-track { animation-direction: reverse; animation-duration: 70s; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee img { height: 38px; width: auto; max-width: 130px; object-fit: contain; filter: grayscale(1); opacity: .6; transition: filter .25s, opacity .25s; }
+.marquee img:hover { filter: none; opacity: 1; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- Category chips (inside Explore Technologies) ---------- */
+#technologies .cat-strip { padding: 0; margin: -6px 0 22px; }
+#technologies .cat-tabs { gap: 8px; padding: 2px; }
+#technologies .cat-tabs button { padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font-size: 13px; transition: background .2s, color .2s, border-color .2s; }
+#technologies .cat-tabs button::after { display: none; }
+#technologies .cat-tabs button:hover { border-color: var(--blue); color: var(--blue); }
+#technologies .cat-tabs button.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+/* ---------- Applications ---------- */
+.apps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.app-card { position: relative; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
+.app-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.app-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13, 26, 69, 0) 18%, rgba(13, 26, 69, .62) 58%, rgba(13, 26, 69, .94) 100%); }
+.app-card > * { position: relative; z-index: 1; }
+.app-card img { z-index: 0; }
+.app-card strong { font-size: 18px; font-weight: 600; line-height: 1.2; }
+.app-card span { font-size: 12.5px; line-height: 1.45; color: rgba(255, 255, 255, .85); margin-top: 6px; }
+.app-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(13, 26, 69, .22); }
+.app-card:hover img { transform: scale(1.07); }
+
+/* ---------- About ---------- */
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-photo { position: relative; }
+.about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 24px 24px 24px 96px; box-shadow: 0 26px 56px rgba(13, 26, 69, .18); }
+.about-badge { position: absolute; right: -18px; bottom: 26px; padding: 16px 22px; border-radius: 16px; background: var(--brand); color: #fff; box-shadow: 0 16px 36px rgba(33, 58, 130, .35); }
+.about-badge b { display: block; font-size: 30px; font-weight: 600; line-height: 1; letter-spacing: -.02em; }
+.about-badge span { font-size: 11.5px; opacity: .85; }
+.about-copy .eyebrow { margin-bottom: 14px; }
+.about-copy p.lead { font-size: 15.5px; line-height: 1.65; color: var(--slate); margin: 18px 0 26px; max-width: 520px; }
+.about-stats { display: flex; gap: 36px; padding: 22px 0; margin-bottom: 26px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.about-stats strong { display: block; font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; color: var(--brand); }
+.about-stats span { font-size: 12px; color: var(--slate); }
+
+/* ---------- Services (real service lines) ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: svc; }
+.svc-card { position: relative; padding: 22px 20px 24px; border-radius: 16px; background: #fff; border: 1px solid #E6ECF6; transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .25s; }
+.svc-card::before { counter-increment: svc; content: '0' counter(svc); position: absolute; right: 18px; top: 18px; font-size: 11px; font-weight: 600; letter-spacing: .12em; color: #B4C0DA; }
+.svc-card svg { width: 34px; height: 34px; fill: none; stroke: var(--blue); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 18px; }
+.svc-card strong { display: block; font-size: 15px; font-weight: 600; line-height: 1.25; margin-bottom: 8px; }
+.svc-card span { font-size: 12.5px; line-height: 1.5; color: var(--slate); }
+.svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: #C3D0EE; }
+
+/* ---------- Contact ---------- */
+.contact {
+  position: relative; overflow: hidden; color: #fff; padding: 72px 0;
+  background: radial-gradient(520px 420px at 12% 110%, rgba(91, 128, 224, .4), rgba(91, 128, 224, 0) 70%), linear-gradient(120deg, #0D1A45 0%, #14265C 50%, #213A82 100%);
+}
+.contact-inner { display: grid; grid-template-columns: 1fr minmax(380px, 46%); gap: 64px; align-items: center; }
+.contact .eyebrow { color: rgba(255, 255, 255, .7); }
+.contact h2 { font-size: clamp(30px, 3.4vw, 44px); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; margin: 16px 0 16px; }
+.contact p.lead { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, .82); max-width: 440px; }
+.contact-list { display: grid; gap: 16px; margin-top: 34px; }
+.contact-list li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: center; font-size: 14.5px; }
+.contact-list svg { width: 40px; height: 40px; padding: 10px; border-radius: 12px; background: rgba(255, 255, 255, .1); fill: none; stroke: #fff; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.contact-list small { display: block; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .6); margin-bottom: 2px; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-form { background: #fff; color: var(--navy); border-radius: 22px; padding: 30px; box-shadow: 0 30px 70px rgba(0, 0, 0, .3); display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact-form h3 { grid-column: 1 / -1; font-size: 20px; font-weight: 600; margin-bottom: 2px; }
+.contact-form label { display: grid; gap: 6px; font-size: 12px; font-weight: 500; color: var(--slate); }
+.contact-form .full { grid-column: 1 / -1; }
+.contact-form input, .contact-form select, .contact-form textarea {
+  font: inherit; font-size: 14px; color: var(--navy); width: 100%; padding: 11px 13px;
+  border: 1px solid var(--line); border-radius: 10px; background: #F8FAFE; transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.contact-form textarea { min-height: 96px; resize: vertical; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 0; border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(47, 84, 184, .14); }
+.contact-form .btn { justify-content: center; height: 46px; }
+.contact-form .form-note { grid-column: 1 / -1; font-size: 11.5px; color: var(--muted); }
+
+@media (max-width: 1100px) {
+  .apps-grid { grid-template-columns: repeat(3, 1fr); }
+  .svc-grid { grid-template-columns: repeat(3, 1fr); }
+  .about-inner, .contact-inner { gap: 40px; }
+}
+@media (max-width: 980px) {
+  .about-inner, .contact-inner { grid-template-columns: 1fr; }
+  .about-badge { right: 12px; }
+}
+@media (max-width: 640px) {
+  .apps-grid { grid-template-columns: repeat(2, 1fr); }
+  .app-card { aspect-ratio: 4 / 5; padding: 14px; }
+  .app-card strong { font-size: 15.5px; }
+  .app-card span { display: none; }
+  .app-card:last-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+  .svc-grid { grid-template-columns: 1fr; }
+  .about-stats { gap: 22px; }
+  .about-stats strong { font-size: 24px; }
+  .marquee img { height: 28px; }
+  .marquee-track { gap: 40px; }
+  .contact { padding: 48px 0; }
+  .contact-form { grid-template-columns: 1fr; padding: 22px; }
+  .contact-form label { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
