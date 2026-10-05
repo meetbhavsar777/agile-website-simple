@@ -567,3 +567,19 @@ main { padding-top: 0; }
   .ps-photo { min-height: 230px; }
   .ps-txt { padding: 28px 24px 32px; }
 }
+
+/* ############ Partners: smooth cross-fade between panels ############ */
+.pl-body { display: grid; background: #F5F8FE; }
+.pl-panel.ps, .pl-panel.ps.on { display: grid; grid-area: 1 / 1; animation: none; }
+.pl-panel.ps { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .7s ease, visibility .7s; }
+.pl-panel.ps.on { opacity: 1; visibility: visible; pointer-events: auto; z-index: 1; }
+.pl-panel.ps .ps-photo img, .pl-panel.ps.on .ps-photo img { animation: none; transform: scale(1.12); transition: transform 1.6s var(--ease); }
+.pl-panel.ps.on .ps-photo img { transform: scale(1); }
+.ps-txt > * { opacity: 0; transform: translateY(18px); transition: opacity .45s ease, transform .7s var(--ease); }
+.pl-panel.ps.on .ps-txt > * { opacity: 1; transform: none; }
+.pl-panel.ps.on .ps-txt > :nth-child(1) { transition-delay: .18s; }
+.pl-panel.ps.on .ps-txt > :nth-child(2) { transition-delay: .26s; }
+.pl-panel.ps.on .ps-txt > :nth-child(3) { transition-delay: .34s; }
+.pl-panel.ps.on .ps-txt > :nth-child(4) { transition-delay: .42s; }
+.pl-list button, .pl-list img { transition: background .4s ease, filter .4s ease, opacity .4s ease, transform .5s var(--ease); }
+@media (prefers-reduced-motion: reduce) { .pl-panel.ps, .ps-txt > *, .pl-panel.ps .ps-photo img { transition: none; } }
