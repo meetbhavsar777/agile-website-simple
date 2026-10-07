@@ -59,33 +59,72 @@
 
 <main id="top">
 
-<!-- ============ HERO (Spotlight) ============ -->
-<section class="sp bg-light" id="spotlight">
-  <div class="container sp-inner">
-    <div class="sp-copy">
+<!-- ============ HERO ============ -->
+<section class="hero" id="spotlight">
+  <div class="container hero-inner">
+    <div class="hero-copy">
       <p class="eyebrow eyebrow-rule">Global technologies. Local expertise.</p>
-      <h1>Advancing science.<br> <span class="grad">Delivering excellence.</span></h1>
-      <p class="sp-sub">World-class scientific technologies and expert support, from Ahmedabad to labs across India.</p>
-      <div class="btn-row">
-        <a href="#products" class="btn btn-light btn-lg">Explore Technologies <svg><use href="#ic-arrow"/></svg></a>
-        <a href="#contact" class="btn btn-ghost btn-lg">Talk to an Expert</a>
-      </div>
-      <div class="sp-facts">
-        <div><b>1500+</b><span>happy customers</span></div>
-        <div><b>12+</b><span>years in service</span></div>
-        <div><b>15+</b><span>product categories</span></div>
-      </div>
+      <h1>Science<br> moves fast.<br> <span class="grad">So do we.</span></h1>
+      <p class="hero-sub">World-class scientific technologies.<br> Expert support across India.</p>
+      <a href="#products" class="btn btn-primary btn-lg">Explore Technologies <svg><use href="#ic-arrow"/></svg></a>
+      <a href="#categories" class="scroll-hint">
+        <svg viewBox="0 0 14 22" width="14" height="22" aria-hidden="true"><rect x="1" y="1" width="12" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M7 5v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Scroll to explore
+      </a>
     </div>
-    <div class="sp-stage">
-      <span class="sp-ring r2"></span><span class="sp-ring"></span><span class="sp-beam"></span><span class="sp-glow"></span><span class="sp-floor"></span>
-      <div class="sp-prod on" style="--k:1" data-logo="inscinstech" data-brand="Inscinstech" data-name="AutoPure FPLC System" data-c1l="Built for" data-c1v="mAbs, proteins, vaccines" data-c2l="Scale" data-c2v="Lab to production"><img src="images/products/fplc.webp" alt="Inscinstech AutoPure FPLC System" width="812" height="1000"></div><div class="sp-prod" style="--k:0.84" data-logo="flowcam" data-brand="FlowCam" data-name="FlowCam" data-c1l="Speed" data-c1v="50,000 particles / min" data-c2l="Analysis" data-c2v="40+ parameters"><img src="images/products/flowcam.webp" alt="FlowCam FlowCam" width="643" height="739"></div><div class="sp-prod" style="--k:0.9" data-logo="unchained-labs" data-brand="Unchained Labs" data-name="Lunatic" data-c1l="For" data-c1v="Biologics &amp; gene therapy" data-c2l="Also" data-c2v="Stunner · Aunty · Honeybun"><img src="images/products/lunatic-lg.webp" alt="Unchained Labs Lunatic" width="740" height="548"></div><div class="sp-prod" style="--k:0.8" data-logo="rainsure" data-brand="RainSure" data-name="PCR Systems" data-c1l="Method" data-c1v="Absolute quantification" data-c2l="Design" data-c2v="Compact footprint"><img src="images/products/dpcr.webp" alt="RainSure PCR Systems" width="333" height="302"></div><div class="sp-prod" style="--k:1" data-logo="inscinstech" data-brand="Inscinstech" data-name="AutoTFF System" data-c1l="Control" data-c1v="Automatic TMP" data-c2l="Scale" data-c2v="Lab, pilot, process"><img src="images/products/tff.webp" alt="Inscinstech AutoTFF System" width="1100" height="823"></div>
-      <div class="sp-chip c1"><small>Built for</small><b>mAbs, proteins, vaccines</b></div>
-      <div class="sp-chip c2"><small>Scale</small><b>Lab to production</b></div>
-      <div class="sp-count"><b>01</b>/ 05</div>
-      <div class="sp-brand" aria-live="polite"><img src="images/partners/inscinstech.png" alt="Inscinstech"><span>AutoPure FPLC System</span></div>
+
+    <div class="hero-scene" id="heroScene">
+      <span class="ring ring-1"></span><span class="ring ring-2"></span><span class="ring ring-3"></span>
+
+      <div class="stage stage-dpcr" data-cat="molecular">
+        <img src="images/products/dpcr.webp" alt="RainSure digital PCR system" width="333" height="302">
+        <span class="plinth"></span>
+      </div>
+      <div class="stage stage-fplc" data-cat="bioprocessing">
+        <img src="images/products/fplc.webp" alt="Inscinstech Unique AutoPure protein purification system" width="812" height="1000">
+        <span class="plinth"></span>
+      </div>
+      <div class="stage stage-lc" data-cat="chromatography">
+        <img src="images/products/lc.webp" alt="Welch preparative chromatography system" width="644" height="900">
+        <span class="plinth"></span>
+      </div>
+      <div class="stage stage-flowcam" data-cat="particle">
+        <img src="images/products/flowcam.webp" alt="FlowCam flow imaging particle analyser" width="643" height="739">
+        <span class="plinth"></span>
+      </div>
+      <div class="stage stage-life" data-cat="life">
+        <img src="images/products/stunner.webp" alt="Unchained Labs Stunner" width="465" height="430">
+        <span class="plinth"></span>
+      </div>
+
+      <a href="#products" class="hotspot hs-fplc" data-cat="bioprocessing">
+        <span class="hs-title">Protein Purification<br> FPLC Systems</span>
+        <span class="hs-brand hs-accent">Inscinstech</span>
+        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
+      </a>
+      <a href="#products" class="hotspot hs-dpcr" data-cat="molecular">
+        <span class="hs-title">Digital PCR<br> Systems</span>
+        <span class="hs-brand">RainSure</span>
+        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
+      </a>
+      <a href="#products" class="hotspot hs-lc" data-cat="chromatography">
+        <span class="hs-title">Chromatography<br> Solutions</span>
+        <span class="hs-brand">Welch Materials</span>
+        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
+      </a>
+      <a href="#products" class="hotspot hs-flowcam" data-cat="particle">
+        <span class="hs-title">Particle Analysis<br> &amp; Imaging</span>
+        <span class="hs-brand">FlowCam</span>
+        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
+      </a>
+      <a href="#products" class="hotspot hs-life" data-cat="life">
+        <span class="hs-title">Life Sciences<br> Instruments</span>
+        <span class="hs-brand">Unchained Labs</span>
+        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
+      </a>
     </div>
   </div>
-  <div class="container"><div class="sp-rail" role="group" aria-label="Choose a product"><button type="button" class="on"><img src="images/products/fplc.webp" alt=""><span><strong>AutoPure FPLC System</strong><small>Protein Purification</small></span></button><button type="button"><img src="images/products/flowcam.webp" alt=""><span><strong>FlowCam</strong><small>Particle Imaging</small></span></button><button type="button"><img src="images/products/lunatic-lg.webp" alt=""><span><strong>Lunatic</strong><small>Biologics Research</small></span></button><button type="button"><img src="images/products/dpcr.webp" alt=""><span><strong>PCR Systems</strong><small>Molecular Diagnostics</small></span></button><button type="button"><img src="images/products/tff.webp" alt=""><span><strong>AutoTFF System</strong><small>Tangential Flow Filtration</small></span></button></div></div>
+
 </section>
 
 <!-- ============ CLIENTS ============ -->
@@ -268,36 +307,6 @@
   function navCheck() { hdr.classList.toggle('stuck', window.scrollY > 60); }
   window.addEventListener('scroll', navCheck, { passive: true }); window.addEventListener('resize', navCheck); navCheck();
 
-  // hero spotlight
-  var sec = document.getElementById('spotlight');
-  var prods = sec.querySelectorAll('.sp-prod'), tabs = sec.querySelectorAll('.sp-rail button');
-  var c1 = sec.querySelector('.sp-chip.c1'), c2 = sec.querySelector('.sp-chip.c2');
-  var cur = 0, timer;
-  function pick(i) {
-    cur = (i + prods.length) % prods.length;
-    prods.forEach(function (p, k) { p.classList.toggle('on', k === cur); });
-    tabs.forEach(function (t, k) { t.classList.toggle('on', k === cur); });
-    var d = prods[cur].dataset, logo = sec.querySelector('.sp-brand img');
-    logo.src = 'images/partners/' + d.logo + '.png'; logo.alt = d.brand;
-    sec.querySelector('.sp-brand span').textContent = d.name;
-    sec.querySelector('.sp-count b').textContent = '0' + (cur + 1);
-    c1.querySelector('small').textContent = d.c1l; c1.querySelector('b').textContent = d.c1v;
-    c2.querySelector('small').textContent = d.c2l; c2.querySelector('b').textContent = d.c2v;
-  }
-  function play() { clearInterval(timer); if (!noMotion) timer = setInterval(function () { pick(cur + 1); }, 4600); }
-  tabs.forEach(function (t, k) { t.addEventListener('click', function () { pick(k); play(); }); });
-  play();
-
-  // partner tabs
-  var pt = document.querySelectorAll('#ptTabs button'), pp = document.querySelectorAll('#ptPanels .pt-panel');
-  pt.forEach(function (b, k) {
-    b.addEventListener('click', function () {
-      pt.forEach(function (x, j) { x.classList.toggle('on', j === k); });
-      pp.forEach(function (x, j) { x.classList.toggle('on', j === k); });
-    });
-  });
-
-
   // partner side list
   var plt = document.querySelectorAll('#plList button'), plp = document.querySelectorAll('#plBody .pl-panel');
   plt.forEach(function (b, k) {
@@ -369,8 +378,8 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   // scroll-linked: progress bar, hero parallax, drifting photo
   scroll(animate('#scrollBar', { scaleX: [0, 1] }, { ease: 'linear' }));
   const hero = document.getElementById('spotlight');
-  scroll(animate('.sp-stage', { y: [0, 90], scale: [1, 0.94] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
-  scroll(animate('.sp-copy', { y: [0, -40], opacity: [1, 0.3] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
+  scroll(animate('.hero-scene', { y: [0, 90], scale: [1, 0.94] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
+  scroll(animate('.hero-copy', { y: [0, -40], opacity: [1, 0.3] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
   const photo = document.querySelector('.ab-photo img');
   if (photo) scroll(animate(photo, { objectPosition: ['50% 20%', '50% 80%'] }, { ease: 'linear' }), { target: photo, offset: ['start end', 'end start'] });
 }

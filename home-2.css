@@ -583,3 +583,7 @@ main { padding-top: 0; }
 .pl-panel.ps.on .ps-txt > :nth-child(4) { transition-delay: .42s; }
 .pl-list button, .pl-list img { transition: background .4s ease, filter .4s ease, opacity .4s ease, transform .5s var(--ease); }
 @media (prefers-reduced-motion: reduce) { .pl-panel.ps, .ps-txt > *, .pl-panel.ps .ps-photo img { transition: none; } }
+
+
+/* ############ Hero copied from the first home page ############ */
+.hero .hero-inner { padding-top: 64px; padding-bottom: 56px; }
