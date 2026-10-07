@@ -1,127 +1,248 @@
 // Generated from products.json – keep the two files in step.
 window.PRODUCTS = [
  {
-  "id": "inscinstech-unique-autopure",
+  "id": "inscinstech-autooligo-25-100-150-oligonucleotides-synthesizer",
   "partner": "Inscinstech",
-  "group": "Protein Purification (FPLC)",
-  "name": "Unique AutoPure",
-  "desc": "Lab-scale protein purification system for biopharmaceutical R&D and small-batch work.",
+  "group": "Oligonucleotide Synthesis",
+  "name": "AutoOligo 25/100/150 Oligonucleotides Synthesizer",
+  "desc": "Laboratory-scale oligonucleotides synthesizer, utilizing solid-phase synthesis method for rapid synthesis of oligonucleotides samples ranging from 10 μmol to 12 mmol.",
   "points": [
-   "Monoclonal antibodies, recombinant proteins, vaccines, enzymes",
-   "Laboratory scale",
-   "Suited to R&D and small batches"
+   "Lab scale",
+   "Oligonucleotide Synthesis"
   ],
-  "image": "images/catalog/inscinstech-unique-autopure.webp",
-  "source": "https://agilescitech.in/protin-purification-systemfplc/"
+  "image": "images/catalog/inscinstech-autooligo-25-100-150-oligonucleotides-synthesizer.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/16.html"
  },
  {
-  "id": "inscinstech-unique-autopure-pilot600",
+  "id": "inscinstech-autooligo-600-oligonucleotides-synthesizer",
   "partner": "Inscinstech",
-  "group": "Protein Purification (FPLC)",
-  "name": "Unique AutoPure Pilot600",
-  "desc": "Benchtop pilot-scale chromatography system for process development and scale-up.",
-  "points": [
-   "Pilot scale",
-   "GMP or non-GMP configurations",
-   "Bridges lab purification and production"
-  ],
-  "image": "images/catalog/inscinstech-unique-autopure-pilot600.webp",
-  "source": "https://agilescitech.in/protin-purification-systemfplc/"
- },
- {
-  "id": "inscinstech-unique-autopure-process-180",
-  "partner": "Inscinstech",
-  "group": "Protein Purification (FPLC)",
-  "name": "Unique AutoPure Process 180",
-  "desc": "Production-scale chromatography system for small to mid-size batches.",
-  "points": [
-   "Flow range 1–180 L/h",
-   "Production scale"
-  ],
-  "image": "images/catalog/inscinstech-unique-autopure-process-180.webp",
-  "source": "https://agilescitech.in/protin-purification-systemfplc/"
- },
- {
-  "id": "inscinstech-unique-autotff075",
-  "partner": "Inscinstech",
-  "group": "Tangential Flow Filtration",
-  "name": "Unique AutoTFF075",
-  "desc": "Automated lab-scale crossflow filtration platform for processing biological products.",
-  "points": [
-   "Automatic TMP control, weighing and feeding",
-   "Supports multiple filter types",
-   "Predefined recipes"
-  ],
-  "image": "images/catalog/inscinstech-unique-autotff075.webp",
-  "source": "https://agilescitech.in/tangential-flow-filtration-tff-systems/"
- },
- {
-  "id": "inscinstech-unique-autotff-pilot10",
-  "partner": "Inscinstech",
-  "group": "Tangential Flow Filtration",
-  "name": "Unique AutoTFF Pilot10",
-  "desc": "Pilot-scale automated crossflow filtration system for process development.",
+  "group": "Oligonucleotide Synthesis",
+  "name": "AutoOligo 600 Oligonucleotides Synthesizer",
+  "desc": "The AutoOligo600 Oligonucleotides Synthesizer is a pilot-scale oligonucleotides synthesis instrument that meets GMP requirements and can synthesize oligonucleotides…",
   "points": [
    "Pilot scale",
-   "Automatic TMP control",
-   "Supports multiple filter types"
+   "Oligonucleotide Synthesis"
   ],
-  "image": "images/catalog/inscinstech-unique-autotff-pilot10.webp",
-  "source": "https://agilescitech.in/tangential-flow-filtration-tff-systems/"
+  "image": "images/catalog/inscinstech-autooligo-600-oligonucleotides-synthesizer.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/17.html"
  },
  {
-  "id": "inscinstech-unique-autotff-process",
+  "id": "inscinstech-nestobr-bioreactors",
   "partner": "Inscinstech",
-  "group": "Tangential Flow Filtration",
-  "name": "Unique AutoTFF Process",
-  "desc": "Customizable production-scale crossflow filtration system.",
+  "group": "Bioreactors",
+  "name": "NestoBR Bioreactors",
+  "desc": "NestoBR bioreactors meet the high-performance and regulatory requirements of the biotechnology industry, enhancing process development capabilities and achieving…",
+  "points": [
+   "Lab scale",
+   "Bioreactors"
+  ],
+  "image": "images/catalog/inscinstech-nestobr-bioreactors.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/18.html"
+ },
+ {
+  "id": "inscinstech-autopres-protein-purification-systems",
+  "partner": "Inscinstech",
+  "group": "Protein Purification",
+  "name": "AutoPreS Protein Purification Systems",
+  "desc": "Single-Pump Chromatography System, designed for the rapid purification of proteins, nucleic acids, polysaccharides, and other biomolecules in the range from…",
+  "points": [
+   "Lab scale",
+   "Protein Purification"
+  ],
+  "image": "images/catalog/inscinstech-autopres-protein-purification-systems.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/3.html"
+ },
+ {
+  "id": "inscinstech-autopure-protein-purification-system",
+  "partner": "Inscinstech",
+  "group": "Protein Purification",
+  "name": "AutoPure Protein Purification System",
+  "desc": "A richly configured laboratory-grade chromatography system for rapid process development and small-scale sample preparation.",
+  "points": [
+   "Lab scale",
+   "Protein Purification"
+  ],
+  "image": "images/catalog/inscinstech-autopure-protein-purification-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/10.html"
+ },
+ {
+  "id": "inscinstech-nestopure-protein-purification-system",
+  "partner": "Inscinstech",
+  "group": "Protein Purification",
+  "name": "NestoPure Protein Purification System",
+  "desc": "Next-generation integrated sample pump laboratory-grade chromatography system, compact with low dead volume.",
+  "points": [
+   "Lab scale",
+   "Protein Purification"
+  ],
+  "image": "images/catalog/inscinstech-nestopure-protein-purification-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/11.html"
+ },
+ {
+  "id": "inscinstech-autopure-pilot600-protein-purification-system",
+  "partner": "Inscinstech",
+  "group": "Protein Purification",
+  "name": "AutoPure Pilot600 Protein Purification System",
+  "desc": "Pilot-scale Benchtop Chromatography System, with a wide operational flow rate range, high pressure tolerance, broad detection range, and flexible configuration.",
+  "points": [
+   "Pilot scale",
+   "Protein Purification"
+  ],
+  "image": "images/catalog/inscinstech-autopure-pilot600-protein-purification-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/13.html"
+ },
+ {
+  "id": "inscinstech-autopure-pilot600d-protein-purification-system",
+  "partner": "Inscinstech",
+  "group": "Protein Purification",
+  "name": "AutoPure Pilot600D Protein Purification System",
+  "desc": "Dual Column Pilot-Scale Chromatography System, Capable of Forward and Reverse Flushing, Mixer Can Bypass, Optional Independent Sample Pump.",
+  "points": [
+   "Pilot scale",
+   "Protein Purification"
+  ],
+  "image": "images/catalog/inscinstech-autopure-pilot600d-protein-purification-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/12.html"
+ },
+ {
+  "id": "inscinstech-autopure-process-protein-purification-system",
+  "partner": "Inscinstech",
+  "group": "Protein Purification",
+  "name": "AutoPure Process Protein Purification System",
+  "desc": "The latest production-grade chromatography system launched by Inscinstech is suitable for purification at pilot and production scales in fields such as medical…",
   "points": [
    "Production scale",
-   "Configured to the process"
+   "Protein Purification"
   ],
-  "image": "images/catalog/inscinstech-unique-autotff-process.webp",
-  "source": "https://agilescitech.in/tangential-flow-filtration-tff-systems/"
+  "image": "images/catalog/inscinstech-autopure-process-protein-purification-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/39.html"
  },
  {
-  "id": "inscinstech-unique-autooligo-25-150",
+  "id": "inscinstech-autotff075-crossflow-system",
   "partner": "Inscinstech",
-  "group": "Oligonucleotide Synthesis",
-  "name": "Unique AutoOligo 25–150",
-  "desc": "Compact large-scale bench and pilot synthesizer for DNA and RNA.",
+  "group": "Crossflow Filtration (TFF)",
+  "name": "AutoTFF075 Crossflow System",
+  "desc": "Fully automatic lab scale tangential flow filtration system, with automatic TMP optimization and dialysis point optimization functions, best tool for process…",
   "points": [
-   "10 µmol to 12 mmol",
-   "Synthesis efficiency above 99% for DNA, 98% for RNA",
-   "Up to 14 amidite inlets"
+   "Lab scale",
+   "Crossflow Filtration (TFF)"
   ],
-  "image": "images/catalog/inscinstech-unique-autooligo-25-150.webp",
-  "source": "https://agilescitech.in/oligonucleotide-synthesizer/"
+  "image": "images/catalog/inscinstech-autotff075-crossflow-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/32.html"
  },
  {
-  "id": "inscinstech-unique-autooligo-600",
+  "id": "inscinstech-autotff3-crossflow-system",
   "partner": "Inscinstech",
-  "group": "Oligonucleotide Synthesis",
-  "name": "Unique AutoOligo 600",
-  "desc": "High-capacity production-scale oligonucleotide synthesizer.",
+  "group": "Crossflow Filtration (TFF)",
+  "name": "AutoTFF3 Crossflow System",
+  "desc": "Automated tangential flow filtration system with a maximum flow rate of 3 L/min, suitable for ultrafiltration process scale-up and sample preparation.",
   "points": [
-   "1 mmol to 50 mmol",
-   "Flow range 4–1200 mL/min",
-   "Stainless-steel, GMP-ready design"
+   "Lab scale",
+   "Crossflow Filtration (TFF)"
   ],
-  "image": "images/catalog/inscinstech-unique-autooligo-600.webp",
-  "source": "https://agilescitech.in/oligonucleotide-synthesizer/"
+  "image": "images/catalog/inscinstech-autotff3-crossflow-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/36.html"
  },
  {
-  "id": "inscinstech-unique-autopilot-oligo2000",
+  "id": "inscinstech-autotff-pilot10-crossflow-system",
   "partner": "Inscinstech",
-  "group": "Oligonucleotide Synthesis",
-  "name": "Unique AutoPilot Oligo2000",
-  "desc": "Industrial-scale automated oligonucleotide synthesizer.",
+  "group": "Crossflow Filtration (TFF)",
+  "name": "AutoTFF Pilot10 Crossflow System",
+  "desc": "Automated tangential flow filtration system for process scale-up and small-scale production, with flexible configuration and a maximum flow rate of 10 L/min.",
   "points": [
-   "Industrial scale",
-   "Fully automated"
+   "Pilot scale",
+   "Crossflow Filtration (TFF)"
   ],
-  "image": "images/catalog/inscinstech-unique-autopilot-oligo2000.webp",
-  "source": "https://agilescitech.in/oligonucleotide-synthesizer/"
+  "image": "images/catalog/inscinstech-autotff-pilot10-crossflow-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/33.html"
+ },
+ {
+  "id": "inscinstech-autotff-process-crossflow-filtration-system",
+  "partner": "Inscinstech",
+  "group": "Crossflow Filtration (TFF)",
+  "name": "AutoTFF Process Crossflow Filtration System",
+  "desc": "GMP-compliant production scale tangential flow filtration system.",
+  "points": [
+   "Production scale",
+   "Crossflow Filtration (TFF)"
+  ],
+  "image": "images/catalog/inscinstech-autotff-process-crossflow-filtration-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/43.html"
+ },
+ {
+  "id": "inscinstech-automcd-prime-nanoparticle-assembly-system",
+  "partner": "Inscinstech",
+  "group": "Nanoparticle Assembly",
+  "name": "AutoMCD Prime Nanoparticle Assembly System",
+  "desc": "The AutoMCD Prime system is designed for the formulation screening of nanoparticle drugs, offering rapid, flexible, and reagent-saving solutions.",
+  "points": [
+   "Lab scale",
+   "Nanoparticle Assembly"
+  ],
+  "image": "images/catalog/inscinstech-automcd-prime-nanoparticle-assembly-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/30.html"
+ },
+ {
+  "id": "inscinstech-automcd-pilot-nanoparticle-assembly-system",
+  "partner": "Inscinstech",
+  "group": "Nanoparticle Assembly",
+  "name": "AutoMCD Pilot Nanoparticle Assembly System",
+  "desc": "For continuous automated preparation of LNP and other nanoparticles.",
+  "points": [
+   "Pilot scale",
+   "Nanoparticle Assembly"
+  ],
+  "image": "images/catalog/inscinstech-automcd-pilot-nanoparticle-assembly-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/31.html"
+ },
+ {
+  "id": "inscinstech-autoprep-high-pressure-liquid-chromatography-system",
+  "partner": "Inscinstech",
+  "group": "Preparative HPLC",
+  "name": "AutoPrep High-Pressure Liquid Chromatography System",
+  "desc": "An integrated preparative high-pressure liquid chromatography system, used for small-scale sample preparation, process development, and scale-up of peptides,…",
+  "points": [
+   "Preparative HPLC"
+  ],
+  "image": "images/catalog/inscinstech-autoprep-high-pressure-liquid-chromatography-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/34.html"
+ },
+ {
+  "id": "inscinstech-autoprep1000-pilot-scale-preparative-liquid-chromatography-system",
+  "partner": "Inscinstech",
+  "group": "Preparative HPLC",
+  "name": "AutoPrep1000 Pilot-scale Preparative Liquid Chromatography System",
+  "desc": "The Unique AutoPrep series fully automatic preparative liquid chromatography system enables the separation and purification of pharmaceuticals including small…",
+  "points": [
+   "Pilot scale",
+   "Preparative HPLC"
+  ],
+  "image": "images/catalog/inscinstech-autoprep1000-pilot-scale-preparative-liquid-chromatography-system.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/61.html"
+ },
+ {
+  "id": "inscinstech-hicient-l-2000-bio-high-performance-liquid-chromatograph",
+  "partner": "Inscinstech",
+  "group": "Analytical Instruments",
+  "name": "Hicient L-2000 Bio High-Performance Liquid Chromatograph",
+  "desc": "With leading independent research and development and innovative technology, it ensures optimized analytical efficiency and testing performance.",
+  "points": [
+   "Analytical Instruments"
+  ],
+  "image": "images/catalog/inscinstech-hicient-l-2000-bio-high-performance-liquid-chromatograph.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/42.html"
+ },
+ {
+  "id": "inscinstech-isce-1000-capillary-electrophoresis-instrument",
+  "partner": "Inscinstech",
+  "group": "Analytical Instruments",
+  "name": "ISCE-1000 Capillary Electrophoresis Instrument",
+  "desc": "ISCE-1000 is a high-resolution capillary electrophoresis instrument that can address complex analytical challenges through various modes of capillary electrophoresis.",
+  "points": [
+   "Analytical Instruments"
+  ],
+  "image": "images/catalog/inscinstech-isce-1000-capillary-electrophoresis-instrument.webp",
+  "source": "https://en.inscinstech.com.cn/products_1/41.html"
  },
  {
   "id": "unchained-labs-aunty",
@@ -314,7 +435,7 @@ window.PRODUCTS = [
    "Particles from 2 µm to 1 mm",
    "Biopharma, aquatic and materials research"
   ],
-  "image": "images/products/flowcam.webp",
+  "image": "images/catalog/flowcam-flowcam-8000.webp",
   "source": "https://www.fluidimaging.com/products/flowcam-8000-flow-imaging-microscope-and-particle-analyzer"
  },
  {

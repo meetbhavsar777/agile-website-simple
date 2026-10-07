@@ -591,3 +591,6 @@ button.arrow-btn:hover { background: var(--navy); color: #fff; border-color: var
 .stage-lc { --img: 62%; }
 .stage-life { --img: 66%; }
 .stage img { image-rendering: auto; }
+
+/* hero flowcam render (squarer picture) */
+.stage-flowcam { --img: 60%; }
