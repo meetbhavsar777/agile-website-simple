@@ -172,22 +172,44 @@
 
 <!-- ============ ABOUT ============ -->
 <section class="section section-tint" id="about">
-  <div class="container ab">
-    <div class="ab-photo">
-      <img src="images/hero/team.webp" alt="The Agile team at the Ahmedabad office" width="1200" height="800" loading="lazy">
-      <b>Established 2013</b>
-    </div>
-    <div class="ab-copy">
-      <p class="eyebrow num"><b>03</b> About Agile SciTech</p>
-      <h2>Authorized channel partner <span class="grad">for global leaders.</span></h2>
-      <p class="ab-lead">Agile Diagnostics, established in 2013, is a leading distributor of chromatography and life science products.</p>
-      <p class="ab-text">We are the trusted partner for globally renowned brands such as Bio-Techne, Welch Materials Inc., Thermo Scientific, UCT, Azure Biosystems, Cellenion, Denovo Biolabs, and Provision Kinetics, serving the biotechnology and pharmaceutical industries across Gujarat.</p>
-      <div class="ab-stats">
-        <div><strong><span data-count="1500">1500</span><i>+</i></strong><span>Happy customers</span></div>
-        <div><strong><span data-count="15">15</span><i>+</i></strong><span>Product categories</span></div>
-        <div><strong><span data-count="12">12</span><i>+</i></strong><span>Years in service</span></div>
+  <div class="container">
+    <div class="ab2-head">
+      <div>
+        <p class="eyebrow num"><b>03</b> About Agile SciTech</p>
+        <h2>Authorized channel partner <span class="grad">for global leaders.</span></h2>
       </div>
-      <div class="ab-foot"><a href="#contact" class="btn btn-primary btn-lg">Get in touch <svg><use href="#ic-arrow"/></svg></a><span>Ahmedabad-based · Authorized channel partner</span></div>
+      <p class="ab2-lead">Agile Diagnostics, established in 2013, is a leading distributor of chromatography and life science products.</p>
+    </div>
+
+    <div class="ab2-main">
+      <figure class="ab2-photo">
+        <img src="images/hero/team.webp" alt="The Agile team at the Ahmedabad office" width="1200" height="800" loading="lazy">
+        <figcaption><b>Established 2013</b><span>Ahmedabad, Gujarat</span></figcaption>
+      </figure>
+      <div class="ab2-side">
+        <p class="ab2-text">We are the trusted partner for globally renowned brands such as Bio-Techne, Welch Materials Inc., Thermo Scientific, UCT, Azure Biosystems, Cellenion, Denovo Biolabs, and Provision Kinetics, serving the biotechnology and pharmaceutical industries across Gujarat.</p>
+        <ul class="ab2-points">
+          <li><svg viewBox="0 0 20 20"><path d="m4 10.5 4 4 8-9"/></svg> Authorized channel partner</li>
+          <li><svg viewBox="0 0 20 20"><path d="m4 10.5 4 4 8-9"/></svg> Sales, installation and service</li>
+          <li><svg viewBox="0 0 20 20"><path d="m4 10.5 4 4 8-9"/></svg> Chromatography and life science</li>
+        </ul>
+        <div class="ab2-awards">
+          <p>Recognition</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20"><circle cx="10" cy="8" r="5"/><path d="m7 12-1.5 6 4.5-2.5 4.5 2.5-1.5-6"/></svg><span><strong>Best Channel – Overall Performance</strong>Thermo Fisher Scientific · 2021 and 2019</span></li>
+            <li><svg viewBox="0 0 20 20"><circle cx="10" cy="8" r="5"/><path d="m7 12-1.5 6 4.5-2.5 4.5 2.5-1.5-6"/></svg><span><strong>Highest turnover among distributors</strong>Welch Materials Inc. · 2021 and 2020</span></li>
+            <li><svg viewBox="0 0 20 20"><circle cx="10" cy="8" r="5"/><path d="m7 12-1.5 6 4.5-2.5 4.5 2.5-1.5-6"/></svg><span><strong>Rising Channel Partner</strong>Thermo Fisher Scientific · 2016</span></li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-lg">Get in touch <svg><use href="#ic-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <div class="ab2-stats">
+      <div><strong><span data-count="1500">1500</span><i>+</i></strong><span>Happy customers</span></div>
+      <div><strong><span data-count="15">15</span><i>+</i></strong><span>Product categories</span></div>
+      <div><strong><span data-count="12">12</span><i>+</i></strong><span>Years in service</span></div>
+      <div><strong><span data-count="6">6</span></strong><span>Global partners</span></div>
     </div>
   </div>
 </section>
@@ -360,9 +382,10 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   reveal('.sec-head', ':scope > *', { y: 28 }, { gap: 0.1 });
   reveal('.pp', '.pp-card', { y: 60, scale: 0.94 }, { gap: 0.09, amount: 0.1 });
   reveal('.kc', '.kc-card', { y: 44, scale: 0.96 }, { gap: 0.07, amount: 0.1 });
-  reveal('.ab-photo', null, { x: -70, scale: 0.94 });
-  reveal('.ab-copy', ':scope > *', { x: 50 }, { gap: 0.08 });
-  reveal('.ab-stats', ':scope > div', { y: 30, scale: 0.9 }, { gap: 0.1, delay: 0.3 });
+  reveal('.ab2-head', ':scope > *', { y: 30 }, { gap: 0.12 });
+  reveal('.ab2-photo', null, { x: -60, scale: 0.95 });
+  reveal('.ab2-side', ':scope > *', { x: 40 }, { gap: 0.09 });
+  reveal('.ab2-stats', ':scope > div', { y: 34, scale: 0.92 }, { gap: 0.1 });
   reveal('.pl-list', 'button', { x: -30 }, { gap: 0.06 });
   reveal('.pl-body', null, { y: 40 }, { delay: 0.15 });
   reveal('.contact-inner > div', ':scope > *', { y: 30 }, { gap: 0.08 });
@@ -380,8 +403,6 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const hero = document.getElementById('spotlight');
   scroll(animate('.hero-scene', { y: [0, 90], scale: [1, 0.94] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
   scroll(animate('.hero-copy', { y: [0, -40], opacity: [1, 0.3] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
-  const photo = document.querySelector('.ab-photo img');
-  if (photo) scroll(animate(photo, { objectPosition: ['50% 20%', '50% 80%'] }, { ease: 'linear' }), { target: photo, offset: ['start end', 'end start'] });
 }
 </script>
 </body>

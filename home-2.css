@@ -587,3 +587,68 @@ main { padding-top: 0; }
 
 /* ############ Hero copied from the first home page ############ */
 .hero .hero-inner { padding-top: 64px; padding-bottom: 56px; }
+
+
+/* ############ About photo: wide frame so the whole team shows ############ */
+.ab { grid-template-columns: 1.08fr 1fr; gap: 64px; }
+.ab-photo { padding: 0 26px 26px 0; }
+.ab-photo::before { left: 26px; right: 0; top: 26px; bottom: 0; border: 0; border-radius: 28px; background: linear-gradient(140deg, #213A82, #5B80E0); }
+.ab-photo::after { content: ''; position: absolute; left: -22px; top: -22px; width: 120px; height: 120px; z-index: 0; background-image: radial-gradient(#9FB3E8 1.6px, transparent 2px); background-size: 15px 15px; }
+.ab-photo img { z-index: 1; aspect-ratio: 3 / 2; border-radius: 28px; object-position: 50% 40%; box-shadow: 0 30px 60px rgba(13, 26, 69, .22); }
+.ab-photo b { z-index: 2; right: auto; left: 22px; bottom: 48px; }
+.ab-chip { position: absolute; z-index: 2; right: 0; top: 26px; display: grid; gap: 2px; max-width: 170px; padding: 16px 20px; border-radius: 18px; background: #fff; box-shadow: 0 18px 40px rgba(13, 26, 69, .18); font-size: 12.5px; line-height: 1.35; color: var(--slate); }
+.ab-chip strong { font-size: 30px; font-weight: 600; letter-spacing: -.03em; line-height: 1; color: var(--brand); }
+.ab-cap { position: absolute; z-index: 2; right: 44px; bottom: 44px; padding: 7px 14px; border-radius: 999px; background: rgba(13, 26, 69, .6); backdrop-filter: blur(8px); color: #fff; font-size: 12px; }
+.ab-copy h2 { font-size: clamp(30px, 3.1vw, 44px); }
+.ab-stats > div { padding: 18px 18px 16px; }
+.ab-stats strong { font-size: 38px; }
+@media (max-width: 980px) { .ab { grid-template-columns: 1fr; } .ab-photo { max-width: 640px; } }
+@media (max-width: 640px) { .ab-photo { padding: 0 14px 14px 0; } .ab-photo::before { left: 14px; top: 14px; } .ab-chip { top: 12px; padding: 12px 14px; } .ab-chip strong { font-size: 22px; } .ab-cap { display: none; } .ab-photo b { left: 12px; bottom: 28px; right: auto; } }
+
+
+/* ############ About, redesigned: headline row, photo + story, stats band ############ */
+.ab2-head { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: end; margin-bottom: 40px; }
+.ab2-head h2 { font-size: clamp(30px, 3.2vw, 46px); font-weight: 600; line-height: 1.05; letter-spacing: -.03em; margin-top: 14px; }
+.ab2-head h2 .grad { display: inline-block; padding-bottom: .1em; }
+.ab2-lead { font-size: 21px; font-weight: 500; line-height: 1.45; letter-spacing: -.012em; color: var(--navy); padding: 0 0 8px 26px; border-left: 3px solid var(--brand); }
+.ab2-main { display: grid; grid-template-columns: 1.25fr 1fr; gap: 20px; align-items: stretch; }
+.ab2-photo { position: relative; margin: 0; min-height: 480px; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px rgba(13, 26, 69, .16); }
+.ab2-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; transition: transform 1.2s var(--ease); }
+.ab2-photo:hover img { transform: scale(1.04); }
+.ab2-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13, 26, 69, 0) 55%, rgba(13, 26, 69, .72) 100%); }
+.ab2-photo figcaption { position: absolute; z-index: 1; left: 26px; right: 26px; bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #fff; }
+.ab2-photo figcaption b { padding: 12px 22px; border-radius: 999px; background: var(--brand); font-size: 14px; font-weight: 500; box-shadow: 0 12px 28px rgba(13, 26, 69, .4); }
+.ab2-photo figcaption span { font-size: 13px; opacity: .9; }
+.ab2-side { display: flex; flex-direction: column; gap: 20px; padding: 34px 34px 32px; border-radius: 28px; background: #fff; border: 1px solid #E3E9F6; }
+.ab2-text { font-size: 15.5px; line-height: 1.72; color: var(--slate); }
+.ab2-points { display: flex; flex-wrap: wrap; gap: 8px; }
+.ab2-points li { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px 8px 10px; border-radius: 999px; background: #EEF2FB; font-size: 12.5px; font-weight: 500; color: var(--navy); }
+.ab2-points svg { width: 15px; height: 15px; fill: none; stroke: var(--blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ab2-awards { padding-top: 20px; border-top: 1px solid #E3E9F6; }
+.ab2-awards > p { font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.ab2-awards ul { display: grid; gap: 12px; }
+.ab2-awards li { display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: center; }
+.ab2-awards svg { width: 38px; height: 38px; padding: 9px; border-radius: 12px; background: #EEF2FB; fill: none; stroke: var(--brand); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ab2-awards span { font-size: 12.5px; color: var(--slate); line-height: 1.4; }
+.ab2-awards strong { display: block; font-size: 14.5px; font-weight: 600; color: var(--navy); }
+.ab2-side .btn { align-self: flex-start; margin-top: auto; }
+.ab2-stats { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 20px; border-radius: 28px; overflow: hidden; color: #fff; background: radial-gradient(520px 260px at 88% 120%, rgba(143, 169, 242, .55), rgba(143, 169, 242, 0) 70%), linear-gradient(120deg, #14265C, #213A82 55%, #2F54B8); }
+.ab2-stats > div { padding: 30px 34px 28px; }
+.ab2-stats > div + div { border-left: 1px solid rgba(255, 255, 255, .16); }
+.ab2-stats strong { display: flex; align-items: baseline; font-size: clamp(38px, 4vw, 56px); font-weight: 600; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.ab2-stats strong i { font-style: normal; font-size: .55em; font-weight: 500; margin-left: 3px; color: #A9BEFA; }
+.ab2-stats strong span { font-size: inherit; }
+.ab2-stats > div > span { display: block; margin-top: 10px; font-size: 11.5px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .75); }
+@media (max-width: 980px) {
+  .ab2-head, .ab2-main { grid-template-columns: 1fr; gap: 22px; }
+  .ab2-photo { min-height: 0; aspect-ratio: 3 / 2; }
+  .ab2-stats { grid-template-columns: repeat(2, 1fr); }
+  .ab2-stats > div:nth-child(3) { border-left: 0; }
+  .ab2-stats > div:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, .16); }
+}
+@media (max-width: 640px) {
+  .ab2-lead { font-size: 17.5px; padding-left: 18px; }
+  .ab2-side { padding: 24px 22px; }
+  .ab2-stats > div { padding: 22px 20px; }
+  .ab2-photo figcaption span { display: none; }
+}
