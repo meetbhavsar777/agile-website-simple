@@ -584,3 +584,10 @@ button.arrow-btn:hover { background: var(--navy); color: #fff; border-color: var
   .contact-form label { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+
+/* hero: sharper product photos (new aspect ratios) */
+.stage-dpcr { --img: 54%; }
+.stage-lc { --img: 62%; }
+.stage-life { --img: 66%; }
+.stage img { image-rendering: auto; }
