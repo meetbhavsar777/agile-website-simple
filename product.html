@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product | Agile SciTech</title>
+<meta name="description" content="Product details, specifications and quote request.">
+<meta name="theme-color" content="#14265C">
+<link rel="icon" type="image/png" href="images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home-2.css">
+<link rel="stylesheet" href="products.css">
+</head>
+<body class="catalog">
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="ic-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+<div class="topbar"><div class="container"><span>Agile Diagnostics / Agile BioScience / Welch Materials India</span><span><a href="tel:+918866101022">+91 88661 01022</a><a href="mailto:sales@agilescitech.in">sales@agilescitech.in</a></span></div></div>
+<header class="site-header stuck always" id="siteHeader">
+  <div class="container header-inner">
+    <a href="home-2.html" class="logo" aria-label="Agile SciTech home"><img class="logo-dark" src="images/brand/logo.png" alt="Agile SciTech" width="1074" height="560"></a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="products.html" class="nav-link is-current">Products</a>
+      <a href="home-2.html#partners" class="nav-link">Partners</a>
+      <a href="home-2.html#categories" class="nav-link">Applications</a>
+      <a href="home-2.html#contact" class="nav-link">Services</a>
+      <a href="home-2.html#contact" class="nav-link">Resources</a>
+      <a href="home-2.html#about" class="nav-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <a href="products.html#quote" class="btn btn-primary">Quote list (<span data-qcount>0</span>)</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="pd-top">
+  <div class="container">
+    <nav class="crumb" id="crumb"></nav>
+    <div class="pdl">
+      <div class="pd-media" id="pdMedia"></div>
+      <div class="pd-info">
+        <p class="pd-partner" id="pdPartner"></p>
+        <h1 id="pdName"></h1>
+        <p class="pd-lead" id="pdLead"></p>
+        <ul class="pd-points" id="pdPoints"></ul>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary btn-lg" id="pdAdd">Add to quote list <svg><use href="#ic-arrow"/></svg></button>
+          <a class="btn btn-line btn-lg" id="pdDemo" href="#">Book a demo</a>
+        </div>
+        <dl class="pd-meta"><div><dt>Category</dt><dd id="pdCat"></dd></div><div><dt>Supplied by</dt><dd>Agile SciTech, authorised partner</dd></div><div><dt>Service</dt><dd>Agile field engineers</dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="pd-tabs"><div class="container"><a href="#overview">Overview</a><a href="#specs">Specifications</a><a href="#apps">Applications</a><a href="#related">Related products</a></div></nav>
+<section class="cat-body">
+  <div class="container pd-sections">
+    <section id="overview"><h2 id="ovTitle"></h2><p id="ovText"></p><div class="tiles" id="ovTiles"></div></section>
+    <section id="specs"><h2>Specifications</h2><table class="spec" id="specTable"></table><p class="note">Full specifications and the datasheet are sent with your quote.</p></section>
+    <section id="apps"><h2>Applications</h2><div class="used"><div id="appList"></div></div></section>
+    <section id="related"><h2>Related products</h2><div class="pg" id="relGrid"></div></section>
+    <form class="rfq" id="rfq">
+      <div><h2 id="rfqTitle"></h2><p>Or book a demo with your own samples.</p></div>
+      <label>Work email<input type="email" name="email" required></label>
+      <label>Organisation<input type="text" name="what" required></label>
+      <button class="btn btn-light" type="submit">Request quote</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-bottom"><span>&copy; 2026 Agile SciTech Pvt. Ltd. · All trademarks belong to their respective owners.</span><span><a href="home-2.html">Home</a> · <a href="products.html">Products</a> · <a href="home-2.html#contact">Contact</a></span></div></footer>
+<div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="products-data.js"></script>
+<script src="products.js"></script>
+<script>CatalogPage.product();</script>
+<script type="module" src="products-motion.js"></script>
+</body>
+</html>
