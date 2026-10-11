@@ -362,3 +362,6 @@ html.fx-open { overflow: hidden; }
 /* header button count badge (hidden while the quote list is empty) */
 .nav-qn { display: inline-grid !important; place-items: center; min-width: 20px; height: 20px; margin-left: 2px; padding: 0 6px; border-radius: 999px; background: #fff; color: var(--brand); font-size: 11.5px; font-weight: 700; }
 .nav-qn[data-n="0"] { display: none !important; }
+
+/* no "Quick view" label on product pictures (clicking the picture still opens it) */
+.pc-pic::before { display: none !important; content: none !important; }

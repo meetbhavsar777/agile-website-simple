@@ -49,7 +49,7 @@
   function card(p) {
     var a = el('article', 'pc');
     var link = el('a', 'pc-link'); link.href = 'product.html?id=' + p.id;
-    var pic = media(p, 'pc-pic'); pic.title = 'Quick view';
+    var pic = media(p, 'pc-pic');
     pic.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); flip(p, pic); });
     link.appendChild(pic);
     var meta = el('span', 'pc-meta'); meta.appendChild(el('small', '', p.partner)); meta.appendChild(el('i', '', p.tag)); link.appendChild(meta);
