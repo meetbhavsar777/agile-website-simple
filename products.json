@@ -16,9 +16,9 @@
     "Food & environmental testing"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-pharma-qc.html",
+    "app-bioanalysis-lc-ms.html",
+    "app-food-residue-testing.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -49,9 +49,9 @@
     "Pharma QC & impurity analysis"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-oligo-mrna-peptide.html",
+    "app-downstream-purification.html",
+    "app-pharma-qc.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -81,9 +81,9 @@
     "Biologics developability"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-downstream-purification.html",
+    "app-protein-cell-research.html",
+    "app-biologics-developability.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -113,9 +113,9 @@
     "Pharma QC & impurity analysis"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-food-residue-testing.html",
+    "app-bioanalysis-lc-ms.html",
+    "app-pharma-qc.html"
    ],
    "ftitle": "Format",
    "help": [
@@ -145,9 +145,9 @@
     "Bioanalysis & LC-MS"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-pharma-qc.html",
+    "app-food-residue-testing.html",
+    "app-bioanalysis-lc-ms.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -178,10 +178,10 @@
     "Cell & gene therapy"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-oligo-mrna-peptide.html",
+    "app-upstream-cell-culture.html",
+    "app-downstream-purification.html",
+    "app-cell-gene-therapy.html"
    ],
    "ftitle": "Process step",
    "help": [
@@ -214,10 +214,10 @@
     "Protein & cell biology research"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-biologics-developability.html",
+    "app-cell-gene-therapy.html",
+    "app-subvisible-particles.html",
+    "app-protein-cell-research.html"
    ],
    "ftitle": "Measures",
    "help": [
@@ -248,10 +248,10 @@
     "Cell & gene therapy"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-subvisible-particles.html",
+    "app-biologics-developability.html",
+    "app-water-environment.html",
+    "app-cell-gene-therapy.html"
    ],
    "ftitle": "Market",
    "help": [
@@ -280,8 +280,8 @@
     "Cell & gene therapy"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-digital-pcr.html",
+    "app-cell-gene-therapy.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -311,9 +311,9 @@
     "Bioanalysis & LC-MS"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-protein-cell-research.html",
+    "app-cell-gene-therapy.html",
+    "app-bioanalysis-lc-ms.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -342,8 +342,8 @@
     "Bioanalysis & LC-MS"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-pharma-qc.html",
+    "app-bioanalysis-lc-ms.html"
    ],
    "ftitle": "Type",
    "help": [
@@ -372,8 +372,8 @@
     "Cell & gene therapy"
    ],
    "applinks": [
-    "home-2.html#categories",
-    "home-2.html#categories"
+    "app-upstream-cell-culture.html",
+    "app-cell-gene-therapy.html"
    ],
    "ftitle": "Type",
    "help": [

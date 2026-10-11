@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design guide | Agile SciTech</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;700&family=Instrument+Serif&family=Manrope:wght@500;800&family=Sora:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home-2.css">
+<link rel="stylesheet" href="products.css">
+<link rel="stylesheet" href="sections.css">
+<style>
+  body { background: #fff; }
+  .dg-top { padding: 56px 0 44px; background: linear-gradient(180deg, #F7F9FE, #E8EEFB); }
+  .dg-top img { height: 64px; width: auto; margin-bottom: 22px; }
+  .dg-top h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(34px, 4.4vw, 58px); letter-spacing: -.045em; line-height: 1.05; }
+  .dg-top p { margin-top: 14px; font-size: 18px; color: var(--slate); max-width: 40em; }
+  .dg-nav { position: sticky; top: 0; z-index: 20; background: rgba(255, 255, 255, .94); backdrop-filter: blur(10px); border-bottom: 1px solid #E3E9F6; }
+  .dg-nav .container { display: flex; gap: 6px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; scrollbar-width: none; }
+  .dg-nav a { flex: none; padding: 9px 15px; border-radius: 999px; font-size: 13.5px; color: var(--slate); }
+  .dg-nav a:hover { background: #EEF2FB; color: var(--brand); }
+  .dg-sec { padding: 64px 0 0; scroll-margin-top: 60px; }
+  .dg-sec:last-of-type { padding-bottom: 90px; }
+  .dg-sec > .container > small { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); }
+  .dg-sec > .container > h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); letter-spacing: -.035em; margin: 8px 0 6px; }
+  .dg-sec > .container > h2 span { color: var(--blue); }
+  .dg-note { font-size: 15.5px; color: var(--slate); margin-bottom: 26px; max-width: 46em; }
+  .dg-h3 { font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 34px 0 14px; }
+  .sw { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+  .sw div { border-radius: 18px; border: 1px solid #E3E9F6; overflow: hidden; background: #fff; }
+  .sw i { display: block; height: 96px; }
+  .sw b { display: block; padding: 12px 14px 2px; font-size: 14.5px; font-weight: 600; color: var(--navy); }
+  .sw span { display: block; padding: 0 14px 4px; font-size: 12.5px; color: var(--slate); font-family: ui-monospace, Consolas, monospace; }
+  .sw em { display: block; padding: 0 14px 14px; font-style: normal; font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+  .ty { display: grid; gap: 0; border: 1px solid #E3E9F6; border-radius: 22px; overflow: hidden; }
+  .ty > div { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: center; padding: 22px 26px; border-top: 1px solid #EEF2FA; }
+  .ty > div:first-child { border-top: 0; }
+  .ty small { font-size: 12.5px; color: var(--muted); line-height: 1.5; } .ty small b { display: block; color: var(--navy); font-size: 13.5px; }
+  .row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .box { padding: 28px; border-radius: 22px; border: 1px dashed #D5DEEF; }
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .dg-sec .ap-facts { margin: 0; } .dg-sec .pp-cta, .dg-sec .rfq, .dg-sec .sv-life { margin-top: 0; }
+  .lay { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .lay figure { margin: 0; padding: 14px; border-radius: 18px; border: 1px solid #E3E9F6; }
+  .lay figure div { display: grid; gap: 6px; }
+  .lay figure i { display: block; border-radius: 6px; background: #E4EBFA; }
+  .lay figure i.d { background: #213A82; } .lay figure i.p { background: #C9D5EE; }
+  .lay figcaption { margin-top: 12px; font-size: 13.5px; font-weight: 600; color: var(--navy); } .lay figcaption span { display: block; font-weight: 400; font-size: 12.5px; color: var(--slate); }
+  .pal { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .pal > div { border-radius: 20px; border: 1px solid #E3E9F6; overflow: hidden; }
+  .pal .strip { display: grid; grid-template-columns: 2fr 1.4fr 1fr 1.6fr; height: 84px; }
+  .pal .demo { padding: 18px; }
+  .pal .demo b { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -.03em; }
+  .pal .demo span { display: inline-block; margin-top: 12px; padding: 9px 15px; border-radius: 10px; color: #fff; font-size: 13px; font-weight: 500; }
+  .pal p { padding: 0 18px 16px; font-size: 13px; color: var(--slate); } .pal p strong { color: var(--navy); }
+  .pal .cur { outline: 2px solid var(--brand); outline-offset: -2px; }
+  .fonts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .fonts div { padding: 24px; border-radius: 20px; border: 1px solid #E3E9F6; }
+  .fonts b { display: block; font-size: 26px; line-height: 1.12; letter-spacing: -.03em; color: var(--navy); }
+  .fonts p { margin-top: 10px; font-size: 15px; line-height: 1.6; color: var(--slate); }
+  .fonts small { display: block; margin-top: 14px; font-family: 'Outfit', sans-serif; font-size: 12.5px; color: var(--blue); font-weight: 600; }
+  .bands { display: grid; gap: 14px; }
+  .bands > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; align-items: center; }
+  .bands small { font-size: 13.5px; color: var(--navy); font-weight: 600; }
+  .bd { display: grid; grid-template-columns: repeat(4, 1fr); border-radius: 16px; overflow: hidden; }
+  .bd span { padding: 16px 18px; font-size: 12px; } .bd span b { display: block; font-size: 24px; font-weight: 600; letter-spacing: -.03em; }
+  @media (max-width: 1000px) { .sw { grid-template-columns: repeat(3, 1fr); } .lay, .pal { grid-template-columns: repeat(2, 1fr); } .fonts, .three { grid-template-columns: 1fr; } .two { grid-template-columns: 1fr; } .ty > div { grid-template-columns: 1fr; gap: 8px; } .bands > div { grid-template-columns: 1fr; gap: 6px; } }
+  @media (max-width: 560px) { .sw, .lay, .pal { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body class="catalog">
+<svg class="sprite" width="0" height="0" aria-hidden="true"><symbol id="ic-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+
+<header class="dg-top"><div class="container">
+  <img src="images/brand/logo.png" alt="Agile SciTech">
+  <h1>Design guide <span class="grad">for the website.</span></h1>
+  <p>Everything the site is built from, shown as it really looks: colours, fonts, buttons, cards and page layouts. The last part shows other options you could choose.</p>
+</div></header>
+<nav class="dg-nav"><div class="container"><a href="#colour">Colour</a><a href="#type">Typography</a><a href="#buttons">Buttons</a><a href="#cards">Cards</a><a href="#blocks">Blocks</a><a href="#layouts">Page layouts</a><a href="#opt-colour">Options: colour</a><a href="#opt-fonts">Options: fonts</a><a href="#opt-band">Options: figures band</a><a href="index.html">Back to site</a></div></nav>
+
+<main>
+<section class="dg-sec" id="colour"><div class="container">
+  <small>01 · In use today</small><h2>Colour <span>palette</span></h2>
+  <p class="dg-note">Blue from the logo, on white and very pale blue. Orange appears in one place only.</p>
+  <div class="sw">
+    <div><i style="background:#213A82"></i><b>Brand blue</b><span>#213A82</span><em>Buttons, links, key numbers</em></div>
+    <div><i style="background:#14265C"></i><b>Navy</b><span>#14265C</span><em>Headings</em></div>
+    <div><i style="background:#2F54B8"></i><b>Bright blue</b><span>#2F54B8</span><em>Heading accents, labels</em></div>
+    <div><i style="background:linear-gradient(145deg,#22408F,#2C4CA6 45%,#3E68D8)"></i><b>Icon gradient</b><span>#22408F → #3E68D8</span><em>Icon tiles only</em></div>
+    <div><i style="background:#FFB04A"></i><b>Orange accent</b><span>#FFB04A</span><em>Figures band only</em></div>
+    <div><i style="background:linear-gradient(90deg,#213A82,#2F54B8 50%,#5B80E0)"></i><b>Headline gradient</b><span>#213A82 → #5B80E0</span><em>Highlighted headline words</em></div>
+    <div><i style="background:#4B5768"></i><b>Slate</b><span>#4B5768</span><em>Paragraph text</em></div>
+    <div><i style="background:#7A8698"></i><b>Muted</b><span>#7A8698</span><em>Captions</em></div>
+    <div><i style="background:#F7F9FE"></i><b>Pale surface</b><span>#F7F9FE</span><em>Light cards, page tops</em></div>
+    <div><i style="background:#EEF2FB"></i><b>Pale fill</b><span>#EEF2FB</span><em>Chips, hover</em></div>
+    <div><i style="background:#E3E9F6"></i><b>Hairline</b><span>#E3E9F6</span><em>Borders, dividers</em></div>
+    <div><i style="background:#fff"></i><b>White</b><span>#FFFFFF</span><em>Page and cards</em></div>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="type"><div class="container">
+  <small>02 · In use today</small><h2>Typo<span>graphy</span></h2>
+  <p class="dg-note">Two fonts: Plus Jakarta Sans for big headings, Outfit for everything else.</p>
+  <div class="ty">
+    <div><small><b>Page headline</b>Plus Jakarta Sans 800 · 34–60px</small><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(30px,4vw,54px);letter-spacing:-.045em;line-height:1.05;color:var(--navy)">Find solutions by the work <span class="grad">your lab does.</span></div></div>
+    <div><small><b>Section heading</b>Plus Jakarta Sans 800 · 28–40px · two-tone</small><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:36px;letter-spacing:-.035em;color:var(--navy)">Recommended <span style="color:var(--blue)">products</span></div></div>
+    <div><small><b>Card title</b>Outfit 600 · 17–20px</small><div style="font-size:20px;font-weight:600;color:var(--navy)">HPLC, UHPLC &amp; GC columns</div></div>
+    <div><small><b>Paragraph</b>Outfit 400 · 15–18px · line height 1.6</small><div style="font-size:17px;line-height:1.6;color:var(--slate);max-width:36em">Each application shows the full workflow, the products for every step, and the partner that supplies them — so you can plan a complete setup with one supplier.</div></div>
+    <div><small><b>Small label</b>Outfit 600 · 11–12px · capitals</small><div style="font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)">Partners in this workflow</div></div>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="buttons"><div class="container">
+  <small>03 · In use today</small><h2>Buttons <span>and chips</span></h2>
+  <p class="dg-note">One blue button per group; the second button is white. Buttons start with a verb.</p>
+  <div class="box row">
+    <a class="btn btn-primary btn-lg" href="#buttons">Send inquiry <svg><use href="#ic-arrow"/></svg></a>
+    <a class="btn btn-line btn-lg" href="#buttons">See the products</a>
+    <a class="btn btn-primary" href="#buttons">Request a quote <svg><use href="#ic-arrow"/></svg></a>
+    <a class="btn btn-line" href="#buttons">+ Quote</a>
+    <span class="sx-chips"><button type="button" class="on">All</button><button type="button">Biopharma</button><button type="button">Research</button></span>
+    <span class="pp-id" style="margin:0"><b>Authorized channel partner</b></span>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="cards"><div class="container">
+  <small>04 · In use today</small><h2>Cards</h2>
+  <p class="dg-note">Rounded, white or pale, with a thin border. They lift slightly when you point at them.</p>
+  <p class="dg-h3">Category card (icon) · product card · step card</p>
+  <div class="three">
+    <a href="products.html" class="ctile cti"><span class="cti-top"><span class="cti-ic"><svg viewBox="0 0 64 64"><rect class="f" x="10" y="25" width="44" height="14" rx="4"/><rect x="10" y="25" width="44" height="14" rx="4"/><path d="M10 32H3M54 32h7M20 25v14M44 25v14"/></svg></span><b>01</b></span><strong>HPLC, UHPLC &amp; GC columns</strong><span class="ct-txt">Ultisil®, Xtimate®, Topsil, Welchrom®, Boltimate®, Blossmate® chiral</span><span class="cti-foot"><em>14 products</em><i><svg><use href="#ic-arrow"/></svg></i></span></a>
+    <article class="pc"><a class="pc-link" href="products.html"><span class="pc-pic"><img src="images/catalog/unchained-labs-stunner.webp" alt=""></span><span class="pc-meta"><small>Unchained Labs</small><i>DLS + UV/Vis</i></span><strong>Stunner</strong><span class="pc-desc">Concentration and size of biologics in one plate-based run.</span></a><div class="pc-act"><a class="btn btn-primary" href="products.html">Details</a><button class="btn btn-line" type="button">+ Quote</button></div></article>
+    <div class="sv-life svp-life" style="padding:0;border:0;background:none;display:block"><ol style="grid-template-columns:1fr">
+      <li><a href="#cards"><b><svg viewBox="0 0 64 64"><rect class="f" x="9" y="11" width="46" height="40" rx="5"/><rect x="9" y="11" width="46" height="40" rx="5"/><path d="M9 29h17M26 11v10M26 37v14M40 29h15M40 11v8"/></svg></b><em>1</em><strong>Plan &amp; build</strong><span>Step card, normal</span></a></li>
+      <li><a href="#cards" class="on"><b><svg viewBox="0 0 64 64"><rect class="f" x="9" y="14" width="46" height="41" rx="6"/><rect x="9" y="14" width="46" height="41" rx="6"/><path d="M9 26h46M21 8v10M43 8v10"/></svg></b><em>2</em><strong>Maintain</strong><span>Step card, current page</span></a></li>
+    </ol></div>
+  </div>
+  <p class="dg-h3">Info card · tick list</p>
+  <div class="two">
+    <div class="sx-cards" style="grid-template-columns:1fr"><div class="sx-card"><small>Challenge 1</small><strong>Ghost peaks and baseline drift</strong><p>Gradient impurities from mobile phase interfere with low-level impurity peaks.</p></div></div>
+    <ul class="svp-list one"><li>Preventive maintenance programs</li><li>Priority technical support for breakdowns</li></ul>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="blocks"><div class="container">
+  <small>05 · In use today</small><h2>Page <span>blocks</span></h2>
+  <p class="dg-note">The larger pieces that pages are assembled from.</p>
+  <p class="dg-h3">Facts strip</p>
+  <div class="ap-facts three"><div><small>Since</small><p><b>2013</b> serving Indian labs</p></div><div><small>On the ground</small><p><b>5</b> states with our own team</p></div><div><small>Response</small><p><b>1 day</b> to reply to your enquiry</p></div></div>
+  <p class="dg-h3">Call-to-action card</p>
+  <div class="pp-cta"><div><h2>Talk to us about this service</h2><p>Tell us the instrument or the project. Our team replies within one working day.</p></div><div class="pp-cta-btns"><a href="about.html#contact" class="btn btn-primary btn-lg">Contact us <svg><use href="#ic-arrow"/></svg></a><a href="tel:+918866101022" class="btn btn-line btn-lg">Call +91 88661 01022</a></div></div>
+  <p class="dg-h3">Short quote form</p>
+  <form class="rfq" onsubmit="return false"><div><h2>Quote the whole workflow</h2><p>One enquiry, one consolidated quote across partners.</p></div><label>Work email<input type="email"></label><label>What you need<input type="text"></label><button class="btn btn-light" type="button">Request quote</button></form>
+  <p class="dg-h3">Figures band (home page)</p>
+  <div class="ab2-stats" style="margin-top:0"><div><strong><span>1500</span><i>+</i></strong><span>Happy customers</span></div><div><strong><span>15</span><i>+</i></strong><span>Product categories</span></div><div><strong><span>12</span><i>+</i></strong><span>Years in service</span></div><div><strong><span>8</span></strong><span>Global partners</span></div></div>
+</div></section>
+
+<section class="dg-sec" id="layouts"><div class="container">
+  <small>06 · In use today</small><h2>Page <span>layouts</span></h2>
+  <p class="dg-note">Simple sketches of how each kind of page is arranged, top to bottom. Dark blocks are the headline area.</p>
+  <div class="lay">
+    <figure><div><i class="d" style="height:54px"></i><i style="height:14px"></i><div style="grid-template-columns:repeat(3,1fr);display:grid;gap:6px"><i style="height:34px"></i><i style="height:34px"></i><i style="height:34px"></i></div><div style="grid-template-columns:repeat(3,1fr);display:grid;gap:6px"><i style="height:26px"></i><i style="height:26px"></i><i style="height:26px"></i></div><i class="p" style="height:30px"></i><i class="d" style="height:36px"></i></div><figcaption>Home<span>Products hero, clients, products, categories, about, partners, contact</span></figcaption></figure>
+    <figure><div><i class="d" style="height:54px"></i><i style="height:16px"></i><div style="grid-template-columns:repeat(4,1fr);display:grid;gap:6px"><i style="height:38px"></i><i style="height:38px"></i><i style="height:38px"></i><i style="height:38px"></i></div><div style="grid-template-columns:repeat(3,1fr);display:grid;gap:6px"><i style="height:24px"></i><i style="height:24px"></i><i style="height:24px"></i></div><i class="p" style="height:26px"></i></div><figcaption>Partner page<span>Photo top with logo, facts, product cards, support, contact card</span></figcaption></figure>
+    <figure><div><div style="grid-template-columns:1.2fr 1fr;display:grid;gap:6px"><i class="d" style="height:54px"></i><i class="p" style="height:54px"></i></div><i style="height:16px"></i><div style="grid-template-columns:repeat(3,1fr);display:grid;gap:6px"><i style="height:24px"></i><i style="height:24px"></i><i style="height:24px"></i></div><div style="grid-template-columns:repeat(4,1fr);display:grid;gap:6px"><i style="height:26px"></i><i style="height:26px"></i><i style="height:26px"></i><i style="height:26px"></i></div><div style="grid-template-columns:repeat(4,1fr);display:grid;gap:6px"><i style="height:36px"></i><i style="height:36px"></i><i style="height:36px"></i><i style="height:36px"></i></div><i class="p" style="height:22px"></i></div><figcaption>Application page<span>Text and photo, facts, challenges, steps, products, quote form</span></figcaption></figure>
+    <figure><div><i class="d" style="height:54px"></i><i style="height:16px"></i><div style="grid-template-columns:1.3fr 1fr;display:grid;gap:6px"><i style="height:60px"></i><i class="p" style="height:60px"></i></div><div style="grid-template-columns:repeat(3,1fr);display:grid;gap:6px"><i style="height:22px"></i><i class="d" style="height:22px"></i><i style="height:22px"></i></div><i class="p" style="height:26px"></i></div><figcaption>Service page<span>Photo top, facts, tick list with info card, six steps, contact card</span></figcaption></figure>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="opt-colour"><div class="container">
+  <small>07 · Options, not applied</small><h2>Other colour <span>palettes</span></h2>
+  <p class="dg-note">Each card shows the main colours, a heading and a button in that palette. The outlined one is what the site uses now. Tell me a code to apply it.</p>
+  <div class="pal">
+    <div class="cur"><div class="strip"><i style="background:#213A82"></i><i style="background:#14265C"></i><i style="background:#FFB04A"></i><i style="background:#F7F9FE"></i></div><div class="demo"><b style="color:#14265C">Heading <em style="font-style:normal;color:#2F54B8">accent</em></b><span style="background:#213A82">Contact us →</span></div><p><strong>P0 · Logo blue</strong> — current</p></div>
+    <div><div class="strip"><i style="background:#2F54B8"></i><i style="background:#1D3478"></i><i style="background:#5B80E0"></i><i style="background:#F2F6FE"></i></div><div class="demo"><b style="color:#1D3478">Heading <em style="font-style:normal;color:#5B80E0">accent</em></b><span style="background:#2F54B8">Contact us →</span></div><p><strong>P1 · Royal and sky</strong> — brighter, on-brand</p></div>
+    <div><div class="strip"><i style="background:#213A82"></i><i style="background:#14265C"></i><i style="background:#F28C28"></i><i style="background:#F8F9FC"></i></div><div class="demo"><b style="color:#14265C">Heading <em style="font-style:normal;color:#F28C28">accent</em></b><span style="background:#F28C28">Contact us →</span></div><p><strong>P2 · Blue and orange</strong> — orange buttons</p></div>
+    <div><div class="strip"><i style="background:#14265C"></i><i style="background:#0D1A45"></i><i style="background:#12A594"></i><i style="background:#F3F8F9"></i></div><div class="demo"><b style="color:#14265C">Heading <em style="font-style:normal;color:#12A594">accent</em></b><span style="background:#14265C">Contact us →</span></div><p><strong>P3 · Navy and teal</strong> — calm, scientific</p></div>
+    <div><div class="strip"><i style="background:#0F6E63"></i><i style="background:#0B4F47"></i><i style="background:#3BB6A5"></i><i style="background:#F1F8F6"></i></div><div class="demo"><b style="color:#0B4F47">Heading <em style="font-style:normal;color:#3BB6A5">accent</em></b><span style="background:#0F6E63">Contact us →</span></div><p><strong>P4 · Teal</strong> — away from the logo</p></div>
+    <div><div class="strip"><i style="background:#4B3FA8"></i><i style="background:#2E2670"></i><i style="background:#8A7FE0"></i><i style="background:#F6F5FD"></i></div><div class="demo"><b style="color:#2E2670">Heading <em style="font-style:normal;color:#8A7FE0">accent</em></b><span style="background:#4B3FA8">Contact us →</span></div><p><strong>P5 · Violet</strong> — away from the logo</p></div>
+    <div><div class="strip"><i style="background:#213A82"></i><i style="background:#14265C"></i><i style="background:#B98A4A"></i><i style="background:#F6F1E7"></i></div><div class="demo" style="background:#FBF8F2"><b style="color:#14265C">Heading <em style="font-style:normal;color:#B98A4A">accent</em></b><span style="background:#213A82">Contact us →</span></div><p><strong>P6 · Warm neutral</strong> — premium, sand</p></div>
+    <div><div class="strip"><i style="background:#111827"></i><i style="background:#000"></i><i style="background:#2F54B8"></i><i style="background:#F6F7F9"></i></div><div class="demo"><b style="color:#111827">Heading <em style="font-style:normal;color:#2F54B8">accent</em></b><span style="background:#111827">Contact us →</span></div><p><strong>P7 · Black and blue</strong> — high contrast</p></div>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="opt-fonts"><div class="container">
+  <small>08 · Options, not applied</small><h2>Other <span>fonts</span></h2>
+  <p class="dg-note">The same heading and sentence in six font pairings.</p>
+  <div class="fonts">
+    <div style="outline:2px solid var(--brand);outline-offset:-2px"><b style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800">Engineers who stay after installation.</b><p style="font-family:'Outfit',sans-serif">One team supports your chromatography and bioprocess instruments.</p><small>T0 · Plus Jakarta Sans + Outfit — current</small></div>
+    <div><b style="font-family:'Inter',sans-serif;font-weight:700">Engineers who stay after installation.</b><p style="font-family:'Inter',sans-serif">One team supports your chromatography and bioprocess instruments.</p><small>T1 · Inter — plain and simple</small></div>
+    <div><b style="font-family:'Instrument Serif',serif;font-weight:400;font-size:32px;letter-spacing:-.01em">Engineers who stay after installation.</b><p style="font-family:'Inter',sans-serif">One team supports your chromatography and bioprocess instruments.</p><small>T2 · Instrument Serif + Inter — elegant</small></div>
+    <div><b style="font-family:'Manrope',sans-serif;font-weight:800">Engineers who stay after installation.</b><p style="font-family:'Manrope',sans-serif;font-weight:500">One team supports your chromatography and bioprocess instruments.</p><small>T3 · Manrope — technical</small></div>
+    <div><b style="font-family:'Sora',sans-serif;font-weight:700">Engineers who stay after installation.</b><p style="font-family:'Sora',sans-serif">One team supports your chromatography and bioprocess instruments.</p><small>T4 · Sora — geometric</small></div>
+    <div><b style="font-family:'Poppins',sans-serif;font-weight:600">Engineers who stay after installation.</b><p style="font-family:'Poppins',sans-serif">One team supports your chromatography and bioprocess instruments.</p><small>T5 · Poppins — soft and familiar</small></div>
+  </div>
+</div></section>
+
+<section class="dg-sec" id="opt-band"><div class="container">
+  <small>09 · Options, not applied</small><h2>Figures band <span>colours</span></h2>
+  <p class="dg-note">J is what the home page uses now.</p>
+  <div class="bands">
+    <div><small>A · Light</small><div class="bd" style="background:#F4F7FE;border:1px solid #DCE5F7;color:#55607F"><span><b style="color:#213A82">1500+</b>Customers</span><span><b style="color:#213A82">15+</b>Categories</span><span><b style="color:#213A82">12+</b>Years</span><span><b style="color:#213A82">8</b>Partners</span></div></div>
+    <div><small>C · Solid logo blue</small><div class="bd" style="background:#213A82;color:#C9D6F7"><span><b style="color:#fff">1500+</b>Customers</span><span><b style="color:#fff">15+</b>Categories</span><span><b style="color:#fff">12+</b>Years</span><span><b style="color:#fff">8</b>Partners</span></div></div>
+    <div><small>D · Royal blue</small><div class="bd" style="background:#3A62D0;color:#E1E9FC"><span><b style="color:#fff">1500+</b>Customers</span><span><b style="color:#fff">15+</b>Categories</span><span><b style="color:#fff">12+</b>Years</span><span><b style="color:#fff">8</b>Partners</span></div></div>
+    <div><small>E · Sky blue</small><div class="bd" style="background:#DCE7FB;color:#3B4767"><span><b style="color:#14265C">1500+</b>Customers</span><span><b style="color:#14265C">15+</b>Categories</span><span><b style="color:#14265C">12+</b>Years</span><span><b style="color:#14265C">8</b>Partners</span></div></div>
+    <div><small>F · Teal</small><div class="bd" style="background:#0F6E63;color:#CDEDE7"><span><b style="color:#fff">1500+</b>Customers</span><span><b style="color:#fff">15+</b>Categories</span><span><b style="color:#fff">12+</b>Years</span><span><b style="color:#fff">8</b>Partners</span></div></div>
+    <div><small>H · Violet</small><div class="bd" style="background:#4B3FA8;color:#DAD6F7"><span><b style="color:#fff">1500+</b>Customers</span><span><b style="color:#fff">15+</b>Categories</span><span><b style="color:#fff">12+</b>Years</span><span><b style="color:#fff">8</b>Partners</span></div></div>
+    <div><small>I · Warm sand</small><div class="bd" style="background:#F6F1E7;color:#6B6351"><span><b style="color:#213A82">1500+</b>Customers</span><span><b style="color:#213A82">15+</b>Categories</span><span><b style="color:#213A82">12+</b>Years</span><span><b style="color:#213A82">8</b>Partners</span></div></div>
+    <div><small>J · Blue + orange (current)</small><div class="bd" style="background:#213A82;color:#C9D6F7;outline:2px solid #FFB04A;outline-offset:2px"><span><b style="color:#fff">1500<i style="font-style:normal;color:#FFB04A">+</i></b>Customers</span><span><b style="color:#fff">15<i style="font-style:normal;color:#FFB04A">+</i></b>Categories</span><span><b style="color:#fff">12<i style="font-style:normal;color:#FFB04A">+</i></b>Years</span><span><b style="color:#FFB04A">8</b>Partners</span></div></div>
+  </div>
+</div></section>
+</main>
+</body>
+</html>

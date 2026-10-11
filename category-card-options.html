@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Category card options</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="home-2.css">
+<style>
+body { background: #EEF2FA; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 30px 24px 60px; }
+.wrap > h1 { font-size: 30px; font-weight: 600; } .wrap > p { color: var(--slate); margin: 6px 0 22px; }
+.idea { position: relative; margin: 0 0 26px; border-radius: 26px; background: #fff; padding: 70px 34px 34px; box-shadow: 0 10px 30px rgba(13, 26, 69, .06); }
+.tag { position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 10px; padding: 10px 18px 10px 14px; border-radius: 26px 0 18px 0; background: #213A82; color: #fff; font-size: 13px; }
+.tag b { display: grid; place-items: center; min-width: 30px; height: 26px; border-radius: 8px; background: #fff; color: #213A82; font-weight: 700; }
+.g { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.g a { transition: transform .4s var(--ease), box-shadow .4s var(--ease), background .3s, color .3s, border-color .3s; }
+.g a:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(13, 26, 69, .14); }
+small.n { font-size: 11px; font-weight: 600; letter-spacing: .08em; }
+em { font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--blue); white-space: nowrap; }
+.logo { height: 17px; width: auto; }
+svg.ic { fill: none; stroke: #213A82; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* A – photo on top */
+.a a { display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; background: #fff; border: 1px solid #E3E9F6; }
+.a .pic { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 10; background: linear-gradient(160deg, #E6EDFB, #F6F8FE); }
+.a .pic img { position: absolute; inset: 10% 14%; width: 72%; height: 80%; object-fit: contain; mix-blend-mode: multiply; }
+.a .pic svg { width: 64px; height: 64px; padding: 16px; border-radius: 22px; background: #fff; box-sizing: content-box; box-shadow: 0 12px 26px rgba(33, 58, 130, .14); }
+.a .pic small { position: absolute; left: 14px; top: 12px; padding: 4px 10px; border-radius: 999px; background: #213A82; color: #fff; }
+.a .bd { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px; flex: 1; }
+.a strong { font-size: 18.5px; font-weight: 600; line-height: 1.22; } .a p { font-size: 13px; color: var(--slate); line-height: 1.5; flex: 1; }
+.a .ft { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid #EEF2FA; }
+
+/* B – horizontal, picture left */
+.b { grid-template-columns: repeat(2, 1fr); }
+.b a { display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: center; padding: 16px; border-radius: 22px; background: #F5F8FE; border: 1px solid #E6ECF8; }
+.b .pic { position: relative; aspect-ratio: 1; border-radius: 16px; background: #fff; display: grid; place-items: center; }
+.b .pic img { position: absolute; inset: 10%; width: 80%; height: 80%; object-fit: contain; mix-blend-mode: multiply; }
+.b .pic svg { width: 60px; height: 60px; }
+.b small.n { color: var(--blue); } .b strong { display: block; font-size: 21px; font-weight: 600; margin: 4px 0 6px; letter-spacing: -.01em; } .b p { font-size: 13.5px; color: var(--slate); line-height: 1.5; margin-bottom: 12px; }
+.b .ft { display: flex; justify-content: space-between; align-items: center; }
+
+/* C – dark tile, product breaks out */
+.c a { position: relative; min-height: 290px; padding: 22px; border-radius: 22px; color: #fff; overflow: hidden; background: radial-gradient(260px 240px at 86% 80%, rgba(120, 150, 240, .7), rgba(120, 150, 240, 0) 70%), linear-gradient(150deg, #0D1A45, #213A82); }
+.c small.n { font-size: 54px; font-weight: 700; letter-spacing: -.04em; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px rgba(255, 255, 255, .45); }
+.c strong { display: block; font-size: 20px; font-weight: 600; line-height: 1.2; margin: 10px 0 6px; max-width: 80%; } .c p { font-size: 12.5px; color: rgba(255, 255, 255, .78); max-width: 58%; line-height: 1.45; }
+.c img.p { position: absolute; right: -4%; bottom: -4%; width: 52%; height: 56%; object-fit: contain; filter: drop-shadow(0 18px 20px rgba(0, 0, 0, .45)); transition: transform .5s var(--ease); }
+.c a:hover img.p { transform: scale(1.08) translateY(-6px); }
+.c svg.ic { position: absolute; right: 22px; bottom: 22px; width: 76px; height: 76px; stroke: rgba(255, 255, 255, .85); }
+.c em { position: absolute; left: 22px; bottom: 20px; color: #C9D6FB; }
+
+/* D – colour-coded, icon first */
+.d a { position: relative; padding: 24px 22px 22px; border-radius: 22px; background: #fff; border: 1px solid #E3E9F6; border-top: 5px solid var(--k); }
+.d .i { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 18px; background: color-mix(in srgb, var(--k) 14%, #fff); margin-bottom: 18px; }
+.d .i svg { width: 34px; height: 34px; stroke: var(--k); }
+.d small.n { position: absolute; right: 20px; top: 20px; color: #9AA9CC; }
+.d strong { display: block; font-size: 19px; font-weight: 600; line-height: 1.22; } .d p { font-size: 13px; color: var(--slate); line-height: 1.5; margin: 8px 0 16px; }
+.d .ft { display: flex; justify-content: space-between; align-items: center; } .d em { color: var(--k); }
+.d a:hover { background: color-mix(in srgb, var(--k) 8%, #fff); }
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="col" viewBox="0 0 32 32"><rect x="12" y="7" width="8" height="18" rx="2"/><path d="M14 7V3.5h4V7M14 25v3.5h4V25M12 12h8M12 20h8"/></symbol>
+<symbol id="bio" viewBox="0 0 32 32"><path d="M9 9h14v11a7 7 0 0 1-14 0z"/><path d="M6.5 9h19M16 4v14M12 18h8"/></symbol>
+<symbol id="chr" viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="16" rx="2"/><path d="M8 18l4-6 4 4 4-7 4 9M12 27h8M16 22v5"/></symbol>
+<symbol id="std" viewBox="0 0 32 32"><path d="M9 4h10l5 5v19H9z"/><path d="M19 4v5h5M13 20l2.5 2.5 5-6M13 13h7"/></symbol>
+</defs></svg>
+<div class="wrap"><h1>Category cards: nine styles</h1><p>The same four categories shown in each style. Tell me the letter you want and I will use it for all twelve.</p>
+
+<div class="idea"><div class="tag"><b>A</b>Photo on top</div><div class="g a">
+<a href="#"><span class="pic"><small class="n">01</small><img src="images/catalog/welch-materials-xtimate-columns.webp" alt=""></span><span class="bd"><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil® · Xtimate® · Topsil</p><span class="ft"><img class="logo" src="images/partners/welch.png" alt=""><em>14 products →</em></span></span></a>
+<a href="#"><span class="pic"><small class="n">06</small><img src="images/catalog/inscinstech-autopure-protein-purification-system.webp" alt=""></span><span class="bd"><strong>Bioprocess systems</strong><p>Oligo synthesizers · FPLC · TFF</p><span class="ft"><img class="logo" src="images/partners/inscinstech.png" alt=""><em>8 products →</em></span></span></a>
+<a href="#"><span class="pic"><small class="n">07</small><img src="images/catalog/unchained-labs-stunner.webp" alt=""></span><span class="bd"><strong>Biologics characterization</strong><p>Stunner · Aunty · Lunatic</p><span class="ft"><img class="logo" src="images/partners/unchained-labs.png" alt=""><em>13 products →</em></span></span></a>
+<a href="#"><span class="pic"><small class="n">11</small><svg class="ic"><use href="#std"/></svg></span><span class="bd"><strong>Reference standards</strong><p>Impurity · isotope-labelled · custom</p><span class="ft"><b style="font-size:11px;color:#213A82">TLC Standards</b><em>4 products →</em></span></span></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>B</b>Wide card, picture on the left</div><div class="g b">
+<a href="#"><span class="pic"><img src="images/catalog/welch-materials-xtimate-columns.webp" alt=""></span><span><small class="n">01 · 14 PRODUCTS</small><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil®, Xtimate®, Topsil, Welchrom®, Boltimate®, Blossmate® chiral and GC columns.</p><span class="ft"><img class="logo" src="images/partners/welch.png" alt=""><em>View category →</em></span></span></a>
+<a href="#"><span class="pic"><img src="images/catalog/inscinstech-autopure-protein-purification-system.webp" alt=""></span><span><small class="n">06 · 8 PRODUCTS</small><strong>Bioprocess systems</strong><p>Oligo synthesizers, FPLC, process chromatography, TFF, bioreactors, LNP assembly.</p><span class="ft"><img class="logo" src="images/partners/inscinstech.png" alt=""><em>View category →</em></span></span></a>
+<a href="#"><span class="pic"><img src="images/catalog/unchained-labs-stunner.webp" alt=""></span><span><small class="n">07 · 13 PRODUCTS</small><strong>Biologics characterization</strong><p>Stunner, Aunty, Lunatic, Honeybun, Leprechaun, Simple Western, Ella, Maurice.</p><span class="ft"><img class="logo" src="images/partners/unchained-labs.png" alt=""><em>View category →</em></span></span></a>
+<a href="#"><span class="pic"><svg class="ic"><use href="#std"/></svg></span><span><small class="n">11 · 4 PRODUCTS</small><strong>Reference standards</strong><p>Impurity and stable isotope-labelled standards, catalogue standards, custom synthesis.</p><span class="ft"><b style="font-size:11px;color:#213A82">TLC Standards</b><em>View category →</em></span></span></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>C</b>Dark tile, product breaks out of the corner</div><div class="g c">
+<a href="#"><small class="n">01</small><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil® · Xtimate® · Topsil</p><svg class="ic"><use href="#col"/></svg><em>14 products →</em></a>
+<a href="#"><small class="n">06</small><strong>Bioprocess systems</strong><p>Oligo synthesizers · FPLC · TFF</p><img class="p" src="images/products/fplc.webp" alt=""><em>8 products →</em></a>
+<a href="#"><small class="n">07</small><strong>Biologics characterization</strong><p>Stunner · Aunty · Lunatic</p><img class="p" src="images/products/stunner.webp" alt=""><em>13 products →</em></a>
+<a href="#"><small class="n">11</small><strong>Reference standards</strong><p>Impurity · isotope-labelled · custom</p><svg class="ic"><use href="#std"/></svg><em>4 products →</em></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>D</b>Icon first, one colour per category</div><div class="g d">
+<a href="#" style="--k:#2F54B8"><span class="i"><svg class="ic"><use href="#col"/></svg></span><small class="n">01</small><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil® · Xtimate® · Topsil</p><span class="ft"><img class="logo" src="images/partners/welch.png" alt=""><em>14 products →</em></span></a>
+<a href="#" style="--k:#E0701B"><span class="i"><svg class="ic"><use href="#bio"/></svg></span><small class="n">06</small><strong>Bioprocess systems</strong><p>Oligo synthesizers · FPLC · TFF</p><span class="ft"><img class="logo" src="images/partners/inscinstech.png" alt=""><em>8 products →</em></span></a>
+<a href="#" style="--k:#2A9D55"><span class="i"><svg class="ic"><use href="#chr"/></svg></span><small class="n">07</small><strong>Biologics characterization</strong><p>Stunner · Aunty · Lunatic</p><span class="ft"><img class="logo" src="images/partners/unchained-labs.png" alt=""><em>13 products →</em></span></a>
+<a href="#" style="--k:#7A3FD0"><span class="i"><svg class="ic"><use href="#std"/></svg></span><small class="n">11</small><strong>Reference standards</strong><p>Impurity · isotope-labelled · custom</p><span class="ft"><b style="font-size:11px;color:#213A82">TLC Standards</b><em>4 products →</em></span></a>
+</div></div>
+<style>
+/* E – pop-out circle */
+.e { padding-top: 50px; }
+.e a { position: relative; padding: 118px 22px 22px; border-radius: 24px; background: #F5F8FE; border: 1px solid #E6ECF8; text-align: center; }
+.e i { position: absolute; left: 50%; top: -40px; width: 150px; height: 150px; border-radius: 50%; transform: translateX(-50%); background: #DCE6FA; }
+.e img.p { position: absolute; left: 50%; top: -52px; width: 160px; height: 164px; object-fit: contain; transform: translateX(-50%); mix-blend-mode: multiply; transition: transform .5s var(--ease); }
+.e svg.ic { position: absolute; left: 50%; top: 4px; width: 62px; height: 62px; transform: translateX(-50%); }
+.e small.n { color: var(--blue); } .e strong { display: block; font-size: 19px; font-weight: 600; line-height: 1.22; margin: 6px 0 6px; } .e p { font-size: 13px; color: var(--slate); margin-bottom: 14px; }
+.e span.pill { display: inline-block; padding: 7px 16px; border-radius: 999px; background: #213A82; color: #fff; font-size: 12.5px; font-weight: 500; }
+.e a:hover { background: #213A82; color: #fff; } .e a:hover p { color: rgba(255,255,255,.8); } .e a:hover small.n { color: #C9D6FB; } .e a:hover span.pill { background: #fff; color: #213A82; } .e a:hover i { background: #fff; } .e a:hover img.p { transform: translateX(-50%) translateY(-8px) scale(1.06); }
+
+/* F – full photo with text over it */
+.f a { position: relative; min-height: 300px; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; border-radius: 22px; overflow: hidden; color: #fff; }
+.f img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.f a::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,26,69,.05) 20%, rgba(13,26,69,.93) 100%); }
+.f a > * { position: relative; z-index: 1; } .f img.bg { z-index: 0; }
+.f small.n { position: absolute !important; left: 16px; top: 14px; padding: 4px 10px; border-radius: 999px; background: #fff; color: #213A82; }
+.f strong { font-size: 20px; font-weight: 600; line-height: 1.2; } .f p { font-size: 12.5px; color: rgba(255,255,255,.82); margin: 6px 0 10px; } .f em { color: #C9D6FB; }
+.f a:hover img.bg { transform: scale(1.08); }
+
+/* G – index card, text only */
+.g2 { grid-template-columns: repeat(3, 1fr); }
+.g2 a { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; padding: 22px 24px; border-radius: 20px; background: #fff; border: 1px solid #E3E9F6; align-items: start; }
+.g2 small.n { grid-row: span 3; font-size: 46px; font-weight: 700; letter-spacing: -.05em; line-height: .9; color: #213A82; }
+.g2 strong { font-size: 19px; font-weight: 600; line-height: 1.2; } .g2 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; } .g2 .chips span { padding: 4px 10px; border-radius: 999px; background: #EEF2FB; font-size: 11.5px; color: var(--navy); }
+.g2 .ft { display: flex; justify-content: space-between; align-items: center; }
+.g2 a:hover { border-color: #213A82; }
+
+/* H – blue top, white bottom */
+.h a { display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; background: #fff; border: 1px solid #E3E9F6; }
+.h .top { position: relative; height: 170px; background: radial-gradient(200px 160px at 50% 110%, rgba(143,169,242,.8), rgba(143,169,242,0) 70%), linear-gradient(150deg, #14265C, #2F54B8); display: grid; place-items: center; }
+.h .top img { height: 132px; width: 70%; object-fit: contain; filter: drop-shadow(0 14px 16px rgba(0,0,0,.4)); transition: transform .5s var(--ease); }
+.h .top svg { width: 70px; height: 70px; stroke: #fff; }
+.h .top small.n { position: absolute; left: 16px; top: 12px; color: #C9D6FB; } .h .top b { position: absolute; right: 14px; top: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.16); color: #fff; font-size: 11px; font-weight: 500; }
+.h .bd { padding: 18px 20px 20px; display: grid; gap: 6px; } .h strong { font-size: 18.5px; font-weight: 600; line-height: 1.22; } .h p { font-size: 13px; color: var(--slate); }
+.h .ft { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.h a:hover .top img { transform: scale(1.08) translateY(-4px); }
+
+/* I – small square tiles */
+.i2 { grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.i2 a { display: grid; gap: 10px; justify-items: center; text-align: center; padding: 16px 12px 16px; border-radius: 20px; background: #fff; border: 1px solid #E3E9F6; }
+.i2 .pic { position: relative; width: 100%; aspect-ratio: 1; border-radius: 14px; background: linear-gradient(160deg, #E6EDFB, #F6F8FE); display: grid; place-items: center; }
+.i2 .pic img { position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: contain; mix-blend-mode: multiply; } .i2 .pic svg { width: 48px; height: 48px; }
+.i2 strong { font-size: 14px; font-weight: 600; line-height: 1.25; } .i2 em { font-size: 11.5px; color: var(--muted); font-weight: 500; }
+.i2 a:hover { border-color: #213A82; }
+</style>
+
+<div class="idea"><div class="tag"><b>E</b>Product pops out of a circle</div><div class="g e">
+<a href="#"><i></i><img class="p" src="images/catalog/welch-materials-xtimate-columns.webp" alt=""><small class="n">01</small><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil® · Xtimate® · Topsil</p><span class="pill">14 products →</span></a>
+<a href="#"><i></i><img class="p" src="images/catalog/inscinstech-autopure-protein-purification-system.webp" alt=""><small class="n">06</small><strong>Bioprocess systems</strong><p>Oligo synthesizers · FPLC · TFF</p><span class="pill">8 products →</span></a>
+<a href="#"><i></i><img class="p" src="images/catalog/unchained-labs-stunner.webp" alt=""><small class="n">07</small><strong>Biologics characterization</strong><p>Stunner · Aunty · Lunatic</p><span class="pill">13 products →</span></a>
+<a href="#"><i></i><svg class="ic"><use href="#std"/></svg><small class="n">11</small><strong>Reference standards</strong><p>Impurity · isotope-labelled · custom</p><span class="pill">4 products →</span></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>F</b>Full photo, text on top</div><div class="g f">
+<a href="#"><img class="bg" src="images/workflow/separate.webp" alt=""><small class="n">01</small><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil® · Xtimate® · Topsil</p><em>14 products →</em></a>
+<a href="#"><img class="bg" src="images/workflow/purify.webp" alt=""><small class="n">06</small><strong>Bioprocess systems</strong><p>Oligo synthesizers · FPLC · TFF</p><em>8 products →</em></a>
+<a href="#"><img class="bg" src="images/workflow/analyse.webp" alt=""><small class="n">07</small><strong>Biologics characterization</strong><p>Stunner · Aunty · Lunatic</p><em>13 products →</em></a>
+<a href="#"><img class="bg" src="images/workflow/diagnose.webp" alt=""><small class="n">11</small><strong>Reference standards</strong><p>Impurity · isotope-labelled · custom</p><em>4 products →</em></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>G</b>Index card: big number and product chips</div><div class="g g2">
+<a href="#"><small class="n">01</small><strong>HPLC, UHPLC &amp; GC columns</strong><span class="chips"><span>Ultisil®</span><span>Xtimate®</span><span>Topsil</span><span>Boltimate®</span><span>+10</span></span><span class="ft"><img class="logo" src="images/partners/welch.png" alt=""><em>View →</em></span></a>
+<a href="#"><small class="n">06</small><strong>Bioprocess systems</strong><span class="chips"><span>Oligo synthesizers</span><span>FPLC</span><span>TFF</span><span>+5</span></span><span class="ft"><img class="logo" src="images/partners/inscinstech.png" alt=""><em>View →</em></span></a>
+<a href="#"><small class="n">07</small><strong>Biologics characterization</strong><span class="chips"><span>Stunner</span><span>Aunty</span><span>Lunatic</span><span>Honeybun</span><span>+9</span></span><span class="ft"><img class="logo" src="images/partners/unchained-labs.png" alt=""><em>View →</em></span></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>H</b>Blue top with the product, white bottom</div><div class="g h">
+<a href="#"><span class="top"><small class="n">01</small><b>14 products</b><svg class="ic"><use href="#col"/></svg></span><span class="bd"><strong>HPLC, UHPLC &amp; GC columns</strong><p>Ultisil® · Xtimate® · Topsil</p><span class="ft"><img class="logo" src="images/partners/welch.png" alt=""><em>View category →</em></span></span></a>
+<a href="#"><span class="top"><small class="n">06</small><b>8 products</b><img src="images/products/fplc.webp" alt=""></span><span class="bd"><strong>Bioprocess systems</strong><p>Oligo synthesizers · FPLC · TFF</p><span class="ft"><img class="logo" src="images/partners/inscinstech.png" alt=""><em>View category →</em></span></span></a>
+<a href="#"><span class="top"><small class="n">07</small><b>13 products</b><img src="images/products/stunner.webp" alt=""></span><span class="bd"><strong>Biologics characterization</strong><p>Stunner · Aunty · Lunatic</p><span class="ft"><img class="logo" src="images/partners/unchained-labs.png" alt=""><em>View category →</em></span></span></a>
+<a href="#"><span class="top"><small class="n">11</small><b>4 products</b><svg class="ic"><use href="#std"/></svg></span><span class="bd"><strong>Reference standards</strong><p>Impurity · isotope-labelled · custom</p><span class="ft"><b style="font-size:11px;color:#213A82">TLC Standards</b><em>View category →</em></span></span></a>
+</div></div>
+
+<div class="idea"><div class="tag"><b>I</b>Small square tiles, six in a row</div><div class="g i2">
+<a href="#"><span class="pic"><img src="images/catalog/welch-materials-xtimate-columns.webp" alt=""></span><strong>HPLC, UHPLC &amp; GC columns</strong><em>14 products</em></a>
+<a href="#"><span class="pic"><img src="images/catalog/welch-materials-sail1000-preparative-hplc-system.webp" alt=""></span><strong>Preparative, flash &amp; DAC</strong><em>11 products</em></a>
+<a href="#"><span class="pic"><img src="images/catalog/inscinstech-autopure-protein-purification-system.webp" alt=""></span><strong>Bioprocess systems</strong><em>8 products</em></a>
+<a href="#"><span class="pic"><img src="images/catalog/unchained-labs-stunner.webp" alt=""></span><strong>Biologics characterization</strong><em>13 products</em></a>
+<a href="#"><span class="pic"><img src="images/catalog/flowcam-flowcam-8000.webp" alt=""></span><strong>Particle imaging</strong><em>7 products</em></a>
+<a href="#"><span class="pic"><svg class="ic"><use href="#std"/></svg></span><strong>Reference standards</strong><em>4 products</em></a>
+</div></div>
+</div></body></html>

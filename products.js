@@ -24,6 +24,9 @@
   function paintCount() {
     var n = getList().length;
     document.querySelectorAll('[data-qcount]').forEach(function (e) { e.textContent = n; });
+    // header button: same as the home page; once products are in the quote list it shows the count and opens the list
+    document.querySelectorAll('.nav-qn').forEach(function (e) { e.dataset.n = n; });
+    document.querySelectorAll('[data-qbtn]').forEach(function (b) { b.href = n ? 'products.html#quote' : 'about.html#contact'; });
   }
   var toastTimer;
   function toast(msg) {
@@ -231,6 +234,54 @@
       if (location.hash === '#quote') $('quote').scrollIntoView();
     },
 
+    partner: function (name) {
+      common();
+      var all = DATA.products.filter(function (p) { return p.partner === name; });
+      var grid = $('grid'), bar = $('pChips'), more = $('pMore'), cats = [], cur = '', open = false, LIMIT = 8;
+      all.forEach(function (p) { if (cats.indexOf(p.cat) < 0) cats.push(p.cat); });
+      function run() {
+        var list = all.filter(function (p) { return !cur || p.cat === cur; });
+        var cut = !open && list.length > LIMIT;
+        fill(grid, cut ? list.slice(0, LIMIT) : list);
+        more.hidden = !cut; more.textContent = 'Show all ' + list.length + ' products';
+      }
+      if (cats.length > 1) {
+        [''].concat(cats).forEach(function (c, i) {
+          var b = el('button', i ? '' : 'on', c ? cat(c).name : 'All'); b.type = 'button';
+          b.addEventListener('click', function () { cur = c; open = false; [].forEach.call(bar.children, function (x) { x.classList.toggle('on', x === b); }); run(); });
+          bar.appendChild(b);
+        });
+      } else bar.hidden = true;
+      more.addEventListener('click', function () { open = true; run(); });
+      run();
+    },
+
+    // application pages: the recommended products as cards; each row is [title, role in the workflow, 'p:<product id>' or 'c:<category slug>']
+    app: function (rows) {
+      common();
+      var grid = $('grid');
+      rows.forEach(function (r) {
+        var key = r[2];
+        if (key.indexOf('p:') === 0) {
+          var p = byId(key.slice(2)); if (!p) return;
+          var c = {}; for (var k in p) c[k] = p[k];
+          c.name = r[0]; c.desc = r[1]; c.lead = r[1];
+          grid.appendChild(card(c));
+        } else {
+          var ct = cat(key.slice(2)); if (!ct) return;
+          var list = DATA.products.filter(function (x) { return x.cat === ct.slug; });
+          var first = list.filter(function (x) { return x.image; })[0] || list[0];
+          var a = el('article', 'pc'), link = el('a', 'pc-link'); link.href = 'cat-' + ct.slug + '.html';
+          link.appendChild(media(first, 'pc-pic'));
+          var meta = el('span', 'pc-meta'); meta.appendChild(el('small', '', first.partner)); meta.appendChild(el('i', '', list.length + ' products')); link.appendChild(meta);
+          link.appendChild(el('strong', '', r[0])); link.appendChild(el('span', 'pc-desc', r[1]));
+          a.appendChild(link);
+          var row = el('div', 'pc-act'), d = el('a', 'btn btn-primary', 'Browse category'); d.href = link.href; row.appendChild(d); a.appendChild(row);
+          grid.appendChild(a);
+        }
+      });
+    },
+
     category: function (slug) {
       common();
       var all = DATA.products.filter(function (p) { return p.cat === slug; });
@@ -255,7 +306,7 @@
       var c = cat(p.cat);
       document.title = p.name + ' | Agile SciTech';
       var crumb = $('crumb');
-      [['Home', 'home-2.html'], ['Products', 'products.html'], [c.name, 'cat-' + c.slug + '.html']].forEach(function (x) { var a = el('a', '', x[0]); a.href = x[1]; crumb.appendChild(a); crumb.appendChild(document.createTextNode(' / ')); });
+      [['Home', 'index.html'], ['Products', 'products.html'], [c.name, 'cat-' + c.slug + '.html']].forEach(function (x) { var a = el('a', '', x[0]); a.href = x[1]; crumb.appendChild(a); crumb.appendChild(document.createTextNode(' / ')); });
       crumb.appendChild(el('span', '', p.name));
       $('pdMedia').appendChild(media(p, 'pd-pic'));
       var pp = $('pdPartner'); pp.appendChild(el('b', '', p.partner)); pp.appendChild(el('span', '', 'Authorized distributor'));

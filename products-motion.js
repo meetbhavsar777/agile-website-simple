@@ -66,8 +66,7 @@ if (!reduce) {
   // ---------- Partners and Applications pages
   reveal('.sx-hero .container', ':scope > div > .crumb, :scope > div > .eyebrow, :scope > div > .sx-badges, :scope > div > .cat-sub, :scope > div > .btn-row', { y: 22 }, { gap: 0.07, delay: 0.25, amount: 0 });
   reveal('.sx-visual', ':scope > *', { y: 40, scale: 0.92 }, { gap: 0.14, delay: 0.2, amount: 0 });
-  reveal('.sx-glance', null, { x: 40, scale: 0.96 }, { delay: 0.25, amount: 0 });
-  reveal('.sx-head', null, { y: 20 });
+    reveal('.sx-head', null, { y: 20 });
   reveal('.sx-table', '.sx-tr', { x: -22 }, { gap: 0.04, amount: 0.05 });
   reveal('.sx-cards', '.sx-card', { y: 34, scale: 0.96 }, { gap: 0.08 });
   reveal('.sx-steps', 'li', { y: 44, scale: 0.94 }, { gap: 0.1 });
@@ -75,6 +74,32 @@ if (!reduce) {
   reveal('.sx-band', 'li', { y: 20 }, { gap: 0.1, delay: 0.25 });
   reveal('.sx-pairs', '.sx-pair', { y: 26 }, { gap: 0.07 });
   reveal('.sx-pgrid', '.sx-pc', { y: 56, scale: 0.94 }, { gap: 0.07, amount: 0.05 });
+  reveal('.sx-aside', ':scope > *', { y: 40, scale: 0.94 }, { gap: 0.16, delay: 0.2, amount: 0 });
+  reveal('.ax-hero .container', ':scope > div > .cat-sub, :scope > div > .btn-row', { y: 22 }, { gap: 0.08, delay: 0.3, amount: 0 });
+  reveal('.ax-collage', 'img', { y: 46, scale: 0.9 }, { gap: 0.14, delay: 0.2, amount: 0 });
+  reveal('.ap-hero .container', ':scope > div > .ap-back, :scope > div > .cat-sub, :scope > div > .btn-row', { y: 22 }, { gap: 0.08, delay: 0.25, amount: 0 });
+  reveal('.ap-photo', null, { y: 40, scale: 0.94 }, { delay: 0.2, amount: 0 });
+  reveal('.ap-facts', null, { y: 30 }, { delay: 0.45, amount: 0 });
+  reveal('.pp-cta', null, { y: 36, scale: 0.97 });
+  reveal('.pp-text', ':scope > .pp-id, :scope > .cat-sub, :scope > .btn-row', { y: 22 }, { gap: 0.08, delay: 0.25, amount: 0 });
+  reveal('.svp-list', 'li', { y: 26, scale: 0.97 }, { gap: 0.06 });
+  reveal('.svp-close', null, { y: 18 });
+  reveal('.svp-others', '.svp-other', { y: 30 }, { gap: 0.06 });
+  reveal('.svp-info', null, { x: 36, scale: 0.97 }, { delay: 0.15 });
+  reveal('.ab-two', ':scope > *', { y: 36 }, { gap: 0.12 });
+  reveal('.ab-group', 'article', { y: 40, scale: 0.97 }, { gap: 0.1 });
+  reveal('.ab-awards', 'li', { y: 36, scale: 0.95 }, { gap: 0.05, amount: 0.05 });
+  reveal('.ab-events', ':scope > *', { y: 32 }, { gap: 0.12 });
+  reveal('.sx-areas', '.sx-area', { y: 50, scale: 0.94 }, { gap: 0.06, amount: 0.05 });
+  all('.sv').forEach((sv) => reveal('#' + sv.id, '.sv-side, .sv-main > *', { y: 30 }, { gap: 0.05, amount: 0.15 }));
+  reveal('.sv-stats', 'li', { y: 26 }, { gap: 0.08, delay: 0.5, amount: 0 });
+  reveal('.svx', '.svx-tab', { x: -26 }, { gap: 0.06, amount: 0.1 });
+  reveal('.svx-body', null, { y: 40, scale: 0.97 }, { delay: 0.15, amount: 0.1 });
+  reveal('.svc', ':scope > *', { y: 36 }, { gap: 0.12 });
+  reveal('.svk-grid', '.svk', { y: 44, scale: 0.96 }, { gap: 0.08, amount: 0.05 });
+  reveal('.sv-life', null, { y: 40, scale: 0.97 });
+  reveal('.sv-life', 'li', { y: 24 }, { gap: 0.08, delay: 0.2 });
+  reveal('.sv-certs', 'li', { y: 22 }, { gap: 0.06 });
   reveal('.sx-matrix', 'tbody tr', { x: -18 }, { gap: 0.03, amount: 0.05 });
 
   // category tile pictures drift in a little later than their card

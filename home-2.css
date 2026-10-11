@@ -652,3 +652,17 @@ main { padding-top: 0; }
   .ab2-stats > div { padding: 22px 20px; }
   .ab2-photo figcaption span { display: none; }
 }
+
+/* ---------- menu dropdowns: wide two-column lists for Products and Applications ---------- */
+.dropdown.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 6px; min-width: 520px; }
+.dropdown.two a { white-space: normal; line-height: 1.35; }
+.dropdown .dd-all { grid-column: 1 / -1; margin-bottom: 6px; padding-bottom: 12px; border-bottom: 1px solid #EEF2FA; border-radius: 8px 8px 0 0; font-weight: 600; color: var(--brand); }
+.dropdown { border-radius: 16px; padding: 10px; box-shadow: 0 24px 54px rgba(13, 26, 69, .16); }
+.dropdown a { font-size: 13.5px; padding: 10px 12px; }
+.nav-item:nth-last-child(-n+2) .dropdown { left: auto; right: -18px; }
+
+/* figures band, option J: solid logo blue, orange plus signs (and the figure that has no plus) */
+.ab2-stats { background: #213A82; }
+.ab2-stats strong i { color: #FFB04A; }
+.ab2-stats > div:last-child strong { color: #FFB04A; }
+.ab2-stats > div > span { color: #C9D6F7; }
