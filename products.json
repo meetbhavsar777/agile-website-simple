@@ -1361,7 +1361,7 @@
    "filter": "Basal media",
    "name": "CELLiST BASAL3 / 3P",
    "desc": "Basal medium for CHO fed-batch antibody production.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-cellist-basal3-3p.webp"
   },
   {
    "id": "cellist-basal10-10p",
@@ -1371,7 +1371,7 @@
    "filter": "Basal media",
    "name": "CELLiST BASAL10 / 10P",
    "desc": "Basal medium for CHO fed-batch antibody production.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-cellist-basal10-10p.webp"
   },
   {
    "id": "cellist-basal-cho-mx",
@@ -1381,7 +1381,7 @@
    "filter": "Basal media",
    "name": "CELLiST BASAL CHO MX",
    "desc": "Basal medium for CHO growth and production.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-cellist-basal-cho-mx.webp"
   },
   {
    "id": "cellist-feed2",
@@ -1391,7 +1391,7 @@
    "filter": "Feed media",
    "name": "CELLiST FEED2",
    "desc": "Feed to extend culture and raise titre.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-cellist-feed2.webp"
   },
   {
    "id": "cellist-f7",
@@ -1401,7 +1401,7 @@
    "filter": "Feed media",
    "name": "CELLiST F7",
    "desc": "Single-agent feeding at neutral pH with stabilised cysteine.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-cellist-f7.webp"
   },
   {
    "id": "aminosupplement",
@@ -1411,7 +1411,7 @@
    "filter": "Supplements",
    "name": "AminoSupplement",
    "desc": "Amino-acid enrichment for existing media.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-aminosupplement.webp"
   },
   {
    "id": "glycyl-l-tyrosine-dihydrate",
@@ -1421,7 +1421,7 @@
    "filter": "Supplements",
    "name": "Glycyl-L-Tyrosine Dihydrate",
    "desc": "Soluble tyrosine source for concentrated feeds.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-glycyl-l-tyrosine-dihydrate.webp"
   },
   {
    "id": "aav-production-supplement-1",
@@ -1431,7 +1431,7 @@
    "filter": "Supplements",
    "name": "AAV Production Supplement 1",
    "desc": "Supports AAV viral vector production.",
-   "image": ""
+   "image": "images/catalog/ajinomoto-cellist-korea-aav-production-supplement-1.webp"
   }
  ],
  "logos": {
