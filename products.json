@@ -467,7 +467,7 @@
    "filter": "HILIC / IEX / SEC",
    "name": "Advanchrom® HIC-Butyl / Bio HIC-Butyl",
    "desc": "1000 Å butyl phases for antibodies, proteins and ADC DAR analysis; MS-compatible mobile phases.",
-   "image": ""
+   "image": "images/catalog/welch-materials-advanchrom-hic-butyl-bio-hic-butyl.webp"
   },
   {
    "id": "advanchrom-amine-scx",
@@ -477,7 +477,7 @@
    "filter": "HILIC / IEX / SEC",
    "name": "Advanchrom® Amine & SCX",
    "desc": "Amine column for sugars by ELSD (ChP 2025 Poria cocos method); SCX for proteins.",
-   "image": ""
+   "image": "images/catalog/welch-materials-advanchrom-amine-scx.webp"
   },
   {
    "id": "dlc-columns",
@@ -487,7 +487,7 @@
    "filter": "LC-MS",
    "name": "DLC columns",
    "desc": "Diamond-like carbon coated hardware that reduces metal interaction.",
-   "image": ""
+   "image": "images/catalog/welch-materials-dlc-columns.webp"
   },
   {
    "id": "hilic-iex-sec-hic-mixed-mode",
@@ -617,7 +617,7 @@
    "filter": "Production skids",
    "name": "WelPacker purification skids LC5–LC80",
    "desc": "5–80 L/min, 100 bar, explosion-proof Ex d II B T4, PLC + HMI control.",
-   "image": ""
+   "image": "images/catalog/welch-materials-welpacker-purification-skids-lc5-lc80.webp"
   },
   {
    "id": "preparative-hplc-system-lab",
@@ -657,7 +657,7 @@
    "filter": "Resins",
    "name": "WH series — highly rigid agarose",
    "desc": "Rigid agarose for higher flow and process-scale purification.",
-   "image": ""
+   "image": "images/catalog/welch-materials-wh-series-highly-rigid-agarose.webp"
   },
   {
    "id": "wd-series-dextran-media",
@@ -667,7 +667,7 @@
    "filter": "Resins",
    "name": "WD series — dextran media",
    "desc": "Dextran-based media, incl. G25 / G50 grades for desalting and gel filtration.",
-   "image": ""
+   "image": "images/catalog/welch-materials-wd-series-dextran-media.webp"
   },
   {
    "id": "wi-series-inorganic-media",
@@ -677,7 +677,7 @@
    "filter": "Resins",
    "name": "WI series — inorganic media",
    "desc": "Inorganic media such as calcium phosphate.",
-   "image": ""
+   "image": "images/catalog/welch-materials-wi-series-inorganic-media.webp"
   },
   {
    "id": "wk-col-prepacked-columns",
@@ -687,7 +687,7 @@
    "filter": "Columns",
    "name": "WK-Col prepacked columns",
    "desc": "Ready-to-use columns for screening and small-scale purification.",
-   "image": ""
+   "image": "images/catalog/welch-materials-wk-col-prepacked-columns.webp"
   },
   {
    "id": "affinity-media",
@@ -697,7 +697,7 @@
    "filter": "Affinity",
    "name": "Affinity media",
    "desc": "Protein A / G, Ni and IMAC, GST, heparin, blue, benzamidine and more.",
-   "image": ""
+   "image": "images/catalog/welch-materials-affinity-media.webp"
   },
   {
    "id": "ion-exchange-hic-media",
@@ -707,7 +707,7 @@
    "filter": "Ion exchange & HIC",
    "name": "Ion-exchange & HIC media",
    "desc": "SP, Q, CM and DEAE exchangers; butyl and phenyl HIC media.",
-   "image": ""
+   "image": "images/catalog/welch-materials-ion-exchange-hic-media.webp"
   },
   {
    "id": "empty-columns-accessories",
@@ -757,7 +757,7 @@
    "filter": "96-well plates",
    "name": "96-well SPE plates",
    "desc": "High-throughput SPE for bioanalysis and screening labs.",
-   "image": ""
+   "image": "images/catalog/welch-materials-96-well-spe-plates.webp"
   },
   {
    "id": "quechers-bags-clean-up-tubes",
@@ -797,7 +797,7 @@
    "filter": "Equipment",
    "name": "SPE manifold & oil-free vacuum pump",
    "desc": "Manifold and Rex-series oil-free pump to run SPE.",
-   "image": ""
+   "image": "images/catalog/welch-materials-spe-manifold-oil-free-vacuum-pump.webp"
   },
   {
    "id": "autosampler-vials",
@@ -827,7 +827,7 @@
    "filter": "Closures",
    "name": "Caps, septa, inserts & vial racks",
    "desc": "Open and closed-top caps, individual septa, inserts and racks.",
-   "image": ""
+   "image": "images/catalog/welch-materials-caps-septa-inserts-vial-racks.webp"
   },
   {
    "id": "syringe-filters",
@@ -847,7 +847,7 @@
    "filter": "Filtration",
    "name": "Membranes & glass solvent filters",
    "desc": "Membrane discs from 47 to 293 mm and solvent inlet filters.",
-   "image": ""
+   "image": "images/catalog/welch-materials-membranes-glass-solvent-filters.webp"
   },
   {
    "id": "bottles",
@@ -857,7 +857,7 @@
    "filter": "Bottles",
    "name": "Bottles",
    "desc": "Boston round, wide-mouth and laboratory reagent bottles.",
-   "image": ""
+   "image": "images/catalog/welch-materials-bottles.webp"
   },
   {
    "id": "crimpers-decrimpers-syringes",
@@ -867,7 +867,7 @@
    "filter": "Tools & equipment",
    "name": "Crimpers, decrimpers & syringes",
    "desc": "Hand tools and disposable HPLC lab syringes.",
-   "image": ""
+   "image": "images/catalog/welch-materials-crimpers-decrimpers-syringes.webp"
   },
   {
    "id": "welview-photochemical-reactor",
@@ -877,7 +877,7 @@
    "filter": "Tools & equipment",
    "name": "WelView photochemical reactor",
    "desc": "Photochemical reactor used with LC detection.",
-   "image": ""
+   "image": "images/catalog/welch-materials-welview-photochemical-reactor.webp"
   },
   {
    "id": "oligonucleotide-synthesizer-lab",
@@ -907,7 +907,7 @@
    "filter": "Consumables",
    "name": "Oligo columns & solid supports",
    "desc": "Synthesis columns and supports for oligo runs.",
-   "image": ""
+   "image": "images/catalog/inscinstech-oligo-columns-solid-supports.webp"
   },
   {
    "id": "protein-purification-systems-fplc",
