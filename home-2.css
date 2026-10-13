@@ -666,3 +666,8 @@ main { padding-top: 0; }
 .ab2-stats strong i { color: #FFB04A; }
 .ab2-stats > div:last-child strong { color: #FFB04A; }
 .ab2-stats > div > span { color: #C9D6F7; }
+
+/* long home headline: smaller so it sits in five tidy lines beside the products */
+.hero h1.h1-long { font-size: clamp(27px, 2.6vw, 37px); line-height: 1.1; letter-spacing: -.035em; max-width: 8.6em; }
+.hero h1.h1-long .grad { display: inline; padding-bottom: 0; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+@media (max-width: 980px) { .hero h1.h1-long { max-width: 14em; } }
