@@ -1091,7 +1091,7 @@
    "filter": "Charge & purity",
    "name": "Simple Western™",
    "desc": "Automated, quantitative protein identity and expression.",
-   "image": ""
+   "image": "images/catalog/bio-techne-simple-western.webp"
   },
   {
    "id": "simple-plex-ella",
@@ -1101,7 +1101,7 @@
    "filter": "Concentration",
    "name": "Simple Plex™ Ella",
    "desc": "Automated low-volume multiplex immunoassays.",
-   "image": ""
+   "image": "images/catalog/bio-techne-simple-plex-ella.webp"
   },
   {
    "id": "maurice-ice",
@@ -1111,7 +1111,7 @@
    "filter": "Charge & purity",
    "name": "Maurice (iCE)",
    "desc": "Charge-variant and purity analysis of biologics.",
-   "image": ""
+   "image": "images/catalog/bio-techne-maurice-ice.webp"
   },
   {
    "id": "hplc-capillary-electrophoresis",
@@ -1261,7 +1261,7 @@
    "filter": "Antibodies",
    "name": "Antibodies",
    "desc": "Primary and secondary antibodies for flow, WB, IHC and assays.",
-   "image": ""
+   "image": "images/catalog/bio-techne-antibodies.webp"
   },
   {
    "id": "recombinant-proteins",
@@ -1271,7 +1271,7 @@
    "filter": "Proteins",
    "name": "Recombinant proteins",
    "desc": "Cytokines, growth factors and enzymes for cell culture and bioassays.",
-   "image": ""
+   "image": "images/catalog/bio-techne-recombinant-proteins.webp"
   },
   {
    "id": "gmp-proteins",
@@ -1281,7 +1281,7 @@
    "filter": "GMP",
    "name": "GMP proteins",
    "desc": "GMP-grade proteins for cell and gene therapy manufacturing.",
-   "image": ""
+   "image": "images/catalog/bio-techne-gmp-proteins.webp"
   },
   {
    "id": "elisa-kits",
@@ -1291,7 +1291,7 @@
    "filter": "Immunoassays",
    "name": "ELISA kits",
    "desc": "Quantitative kits for cytokines and biomarkers.",
-   "image": ""
+   "image": "images/catalog/bio-techne-elisa-kits.webp"
   },
   {
    "id": "small-molecules-inhibitors",
@@ -1301,7 +1301,7 @@
    "filter": "Small molecules",
    "name": "Small molecules & inhibitors",
    "desc": "Bioactive compounds for pathway research and screening.",
-   "image": ""
+   "image": "images/catalog/bio-techne-small-molecules-inhibitors.webp"
   },
   {
    "id": "rnascope-ish-probes-assays",
@@ -1311,7 +1311,7 @@
    "filter": "Spatial biology",
    "name": "RNAscope™ ISH probes & assays",
    "desc": "In situ hybridization for RNA detection in tissue.",
-   "image": ""
+   "image": "images/catalog/bio-techne-rnascope-ish-probes-assays.webp"
   },
   {
    "id": "pharmaceutical-impurity-standards",

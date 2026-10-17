@@ -365,3 +365,28 @@ html.fx-open { overflow: hidden; }
 
 /* no "Quick view" label on product pictures (clicking the picture still opens it) */
 .pc-pic::before { display: none !important; content: none !important; }
+
+/* phones: product cards two per row, compact, so a list is quick to scan */
+@media (max-width: 700px) {
+  .pg, .pg.pg4, #resGrid.pg, #relGrid.pg { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px; }
+  .pc { padding: 8px 8px 10px; border-radius: 16px; }
+  .pc-pic { aspect-ratio: 1 / 1; margin-bottom: 10px; border-radius: 11px; }
+  .pc-meta { padding: 0 2px; } .pc-meta i { display: none; }
+  .pc-meta small { font-size: 9px; letter-spacing: .06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pc strong { font-size: 14px; margin: 5px 0 4px; padding: 0 2px; }
+  .pc-desc { font-size: 12px; line-height: 1.45; padding: 0 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .pc-act { grid-template-columns: 1fr; gap: 6px; margin-top: 10px; }
+  .pc-act .btn { height: 34px; font-size: 12.5px; }
+}
+
+/* phones: tighter category cards and clearer partner logos */
+@media (max-width: 700px) {
+  .ctile.cti { padding: 18px 18px 14px; }
+  .cti-top { margin-bottom: 12px; }
+  .cti-ic { width: 50px; height: 50px; border-radius: 15px; } .cti-ic svg { width: 30px; height: 30px; }
+  .cti-top b { font-size: 26px; }
+  .ctile.cti strong { font-size: 17.5px; }
+  .ctile.cti .ct-txt { margin-top: 6px; font-size: 13.5px; }
+  .ctile.cti .ct-txt + .cti-foot { margin-top: 14px; padding-top: 12px; }
+  .bp img { max-height: 30px; max-width: 150px; }
+}

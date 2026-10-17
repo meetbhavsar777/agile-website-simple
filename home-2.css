@@ -667,7 +667,13 @@ main { padding-top: 0; }
 .ab2-stats > div:last-child strong { color: #FFB04A; }
 .ab2-stats > div > span { color: #C9D6F7; }
 
-/* long home headline: smaller so it sits in five tidy lines beside the products */
-.hero h1.h1-long { font-size: clamp(27px, 2.6vw, 37px); line-height: 1.1; letter-spacing: -.035em; max-width: 8.6em; }
+/* home hero: copy column with calmer type and spacing (headline, line, button) */
+.hero .hero-inner { grid-template-columns: minmax(340px, 35%) 1fr; column-gap: 56px; }
+.hero .eyebrow { font-size: 11.5px; letter-spacing: .2em; }
+.hero h1.h1-long { font-size: clamp(32px, 3.1vw, 48px); line-height: 1.1; letter-spacing: -.03em; max-width: none; margin: 22px 0 22px; }
 .hero h1.h1-long .grad { display: inline; padding-bottom: 0; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-@media (max-width: 980px) { .hero h1.h1-long { max-width: 14em; } }
+.hero .hero-sub { font-size: clamp(16px, 1.15vw, 18px); line-height: 1.6; color: var(--slate); max-width: 26em; margin-bottom: 32px; }
+.hero .hero-copy .btn-lg { height: 54px; padding: 0 30px; }
+@media (max-width: 980px) { .hero .hero-inner { grid-template-columns: 1fr; } .hero h1.h1-long { max-width: 14em; } }
+@media (max-width: 600px) { .hero h1.h1-long { font-size: 31px; margin: 16px 0 16px; } .hero .hero-sub { font-size: 16px; margin-bottom: 24px; } }
+@media (max-width: 980px) { .hero h1.h1-long br.hbr { display: none; } }

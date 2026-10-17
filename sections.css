@@ -691,3 +691,13 @@ a.sx-tr:hover { background: #F5F8FE; } a.sx-tr:hover strong { color: var(--brand
 .pp-rlogo::before { content: ''; position: absolute; inset: -70px -90px; z-index: -1; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .86), rgba(255, 255, 255, .5) 55%, rgba(255, 255, 255, 0)); }
 .pp-rlogo img { width: 100%; max-height: 170px; object-fit: contain; }
 @media (max-width: 1100px) { .pp-rlogo { position: relative; right: auto; top: auto; transform: none; width: min(260px, 60%); margin: 0 0 22px; place-items: center start; justify-items: start; } .pp-rlogo::before { display: none; } .pp-rlogo img { max-height: 90px; object-position: left center; } }
+
+/* phones: application areas two per row, workflow cards with a shorter picture */
+@media (max-width: 700px) {
+  .sx-areas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .sx-area { aspect-ratio: 1 / 1.12; border-radius: 18px; }
+  .sx-area span { left: 12px; right: 12px; bottom: 12px; }
+  .sx-area strong { font-size: 14.5px; } .sx-area em { display: none; }
+  .sx-area i { width: 30px; height: 30px; right: 10px; top: 10px; } .sx-area i svg { width: 12px; height: 12px; }
+  .ct-grid .ctile:not(.cti) .ct-pic { aspect-ratio: 16 / 10; }
+}
