@@ -90,6 +90,7 @@ if (!reduce) {
   reveal('.ab-group', 'article', { y: 40, scale: 0.97 }, { gap: 0.1 });
   reveal('.ab-awards', 'li', { y: 36, scale: 0.95 }, { gap: 0.05, amount: 0.05 });
   reveal('.ab-events', ':scope > *', { y: 32 }, { gap: 0.12 });
+  reveal('.ab-certs', 'li', { y: 30, scale: 0.95 }, { gap: 0.06 });
   reveal('.sx-areas', '.sx-area', { y: 50, scale: 0.94 }, { gap: 0.06, amount: 0.05 });
   all('.sv').forEach((sv) => reveal('#' + sv.id, '.sv-side, .sv-main > *', { y: 30 }, { gap: 0.05, amount: 0.15 }));
   reveal('.sv-stats', 'li', { y: 26 }, { gap: 0.08, delay: 0.5, amount: 0 });

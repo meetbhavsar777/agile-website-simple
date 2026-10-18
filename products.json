@@ -597,7 +597,7 @@
    "filter": "Lab systems",
    "name": "Sail 1000 collectors & accessories",
    "desc": "8-channel and 120-position fraction collectors, autosampler, column rack, online filters.",
-   "image": ""
+   "image": "images/catalog/welch-materials-sail-1000-collectors-accessories.webp"
   },
   {
    "id": "welpacker-dac-columns",
@@ -717,7 +717,7 @@
    "filter": "Columns",
    "name": "Empty columns & accessories",
    "desc": "Empty columns for custom packing and supporting accessories.",
-   "image": ""
+   "image": "images/catalog/welch-materials-empty-columns-accessories.webp"
   },
   {
    "id": "welchrom-brp-spe-cartridges",
@@ -747,7 +747,7 @@
    "filter": "Cartridges",
    "name": "Silica, inorganic & mixed-mode SPE",
    "desc": "80+ phases incl. C18, Florisil, PSA, alumina and ion exchange; 1–60 mL barrels.",
-   "image": ""
+   "image": "images/catalog/welch-materials-silica-inorganic-mixed-mode-spe.webp"
   },
   {
    "id": "96-well-spe-plates",
@@ -777,7 +777,7 @@
    "filter": "Cartridges",
    "name": "Immunoaffinity cartridges",
    "desc": "Selective clean-up, incl. mycotoxin-specific phases.",
-   "image": ""
+   "image": "images/catalog/welch-materials-immunoaffinity-cartridges.webp"
   },
   {
    "id": "ic-cartridges",
@@ -787,7 +787,7 @@
    "filter": "Cartridges",
    "name": "IC cartridges",
    "desc": "Ag, Ba, H, Na and RP cartridges for IC sample pretreatment.",
-   "image": ""
+   "image": "images/catalog/welch-materials-ic-cartridges.webp"
   },
   {
    "id": "spe-manifold-oil-free-vacuum-pump",
