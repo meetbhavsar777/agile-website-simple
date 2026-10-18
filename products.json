@@ -1321,7 +1321,7 @@
    "filter": "Impurities",
    "name": "Pharmaceutical impurity standards",
    "desc": "Characterised API impurities for profiling, validation and filings.",
-   "image": ""
+   "image": "images/catalog/tlc-pharmaceutical-standards-pharmaceutical-impurity-standards.webp"
   },
   {
    "id": "stable-isotope-labelled-standards",
@@ -1331,7 +1331,7 @@
    "filter": "Stable isotope-labelled",
    "name": "Stable isotope-labelled standards",
    "desc": "¹³C and deuterated analogues for LC-MS internal standards.",
-   "image": ""
+   "image": "images/catalog/tlc-pharmaceutical-standards-stable-isotope-labelled-standards.webp"
   },
   {
    "id": "catalogue-reference-standards",
@@ -1341,7 +1341,7 @@
    "filter": "Catalogue",
    "name": "Catalogue reference standards",
    "desc": "24,000+ compounds in stock, each with a full CoA.",
-   "image": ""
+   "image": "images/catalog/tlc-pharmaceutical-standards-catalogue-reference-standards.webp"
   },
   {
    "id": "custom-synthesis",
@@ -1351,7 +1351,7 @@
    "filter": "Custom synthesis",
    "name": "Custom synthesis",
    "desc": "Synthesis, characterisation and certification of new compounds.",
-   "image": ""
+   "image": "images/catalog/tlc-pharmaceutical-standards-custom-synthesis.webp"
   },
   {
    "id": "cellist-basal3-3p",
