@@ -16,6 +16,7 @@ const P = {
 };
 const ALL = Object.keys(P);
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (location.hash === '#still') document.documentElement.classList.add('still');
 const title = (k, one) => one ? P[k].t.replace('|', ' ') : P[k].t.replace('|', '<br>');
 
 // warm every picture so a swap never shows a half-loaded image

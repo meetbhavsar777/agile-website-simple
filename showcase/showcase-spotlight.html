@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showcase, then spotlight | Agile SciTech showcase ideas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sc.css">
+<style>
+.duo-wrap { position: relative; width: 100%; max-width: 820px; margin-left: auto; }
+.duo { position: relative; aspect-ratio: 62 / 46; }
+.duo .scene { position: absolute; inset: 0; max-width: none; aspect-ratio: auto; }
+.duo .scene .stage { transition: opacity .55s, transform .8s var(--ease); }
+.duo .scene .stage:nth-of-type(2) { transition-delay: .06s; } .duo .scene .stage:nth-of-type(3) { transition-delay: .12s; }
+.duo .scene .stage:nth-of-type(4) { transition-delay: .18s; } .duo .scene .stage:nth-of-type(5) { transition-delay: .24s; }
+.duo.is-big .scene .stage { opacity: 0; transform: translateY(8%) scale(.82); pointer-events: none; transition-delay: 0s; }
+.s-big { left: 2%; width: 60%; bottom: 0; --bw: 96%; --bh: 82cqw; --ph: 22cqw; z-index: 8; opacity: 0; transform: translateY(6%) scale(.9); pointer-events: none;
+  transition: opacity .6s .3s, transform .9s .3s var(--ease); }
+.s-big .pic { margin-bottom: -9cqw; }
+.duo.is-big .s-big { opacity: 1; transform: none; pointer-events: auto; }
+.big-info { position: absolute; right: 0; top: 30%; width: 34%; z-index: 9; transition: opacity .35s, transform .45s var(--ease); }
+.big-info.out, .big-info.is-scene { opacity: 0; transform: translateY(10px); pointer-events: none; }
+.bi-k { margin: 0 0 10px; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.big-info h2 { margin: 0 0 8px; font-size: clamp(24px, 2.4vw, 34px); font-weight: 800; line-height: 1.12; letter-spacing: -.03em; }
+.bi-b { margin: 0 0 22px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.steps { display: flex; gap: 6px; margin: 18px auto 0; width: min(100%, 420px); }
+.steps button { flex: 1; height: 4px; padding: 0; border: 0; border-radius: 4px; background: #CFDAE8; cursor: pointer; overflow: hidden; position: relative; }
+.steps button i { position: absolute; inset: 0; background: var(--blue); transform: scaleX(0); transform-origin: left; }
+.steps button.on i { animation: fill var(--t) linear forwards; }
+.steps button.done i { transform: scaleX(1); }
+@media (max-width: 900px) {
+  .duo-wrap { margin: 4px auto 0; max-width: 560px; }
+  .s-big { left: 12%; width: 76%; --bh: 78cqw; }
+  .big-info { position: relative; right: auto; top: auto; width: auto; text-align: center; margin-top: 14px; min-height: 150px; }
+  .big-info.is-scene { opacity: 1; transform: none; pointer-events: auto; }
+  .big-info.out { opacity: 0; }
+  .big-info h2 { font-size: 24px; }
+  .bi-k { margin-bottom: 6px; } .bi-b { margin-bottom: 16px; }
+  .steps { margin-top: 10px; }
+}
+@media (max-width: 560px) {
+  .hero-duo .hero-in { padding-top: 22px; gap: 4px; }
+  .hero-duo .copy h1 { font-size: 30px; margin: 14px 0 12px; }
+  .hero-duo .copy p { font-size: 15px; margin-bottom: 18px; }
+  .hero-duo .copy .btn { display: none; }
+  .big-info { min-height: 140px; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ar" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="grid" viewBox="0 0 16 16"><path d="M2.5 2.5h4.5v4.5H2.5zM9 2.5h4.5v4.5H9zM2.5 9h4.5v4.5H2.5zM9 9h4.5v4.5H9z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+<header class="bar"><div class="wrap"><a class="bar-logo" href="index.html"><img src="../images/brand/logo.png" alt="Agile SciTech" width="537" height="280"></a><nav class="bar-nav"><a class="pill all" href="index.html"><svg><use href="#grid"/></svg><span>All ideas</span></a><a class="pill round" href="conveyor.html" aria-label="Previous idea"><svg style="transform:rotate(180deg)"><use href="#ar"/></svg></a><span class="count">7 / 7</span><a class="pill round" href="switch.html" aria-label="Next idea"><svg><use href="#ar"/></svg></a></nav></div></header>
+<main class="hero hero-duo"><div class="wrap hero-in">
+    <div class="copy">
+      <p class="eyebrow">Global technologies. Local expertise.</p>
+      <h1>Separation,<br class="hbr"> bioprocess &amp;<br class="hbr"> biologics tools —<br class="hbr"> sourced globally,<br class="hbr"> <span class="grad">supported locally.</span></h1>
+      <p>Instruments, columns and reagents from eight global brands, supported across India.</p>
+      <a href="../products.html" class="btn">Explore Technologies <svg><use href="#ar"/></svg></a>
+    </div>
+    <div class="duo-wrap">
+      <div class="duo" id="duo">
+        <div class="scene" id="scene"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span></div>
+      </div>
+      <div class="big-info" id="bi"><p class="bi-k" id="bk"></p><h2 id="bt"></h2><p class="bi-b" id="bb"></p><a class="btn" id="bh" href="#"><span id="bl">View product</span> <svg><use href="#ar"/></svg></a></div>
+      <div class="steps" id="steps"></div>
+    </div>
+  </div></main>
+<section class="note"><div class="wrap"><span class="num">7</span><div><h2>Showcase, then spotlight</h2><p>The five-product showcase first; then it steps aside and one big product takes the stage, a new one every 4 seconds, before the next showcase comes back. Made to look good on phones too.</p></div></div></section>
+<script src="sc.js"></script>
+<script>
+const FLOW = [
+  { scene: 'Our instruments',    set: ['lc', 'dac', 'dpcr', 'flowcam', 'stunner'] },
+  { big: 'dac' }, { big: 'dpcr' }, { big: 'fplc' },
+  { scene: 'From the catalogue', set: ['cols', 'hplc', 'media', 'tlc', 'cons'] },
+  { big: 'cols' }, { big: 'hplc' }, { big: 'media' },
+];
+const SL = ['s-left', 's-centre', 's-right', 's-fr', 's-fl'], duo = document.getElementById('duo'), scene = document.getElementById('scene'), bi = document.getElementById('bi'), steps = document.getElementById('steps');
+const stages = SL.map((c, i) => scene.appendChild(stage(c, FLOW[0].set[i])));
+const big = duo.appendChild(stage('s-big', FLOW[1].big, false));
+const ms = (f) => f.scene ? 5000 : 4000;
+FLOW.forEach((f, i) => { const b = document.createElement('button'); b.type = 'button'; b.style.setProperty('--t', ms(f) + 'ms'); b.setAttribute('aria-label', f.scene || title(f.big, true)); b.innerHTML = '<i></i>'; b.onclick = () => go(i); steps.appendChild(b); });
+let cur = -1, timer;
+function text(f) {
+  bi.classList.add('out');
+  setTimeout(() => {
+    const k = f.big;
+    document.getElementById('bk').textContent = f.scene ? 'Showcase' : 'Featured product';
+    document.getElementById('bt').innerHTML = f.scene ? f.scene : title(k);
+    document.getElementById('bb').textContent = f.scene ? f.set.length + ' products · tap any to explore' : P[k].b;
+    document.getElementById('bh').href = f.scene ? '../products.html' : P[k].href;
+    document.getElementById('bl').textContent = f.scene ? 'Explore all' : 'View product';
+    bi.classList.toggle('is-scene', !!f.scene); bi.classList.remove('out');
+  }, 350);
+}
+function go(i) {
+  const was = FLOW[cur], f = FLOW[i]; cur = i;
+  [...steps.children].forEach((b, j) => { b.className = ''; void b.offsetWidth; b.className = j === i ? 'on' : j < i ? 'done' : ''; });
+  if (f.scene) {
+    // the five come back; refill them while they are still hidden
+    if (duo.classList.contains('is-big')) stages.forEach((s, j) => fill(s, f.set[j]));
+    else stages.forEach((s, j) => { if (s.dataset.k !== f.set[j]) swap(s, f.set[j], j * 110); });
+    duo.classList.remove('is-big');
+  } else if (was && was.big) swap(big, f.big);
+  else { fill(big, f.big); duo.classList.add('is-big'); }
+  text(f);
+  clearTimeout(timer); timer = setTimeout(next, ms(f));
+}
+function next() { if (document.hidden) { timer = setTimeout(next, 1000); return; } go((cur + 1) % FLOW.length); }
+go(0);
+</script>
+</body>
+</html>
