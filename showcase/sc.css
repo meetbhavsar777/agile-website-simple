@@ -27,21 +27,21 @@ h1, h2 { font-family: 'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif; text
 .pill.round { width: 36px; padding: 0; justify-content: center; }
 .pill svg { width: 14px; height: 14px; }
 
-/* dark top bar (night page) */
-.bar.dark { background: rgba(7, 13, 36, .94); border-bottom-color: rgba(255, 255, 255, .08); }
-.bar.dark .pill { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); color: #fff; }
-.bar.dark .pill:hover { border-color: rgba(255, 255, 255, .4); color: #fff; }
-.bar.dark .count { color: #8E9BBE; }
-
 /* second buttons */
 .ctas { display: flex; flex-wrap: wrap; gap: 10px; }
 .btn-w { background: #fff; color: #0B1635; box-shadow: 0 10px 28px rgba(0, 0, 0, .28); }
 .btn-w:hover { background: #E9EFFF; }
-.btn-ghost, .btn-line { display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 20px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: background .2s, border-color .2s, color .2s; }
-.btn-ghost { border: 1px solid rgba(255, 255, 255, .28); color: #fff; }
+.btn-ghost { display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 20px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, .28); color: #fff; font-size: 13px; font-weight: 500; transition: background .2s, border-color .2s; }
 .btn-ghost:hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .5); }
-.btn-line { border: 1px solid #C9D5E6; color: var(--navy); background: rgba(255, 255, 255, .6); }
-.btn-line:hover { border-color: var(--blue); color: var(--blue); }
+/* pill button and underlined link (ideas 9 and 10) */
+.pair { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 28px; }
+.pill-btn { display: inline-flex; align-items: center; gap: 12px; height: 50px; padding: 0 24px 0 28px; border-radius: 999px; background: #0B1635; color: #fff;
+  font-family: 'Inter Tight', 'Outfit', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: -.01em; box-shadow: 0 10px 24px rgba(11, 22, 53, .18); transition: background .25s; }
+.pill-btn:hover { background: #213A82; }
+.pill-btn svg { width: 15px; height: 15px; transition: transform .25s; }
+.pill-btn:hover svg { transform: translateX(3px); }
+.u-link { padding-bottom: 2px; border-bottom: 1px solid currentColor; font-family: 'Inter Tight', 'Outfit', sans-serif; font-size: 15px; font-weight: 500; color: #0B1635; transition: color .2s; }
+.u-link:hover { color: #2F54B8; }
 
 /* hero frame */
 .hero {

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editorial | Agile SciTech showcase ideas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sc.css">
+<style>
+.hero-ed { background: #F7F7F3; color: #0E1530; }
+.hero-ed .hero-in { display: block; min-height: 0; padding-top: 26px; padding-bottom: 40px; }
+.ed { font-family: 'Inter Tight', 'Outfit', sans-serif; }
+
+/* masthead */
+.ed-mast { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 12px; border-bottom: 1px solid #0E1530; font-size: 11.5px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.ed-brand { font-weight: 600; }
+.ed-mid { color: #5D6272; }
+.ed-figs { font-variant-numeric: tabular-nums; }
+
+/* headline: the type is the design */
+.ed-h { margin: 30px 0 32px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 5.9vw, 86px); line-height: .98; letter-spacing: -.02em; color: #0E1530; text-wrap: balance; }
+.ed-h em { font-style: italic; color: #213A82; }
+
+/* three columns divided by hairlines */
+.ed-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr); border-top: 1px solid #D6D6CE; }
+.ed-grid > * { padding: 22px 30px 0; }
+.ed-grid > :first-child { padding-left: 0; }
+.ed-grid > :last-child { padding-right: 0; }
+.ed-fig { margin: 0; border-left: 1px solid #D6D6CE; border-right: 1px solid #D6D6CE; }
+.ed-k { margin: 0 0 14px; font-size: 11px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: #8A8A80; }
+.ed-lede { margin: 0 0 28px; font-size: 19px; line-height: 1.5; letter-spacing: -.012em; color: #2A3247; }
+
+/* the figure */
+.ed-plate { position: relative; aspect-ratio: 16 / 10.5; border-radius: 3px; overflow: hidden; background: radial-gradient(85% 85% at 50% 62%, #FFFFFF 0%, #EDEFF3 100%); }
+.ed-plate img { position: absolute; left: 9%; right: 9%; top: 9%; bottom: 9%; width: 82%; height: 82%; object-fit: contain; opacity: 0; transform: scale(.97);
+  filter: drop-shadow(0 16px 20px rgba(14, 21, 48, .14)); transition: opacity .8s ease, transform 1.1s var(--ease); }
+.ed-plate img.on { opacity: 1; transform: none; }
+.ed-fig figcaption { display: flex; align-items: baseline; gap: 12px; margin-top: 14px; font-size: 14px; color: #2A3247; transition: opacity .3s; }
+.ed-fig figcaption.out { opacity: 0; }
+.ed-fn { flex: none; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 19px; color: #0E1530; }
+.ed-fig .u-link { margin-left: auto; font-size: 13px; }
+
+/* contents */
+.ed-toc ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid #E0E0D8; }
+.ed-toc button { position: relative; display: grid; grid-template-columns: 30px 1fr 14px; align-items: center; width: 100%; padding: 9px 0; border: 0; border-bottom: 1px solid #E0E0D8;
+  background: none; font: inherit; font-size: 15px; letter-spacing: -.01em; color: #6A7080; text-align: left; cursor: pointer; transition: color .2s; }
+.ed-toc .n { font-size: 11.5px; color: #A0A096; font-variant-numeric: tabular-nums; }
+.ed-toc svg { width: 13px; height: 13px; opacity: 0; transform: translateX(-4px); transition: opacity .25s, transform .25s; }
+.ed-toc button:hover, .ed-toc li.on button { color: #0E1530; }
+.ed-toc li.on button { font-weight: 500; }
+.ed-toc li.on svg, .ed-toc button:hover svg { opacity: 1; transform: none; }
+.ed-toc button i { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: #0E1530; transform: scaleX(0); transform-origin: left; }
+.ed-toc li.on button i { animation: fill 5s linear forwards; }
+
+@media (max-width: 1000px) {
+  .ed-h .hbr { display: none; }
+  .ed-mid { display: none; }
+  .ed-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+  .ed-toc { grid-column: 1 / -1; padding: 26px 0 0 !important; }
+  .ed-fig { border-right: 0; padding-right: 0; }
+}
+@media (max-width: 680px) {
+  .hero-ed .hero-in { padding-top: 18px; }
+  .ed-mast { font-size: 10px; letter-spacing: .12em; }
+  .ed-h { font-size: 44px; line-height: 1; margin: 22px 0 24px; }
+  .ed-grid { grid-template-columns: minmax(0, 1fr); }
+  .ed-grid > * { padding: 22px 0 0 !important; }
+  .ed-fig { border: 0; border-top: 1px solid #D6D6CE; margin-top: 26px; }
+  .ed-lede { font-size: 17.5px; }
+}
+@media (max-width: 400px) { .ed-figs { display: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ar" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="grid" viewBox="0 0 16 16"><path d="M2.5 2.5h4.5v4.5H2.5zM9 2.5h4.5v4.5H9zM2.5 9h4.5v4.5H2.5zM9 9h4.5v4.5H9z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+<header class="bar"><div class="wrap"><a class="bar-logo" href="index.html"><img src="../images/brand/logo.png" alt="Agile SciTech" width="537" height="280"></a><nav class="bar-nav"><a class="pill all" href="index.html"><svg><use href="#grid"/></svg><span>All ideas</span></a><a class="pill round" href="feature.html" aria-label="Previous idea"><svg style="transform:rotate(180deg)"><use href="#ar"/></svg></a><span class="count">10 / 10</span><a class="pill round" href="switch.html" aria-label="Next idea"><svg><use href="#ar"/></svg></a></nav></div></header>
+<main class="hero hero-ed"><div class="wrap hero-in">
+    
+    <div class="ed">
+      <div class="ed-mast"><span class="ed-brand">Agile SciTech</span><span class="ed-mid">Global technologies. Local expertise.</span><span class="ed-figs">1500+ customers · 12+ years · 8 partners</span></div>
+      <h1 class="ed-h">Separation, bioprocess &amp; biologics tools&nbsp;—<br class="hbr"> <em>sourced globally,</em> supported locally.</h1>
+      <div class="ed-grid">
+        <div class="ed-intro"><p class="ed-k">Introduction</p><p class="ed-lede">Instruments, columns and reagents from eight global brands — selected, installed and supported across India.</p><div class="pair"><a href="../products.html" class="pill-btn">Explore technologies <svg><use href="#ar"/></svg></a><a href="../about.html#contact" class="u-link">Request a quote</a></div></div>
+        <figure class="ed-fig"><div class="ed-plate" id="plate"></div><figcaption><span class="ed-fn" id="efn"></span><span class="ed-ft" id="eft"></span><a class="u-link" id="efh" href="#">View</a></figcaption></figure>
+        <div class="ed-toc"><p class="ed-k">Contents</p><ol id="toc"></ol></div>
+      </div>
+    </div>
+  </div></main>
+<section class="note"><div class="wrap"><span class="num">10</span><div><h2>Editorial</h2><p>Set like a scientific journal: a masthead with our figures, a large serif headline, and three columns: an introduction, a captioned figure (Fig. 01, Fig. 02 …) and a contents list of the document’s product families, in order.</p></div></div></section>
+<script src="sc.js"></script>
+<script>
+// the document's product families, in its order
+const TOC = [['cols', 'HPLC Columns'], ['cons', 'Chromatography Consumables'], ['hplc', 'HPLC / UHPLC Systems'], ['bio', 'Bio Research Products'],
+             ['dac', 'Production EX-HPLC & DAC'], ['tlc', 'Impurities, CRMs & Nitrosamines'], ['prep', 'Preparative & Flash Columns'],
+             ['media', 'Cell Culture Media & Feeds'], ['dpcr', 'Digital PCR & Bio Instruments']];
+const $ = (id) => document.getElementById(id), plate = $('plate'), toc = $('toc'), cap = document.querySelector('.ed-fig figcaption');
+TOC.forEach(([k, name], i) => {
+  plate.insertAdjacentHTML('beforeend', '<img src="' + P[k].src + '" alt="' + title(k, true) + ' — ' + P[k].b + '"' + (i ? ' fetchpriority="low"' : '') + '>');
+  const li = document.createElement('li');
+  li.innerHTML = '<button type="button"><span class="n">' + String(i + 1).padStart(2, '0') + '</span><span>' + name + '</span><svg><use href="#ar"/></svg><i></i></button>';
+  li.firstChild.onclick = () => show(i); toc.appendChild(li);
+});
+let cur = -1, timer;
+function show(i) {
+  const first = cur < 0; cur = i;
+  [...plate.children].forEach((im, j) => im.classList.toggle('on', j === i));
+  [...toc.children].forEach((li, j) => { li.className = ''; void li.offsetWidth; li.className = j === i ? 'on' : ''; });
+  cap.classList.add('out');
+  setTimeout(() => {
+    const k = TOC[i][0];
+    $('efn').textContent = 'Fig. ' + String(i + 1).padStart(2, '0');
+    $('eft').textContent = title(k, true) + ' — ' + P[k].b; $('efh').href = P[k].href;
+    cap.classList.remove('out');
+  }, first ? 0 : 300);
+  clearTimeout(timer); timer = setTimeout(next, 5000);
+}
+function next() { if (document.hidden) { timer = setTimeout(next, 1000); return; } show((cur + 1) % TOC.length); }
+show(0);
+</script>
+</body>
+</html>
