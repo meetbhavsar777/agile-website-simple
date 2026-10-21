@@ -677,3 +677,7 @@ main { padding-top: 0; }
 @media (max-width: 980px) { .hero .hero-inner { grid-template-columns: 1fr; } .hero h1.h1-long { max-width: 14em; } }
 @media (max-width: 600px) { .hero h1.h1-long { font-size: 31px; margin: 16px 0 16px; } .hero .hero-sub { font-size: 16px; margin-bottom: 24px; } }
 @media (max-width: 980px) { .hero h1.h1-long br.hbr { display: none; } }
+
+/* hero: the wide EX-HPLC & DAC system fills its plinth */
+.stage-fplc { --img: 100%; }
+.stage-dpcr { left: 67%; top: 13%; width: 25%; --img: 74%; }
