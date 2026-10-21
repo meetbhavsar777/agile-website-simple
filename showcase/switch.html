@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whole showcase switches | Agile SciTech showcase ideas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sc.css">
+<style>
+.cap { margin: 10px 0 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ar" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="grid" viewBox="0 0 16 16"><path d="M2.5 2.5h4.5v4.5H2.5zM9 2.5h4.5v4.5H9zM2.5 9h4.5v4.5H2.5zM9 9h4.5v4.5H9z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+<header class="bar"><div class="wrap"><a class="bar-logo" href="index.html"><img src="../images/brand/logo.png" alt="Agile SciTech" width="537" height="280"></a><nav class="bar-nav"><a class="pill all" href="index.html"><svg><use href="#grid"/></svg><span>All ideas</span></a><a class="pill round" href="conveyor.html" aria-label="Previous idea"><svg style="transform:rotate(180deg)"><use href="#ar"/></svg></a><span class="count">1 / 6</span><a class="pill round" href="one-by-one.html" aria-label="Next idea"><svg><use href="#ar"/></svg></a></nav></div></header>
+<main class="hero "><div class="wrap hero-in">
+    <div class="copy">
+      <p class="eyebrow">Global technologies. Local expertise.</p>
+      <h1>Separation, bioprocess &amp; biologics tools — sourced globally, <span class="grad">supported locally.</span></h1>
+      <p>Instruments, columns and reagents from eight global brands, supported across India.</p>
+      <a href="../products.html" class="btn">Explore Technologies <svg><use href="#ar"/></svg></a>
+      <div class="dots" id="dots" style="--t:5s"></div><p class="cap" id="cap"></p>
+    </div>
+    <div class="scene" id="scene"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span></div>
+  </div></main>
+<section class="note"><div class="wrap"><span class="num">1</span><div><h2>Whole showcase switches</h2><p>Every 5 seconds all five products change together: first the home instruments (RainSure dPCR stays), then the products from your document.</p></div></div></section>
+<script src="sc.js"></script>
+<script>
+const SCENES = [
+  { name: 'Instruments',                 set: ['lc', 'dac', 'dpcr', 'flowcam', 'stunner'] },
+  { name: 'Chromatography & standards',  set: ['cols', 'hplc', 'media', 'tlc', 'cons'] },
+  { name: 'Purification & research',     set: ['prep', 'dac', 'fplc', 'bio', 'cols'] },
+];
+const SL = ['s-left', 's-centre', 's-right', 's-fr', 's-fl'], scene = document.getElementById('scene');
+const stages = SL.map((c, i) => scene.appendChild(stage(c, SCENES[0].set[i])));
+const dots = document.getElementById('dots'), cap = document.getElementById('cap');
+let cur = 0;
+SCENES.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', s.name); b.innerHTML = '<i></i>'; b.onclick = () => { go(i); t.reset(); }; dots.appendChild(b); });
+function mark() { [...dots.children].forEach((b, i) => { b.className = i === cur ? 'on' : i < cur ? 'done' : ''; void b.offsetWidth; }); cap.textContent = SCENES[cur].name; }
+function go(n) {
+  if (n === cur) return; cur = n; mark();
+  // centre first, then the rest in a quick wave
+  [1, 0, 2, 4, 3].forEach((s, j) => { if (stages[s].dataset.k !== SCENES[n].set[s]) swap(stages[s], SCENES[n].set[s], j * 110); });
+}
+mark();
+const t = every(5000, () => go((cur + 1) % SCENES.length));
+</script>
+</body>
+</html>

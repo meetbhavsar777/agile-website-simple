@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>By category | Agile SciTech showcase ideas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sc.css">
+<style>
+.h1-sm { font-size: clamp(30px, 3.4vw, 44px) !important; margin: 18px 0 20px !important; }
+.cats { display: grid; gap: 2px; }
+.cats button { position: relative; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; width: 100%; padding: 11px 4px 11px 16px; border: 0; background: none;
+  font: inherit; font-size: 15px; color: var(--slate); text-align: left; cursor: pointer; border-left: 2px solid #D5DFEC; transition: color .25s, background .25s; }
+.cats button small { font-size: 9.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); opacity: 0; transition: opacity .25s; }
+.cats button i { position: absolute; left: -2px; top: 0; bottom: 0; width: 2px; background: var(--blue); transform: scaleY(0); transform-origin: top; }
+.cats button.on { color: var(--navy); font-weight: 500; background: linear-gradient(90deg, rgba(47, 84, 184, .07), rgba(47, 84, 184, 0)); }
+.cats button.on small { opacity: 1; color: var(--blue); }
+.cats button.on i { animation: fillY 4s linear forwards; }
+.cats button:hover { color: var(--navy); }
+@keyframes fillY { to { transform: scaleY(1); } }
+.cat-stage { position: relative; height: clamp(360px, 44vw, 600px); }
+.cat-stage .ring.r1 { width: 70%; aspect-ratio: 1; left: 14%; top: -8%; }
+.cat-stage .ring.r2 { width: 34%; aspect-ratio: 1; right: 0; top: 30%; }
+.s-cat { left: 20%; right: 20%; bottom: 4%; --bw: 96%; --bh: 100cqw; --ph: 34cqw; }
+.s-cat .lab b { font-size: clamp(14px, 3.4cqw, 19px); } .s-cat .lab i { font-size: 10px; display: block; } .s-cat .lab { top: 13cqw; }
+@media (max-width: 900px) {
+  .cats { display: flex; overflow-x: auto; gap: 8px; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+  .cats button { flex: none; width: auto; border: 1px solid var(--line); border-radius: 99px; padding: 9px 16px; font-size: 13.5px; background: #fff; }
+  .cats button small, .cats button i { display: none; }
+  .cats button.on { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .cat-stage { height: 92vw; max-height: 520px; }
+  .s-cat { left: 8%; right: 8%; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ar" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="grid" viewBox="0 0 16 16"><path d="M2.5 2.5h4.5v4.5H2.5zM9 2.5h4.5v4.5H9zM2.5 9h4.5v4.5H2.5zM9 9h4.5v4.5H9z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+<header class="bar"><div class="wrap"><a class="bar-logo" href="index.html"><img src="../images/brand/logo.png" alt="Agile SciTech" width="537" height="280"></a><nav class="bar-nav"><a class="pill all" href="index.html"><svg><use href="#grid"/></svg><span>All ideas</span></a><a class="pill round" href="turntable.html" aria-label="Previous idea"><svg style="transform:rotate(180deg)"><use href="#ar"/></svg></a><span class="count">5 / 6</span><a class="pill round" href="conveyor.html" aria-label="Next idea"><svg><use href="#ar"/></svg></a></nav></div></header>
+<main class="hero "><div class="wrap hero-in">
+    <div class="copy">
+      <p class="eyebrow">Global technologies. Local expertise.</p>
+      <h1 class="h1-sm">What are you <span class="grad">working on?</span></h1>
+      <div class="cats" id="cats"></div>
+    </div>
+    <div class="cat-stage" id="cs"><span class="ring r1"></span><span class="ring r2"></span></div>
+  </div></main>
+<section class="note"><div class="wrap"><span class="num">5</span><div><h2>By category</h2><p>A list of categories on the left; the matching product appears on the right. Moves on every 4 seconds or on click.</p></div></div></section>
+<script src="sc.js"></script>
+<script>
+const CATS = [
+  ['HPLC columns', 'cols'], ['HPLC / UHPLC systems', 'hplc'], ['Preparative & flash columns', 'prep'],
+  ['Production EX-HPLC & DAC', 'dac'], ['Protein purification', 'fplc'], ['Digital PCR', 'dpcr'],
+  ['Particle imaging', 'flowcam'], ['Bio research', 'bio'], ['Reference standards', 'tlc'], ['Cell culture media', 'media'],
+];
+const list = document.getElementById('cats'), host = document.getElementById('cs');
+const st = host.appendChild(stage('s-cat', CATS[0][1]));
+let cur = 0;
+CATS.forEach(([name, k], i) => { const b = document.createElement('button'); b.type = 'button'; b.innerHTML = '<span>' + name + '</span><small>' + P[k].b + '</small><i></i>'; b.onclick = () => { go(i); t.reset(); }; list.appendChild(b); });
+function mark() { [...list.children].forEach((b, i) => { b.classList.remove('on'); void b.offsetWidth; b.classList.toggle('on', i === cur); }); list.children[cur].scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }
+function go(i) { if (i === cur) return; cur = i; mark(); swap(st, CATS[i][1]); }
+mark();
+const t = every(4000, () => go((cur + 1) % CATS.length));
+</script>
+</body>
+</html>

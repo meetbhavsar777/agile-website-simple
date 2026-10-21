@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotlight | Agile SciTech showcase ideas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sc.css">
+<style>
+.spot { position: relative; display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 8px 24px; }
+.spot .ring.r1 { width: 74%; aspect-ratio: 1; left: 0; top: -14%; }
+.spot .ring.r2 { width: 36%; aspect-ratio: 1; right: -6%; top: 4%; }
+.spot-stage { position: relative; height: clamp(320px, 46vw, 560px); }
+.s-spot { left: 6%; right: 6%; bottom: 0; --bw: 92%; --bh: 92cqw; --ph: 26cqw; }
+.s-spot .pic { margin-bottom: -10cqw; }
+.spot-info { position: relative; z-index: 4; transition: opacity .35s, transform .45s var(--ease); }
+.spot-info.out { opacity: 0; transform: translateY(10px); }
+.spot-n { margin: 0 0 10px; font-size: 12px; font-weight: 600; letter-spacing: .14em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.spot-info h2 { margin: 0 0 8px; font-size: clamp(24px, 2.6vw, 34px); font-weight: 600; line-height: 1.12; letter-spacing: -.01em; }
+.spot-b { margin: 0 0 22px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.thumbs { grid-column: 1 / -1; display: flex; gap: 10px; overflow-x: auto; padding: 18px 2px 6px; scrollbar-width: none; }
+.thumbs::-webkit-scrollbar { display: none; }
+.thumbs button { flex: none; width: 66px; height: 66px; padding: 8px; border-radius: 14px; border: 1px solid var(--line); background: #fff; cursor: pointer; transition: border-color .25s, box-shadow .25s, transform .25s; }
+.thumbs button img { width: 100%; height: 100%; object-fit: contain; }
+.thumbs button.on { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47, 84, 184, .14); transform: translateY(-3px); }
+.hero-spot .hero-in { grid-template-columns: minmax(260px, 28%) 1fr; }
+@media (max-width: 900px) { .spot { grid-template-columns: 1fr; } .spot-info { text-align: center; } .spot-stage { height: 78vw; max-height: 480px; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ar" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="grid" viewBox="0 0 16 16"><path d="M2.5 2.5h4.5v4.5H2.5zM9 2.5h4.5v4.5H9zM2.5 9h4.5v4.5H2.5zM9 9h4.5v4.5H9z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+<header class="bar"><div class="wrap"><a class="bar-logo" href="index.html"><img src="../images/brand/logo.png" alt="Agile SciTech" width="537" height="280"></a><nav class="bar-nav"><a class="pill all" href="index.html"><svg><use href="#grid"/></svg><span>All ideas</span></a><a class="pill round" href="one-by-one.html" aria-label="Previous idea"><svg style="transform:rotate(180deg)"><use href="#ar"/></svg></a><span class="count">3 / 6</span><a class="pill round" href="turntable.html" aria-label="Next idea"><svg><use href="#ar"/></svg></a></nav></div></header>
+<main class="hero hero-spot"><div class="wrap hero-in">
+    <div class="copy">
+      <p class="eyebrow">Global technologies. Local expertise.</p>
+      <h1>Separation, bioprocess &amp; biologics tools — sourced globally, <span class="grad">supported locally.</span></h1>
+      <p>Instruments, columns and reagents from eight global brands, supported across India.</p>
+      <a href="../products.html" class="btn">Explore Technologies <svg><use href="#ar"/></svg></a>
+    </div>
+    <div class="spot">
+      <span class="ring r1"></span><span class="ring r2"></span>
+      <div class="spot-stage" id="spot"></div>
+      <div class="spot-info"><p class="spot-n" id="sn"></p><h2 id="st"></h2><p class="spot-b" id="sb"></p><a class="btn" id="sh" href="#">View product <svg><use href="#ar"/></svg></a></div>
+      <div class="thumbs" id="th"></div>
+    </div>
+  </div></main>
+<section class="note"><div class="wrap"><span class="num">3</span><div><h2>Spotlight</h2><p>One big product on a large plinth with its name and a button. A new product comes every 4 seconds; the thumbnails let visitors jump.</p></div></div></section>
+<script src="sc.js"></script>
+<script>
+const order = ['dac', 'dpcr', 'cols', 'hplc', 'fplc', 'tlc', 'prep', 'media', 'lc', 'bio', 'flowcam', 'cons', 'stunner'];
+const host = document.getElementById('spot'), th = document.getElementById('th');
+const st = host.appendChild(stage('s-spot', order[0], false));
+let cur = 0;
+order.forEach((k, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', title(k, true)); b.innerHTML = '<img src="' + P[k].src + '" alt="">'; b.onclick = () => { show(i); t.reset(); }; th.appendChild(b); });
+function info() {
+  const k = order[cur], box = document.querySelector('.spot-info');
+  box.classList.add('out');
+  setTimeout(() => {
+    document.getElementById('sn').textContent = String(cur + 1).padStart(2, '0') + ' / ' + order.length;
+    document.getElementById('st').innerHTML = title(k); document.getElementById('sb').textContent = P[k].b;
+    document.getElementById('sh').href = P[k].href; box.classList.remove('out');
+  }, 380);
+  [...th.children].forEach((b, i) => b.classList.toggle('on', i === cur));
+  th.children[cur].scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+}
+function show(i) { if (i === cur) return; cur = i; swap(st, order[i]); info(); }
+info();
+const t = every(4000, () => show((cur + 1) % order.length));
+</script>
+</body>
+</html>
