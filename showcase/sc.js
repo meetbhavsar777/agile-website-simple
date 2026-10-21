@@ -13,15 +13,24 @@ const P = {
   tlc:     { src: 'img/reference-standards.webp',    t: 'Impurities, CRMs|& Nitrosamines',         b: 'TLC Pharma Standards',  href: '../partner-tlc-pharmaceutical-standards.html' },
   prep:    { src: 'img/prep-column.webp',            t: 'Preparative &|Flash Columns',             b: 'Welch Materials',       href: '../cat-preparative-flash-dac.html' },
   media:   { src: 'img/cell-media.webp',             t: 'Cell Culture|Media & Feeds',              b: 'Ajinomoto CELLiST',     href: '../partner-ajinomoto-cellist-korea.html' },
+  lunatic: { src: '../images/products/lunatic.webp', t: 'Microvolume|UV/Vis Quantification',      b: 'Unchained Labs',        href: '../partner-unchained-labs.html' },
+  tff:     { src: '../images/products/tff.webp',     t: 'Tangential Flow|Filtration',              b: 'Inscinstech',           href: '../partner-inscinstech.html' },
+  oligo:   { src: '../images/products/oligo.webp',   t: 'Oligonucleotide|Synthesizers',            b: 'Inscinstech',           href: '../cat-bioprocess-systems.html' },
+  qpcr:    { src: '../images/products/qpcr.webp',    t: 'Real-Time|qPCR Systems',                  b: 'RainSure',              href: '../partner-rainsure.html' },
+  welprep: { src: '../images/products/welprep.webp', t: 'Preparative|HPLC Systems',                b: 'Welch Materials',       href: '../cat-preparative-flash-dac.html' },
 };
 const ALL = Object.keys(P);
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (location.hash === '#still') document.documentElement.classList.add('still');
 const title = (k, one) => one ? P[k].t.replace('|', ' ') : P[k].t.replace('|', '<br>');
 
-// warm every picture so a swap never shows a half-loaded image
+// warm pictures so a swap never shows a half-loaded image: on demand, and the rest once the page has loaded
 const ready = {};
-ALL.forEach((k) => { const i = new Image(); i.src = P[k].src; ready[k] = i.decode ? i.decode().catch(() => {}) : Promise.resolve(); });
+function load(k) {
+  if (!ready[k]) { const i = new Image(); i.src = P[k].src; ready[k] = i.decode ? i.decode().catch(() => {}) : Promise.resolve(); }
+  return ready[k];
+}
+addEventListener('load', () => setTimeout(() => ALL.forEach(load), 400));
 
 /* a product on a plinth: <div class="stage slot"> picture, plinth, label */
 function stage(slot, k, withLabel = true) {
@@ -44,7 +53,7 @@ function swap(s, k, delay = 0) {
   return new Promise((done) => setTimeout(async () => {
     img.classList.add('out'); if (lab) lab.classList.add('out');
     // never wait more than 1.5 s for a picture to decode
-    await Promise.all([Promise.race([ready[k], new Promise((r) => setTimeout(r, 1500))]), new Promise((r) => setTimeout(r, REDUCED ? 250 : 480))]);
+    await Promise.all([Promise.race([load(k), new Promise((r) => setTimeout(r, 1500))]), new Promise((r) => setTimeout(r, REDUCED ? 250 : 480))]);
     img.classList.remove('out'); img.classList.add('pre');
     fill(s, k);
     void img.offsetWidth;

@@ -27,6 +27,22 @@ h1, h2 { font-family: 'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif; text
 .pill.round { width: 36px; padding: 0; justify-content: center; }
 .pill svg { width: 14px; height: 14px; }
 
+/* dark top bar (night page) */
+.bar.dark { background: rgba(7, 13, 36, .94); border-bottom-color: rgba(255, 255, 255, .08); }
+.bar.dark .pill { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); color: #fff; }
+.bar.dark .pill:hover { border-color: rgba(255, 255, 255, .4); color: #fff; }
+.bar.dark .count { color: #8E9BBE; }
+
+/* second buttons */
+.ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn-w { background: #fff; color: #0B1635; box-shadow: 0 10px 28px rgba(0, 0, 0, .28); }
+.btn-w:hover { background: #E9EFFF; }
+.btn-ghost, .btn-line { display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 20px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: background .2s, border-color .2s, color .2s; }
+.btn-ghost { border: 1px solid rgba(255, 255, 255, .28); color: #fff; }
+.btn-ghost:hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .5); }
+.btn-line { border: 1px solid #C9D5E6; color: var(--navy); background: rgba(255, 255, 255, .6); }
+.btn-line:hover { border-color: var(--blue); color: var(--blue); }
+
 /* hero frame */
 .hero {
   position: relative; overflow: hidden;
@@ -121,6 +137,7 @@ a:hover > .arrow, .arrow:hover { background: var(--blue); border-color: var(--bl
 @media (max-width: 560px) {
   .copy h1 { font-size: 31px; line-height: 1.12; letter-spacing: -.03em; margin: 16px 0 16px; }
   .eyebrow { white-space: normal; letter-spacing: .16em; }
+  .eyebrow::after { display: none; }
   .copy p { font-size: 15.5px; }
   .bar-logo img { height: 32px; }
   .lab i { display: none; }
@@ -131,4 +148,4 @@ a:hover > .arrow, .arrow:hover { background: var(--blue); border-color: var(--bl
   .pic img.out, .pic img.pre { transform: none; }
 }
 /* review screenshots: page.html#still turns animation off */
-html.still *, html.still *::before, html.still *::after { transition: none !important; animation-duration: 0s !important; }
+html.still *, html.still *::before, html.still *::after { transition: none !important; animation-duration: 0s !important; animation-delay: 0s !important; }
