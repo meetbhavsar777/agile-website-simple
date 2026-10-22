@@ -360,6 +360,7 @@
       fill($('relGrid'), DATA.products.filter(function (x) { return x.cat === p.cat && x.id !== p.id; }).slice(0, 4));
       $('rfqTitle').textContent = 'Get ' + p.name + ' pricing';
       $('rfq').dataset.subject = p.name + ' (' + p.partner + ')';
+      document.documentElement.classList.remove('pd-wait');   // everything is in place: show it in one go
     }
   };
 })();

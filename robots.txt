@@ -1,0 +1,21 @@
+# Search engines and AI assistants are welcome; test copies and working files are not for indexing.
+User-agent: *
+Allow: /agile-website-simple/
+Disallow: /agile-website-simple/v2/
+Disallow: /agile-website-simple/showcase/
+Disallow: /agile-website-simple/category-card-options.html
+Disallow: /agile-website-simple/design.html
+Disallow: /agile-website-simple/hero-bg.html
+Disallow: /agile-website-simple/hero-options.html
+Disallow: /agile-website-simple/hero2-options.html
+Disallow: /agile-website-simple/home-1.html
+Disallow: /agile-website-simple/home-2.html
+Disallow: /agile-website-simple/looks.html
+Disallow: /agile-website-simple/partners-photo-options.html
+Disallow: /agile-website-simple/partners-section-options.html
+Disallow: /agile-website-simple/products-section-options.html
+Disallow: /agile-website-simple/section-ideas.html
+Disallow: /agile-website-simple/*.md$
+Disallow: /agile-website-simple/products.json
+
+Sitemap: https://meetbhavsar777.github.io/agile-website-simple/sitemap.xml

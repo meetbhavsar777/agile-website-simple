@@ -410,3 +410,8 @@ html.fx-open { overflow: hidden; }
   .crumb a { display: inline-block; padding: 10px 2px; }
   .crumb { margin-bottom: 10px; }
 }
+
+/* product page: its content is filled in by products.js; keep the space and show it once it is complete,
+   so nothing jumps while it loads (shown after 2.5 s in any case) */
+.pd-wait main { visibility: hidden; min-height: 100vh; animation: pd-show 0s 2.5s forwards; }
+@keyframes pd-show { to { visibility: visible; } }
