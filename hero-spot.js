@@ -64,6 +64,7 @@
       img.classList.remove('out'); img.classList.add('pre');
       void img.offsetWidth;
       img.classList.remove('pre'); info.classList.remove('out');
+      ahead(i);
     });
   }
   function restart() {
@@ -79,8 +80,7 @@
   root.addEventListener('focusout', function () { held = false; });
   mark(); restart();
 
-  // fetch the other big pictures once the page has settled, so each change is instant
-  window.addEventListener('load', function () {
-    setTimeout(function () { P.forEach(function (p) { new Image().src = DIR + p[0]; }); }, 1200);
-  });
+  // fetch only the next big picture ahead of time, so each change is instant without downloading all of them
+  function ahead(i) { new Image().src = DIR + P[(i + 1) % P.length][0]; }
+  window.addEventListener('load', function () { ahead(0); });
 })();

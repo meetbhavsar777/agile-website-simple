@@ -42,7 +42,7 @@
   function media(p, cls) {
     var box = el('span', cls + (p.image ? '' : ' no-img'));
     if (p.image) { var im = document.createElement('img'); im.src = p.image; im.alt = ''; im.loading = 'lazy'; box.appendChild(im); }
-    else if (DATA.logos[p.partner]) { var lg = document.createElement('img'); lg.src = 'images/partners/' + DATA.logos[p.partner] + '.png'; lg.alt = ''; lg.loading = 'lazy'; box.appendChild(lg); }
+    else if (DATA.logos[p.partner]) { var lg = document.createElement('img'); lg.src = 'images/partners/' + DATA.logos[p.partner] + '.webp'; lg.alt = ''; lg.loading = 'lazy'; box.appendChild(lg); }
     else box.appendChild(el('b', 'wordmark', p.partner));
     return box;
   }
@@ -86,7 +86,7 @@
       var hint = el('span', 'fx-zoom', 'Click image to zoom'); pic.appendChild(hint);
       pic.addEventListener('click', function () { var z = pic.classList.toggle('zoom'); hint.textContent = z ? 'Click to zoom out' : 'Click image to zoom'; });
       pic.addEventListener('mousemove', function (e) { var r = pic.getBoundingClientRect(); im.style.transformOrigin = ((e.clientX - r.left) / r.width * 100) + '% ' + ((e.clientY - r.top) / r.height * 100) + '%'; });
-    } else if (DATA.logos[p.partner]) { var lg = document.createElement('img'); lg.src = 'images/partners/' + DATA.logos[p.partner] + '.png'; lg.alt = p.partner; pic.appendChild(lg); }
+    } else if (DATA.logos[p.partner]) { var lg = document.createElement('img'); lg.src = 'images/partners/' + DATA.logos[p.partner] + '.webp'; lg.alt = p.partner; pic.appendChild(lg); }
     else pic.appendChild(el('b', 'wordmark', p.partner));
     back.appendChild(pic);
 
@@ -248,7 +248,7 @@
         if (chips.children.length) view.appendChild(chips);
         var foot = el('div', 'cx-foot'), lg = el('div', 'cx-logos');
         c.partners.forEach(function (p) {
-          if (DATA.logos[p]) { var im = document.createElement('img'); im.src = 'images/partners/' + DATA.logos[p] + '.png'; im.alt = p; lg.appendChild(im); }
+          if (DATA.logos[p]) { var im = document.createElement('img'); im.src = 'images/partners/' + DATA.logos[p] + '.webp'; im.alt = p; lg.appendChild(im); }
           else lg.appendChild(el('b', 'wordmark', p));
         });
         foot.appendChild(lg);
