@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/products/dac.webp">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="home-2.css">
 <link rel="stylesheet" href="loader.css">
@@ -58,60 +59,24 @@
   <div class="container hero-inner">
     <div class="hero-copy">
       <p class="eyebrow eyebrow-rule">Global technologies. Local expertise.</p>
-      <h1 class="h1-long">Separation,<br class="hbr"> bioprocess &amp;<br class="hbr"> biologics tools —<br class="hbr"> sourced globally,<br class="hbr"> <span class="grad">supported locally.</span></h1>
+      <h1 class="h1-long">Separation,<br class="hbr"> bioprocess &amp;<br class="hbr"> biologics tools —<br class="hbr"> sourced globally,<br class="hbr"> <em class="h1-accent">supported locally.</em></h1>
       <p class="hero-sub">Instruments, columns and reagents from eight global brands, supported across India.</p>
       <a href="products.html" class="btn btn-primary btn-lg">Explore Technologies <svg><use href="#ic-arrow"/></svg></a>
     </div>
 
-    <div class="hero-scene" id="heroScene">
-      <span class="ring ring-1"></span><span class="ring ring-2"></span><span class="ring ring-3"></span>
-
-      <div class="stage stage-dpcr" data-cat="molecular">
-        <img src="images/products/fplc.webp?v=3" alt="Inscinstech Unique AutoPure protein purification system" width="812" height="1000">
+    <div class="hsp" id="heroSpot" aria-roledescription="carousel" aria-label="Featured products">
+      <span class="ring ring-1"></span><span class="ring ring-2"></span>
+      <div class="hsp-stage">
+        <a class="hsp-pic" id="hspPic" href="cat-preparative-flash-dac.html"><img src="images/products/dac.webp" alt="Production Scale EX-HPLC &amp; DAC Systems — Welch Materials" width="1800" height="1607" fetchpriority="high"></a>
         <span class="plinth"></span>
       </div>
-      <div class="stage stage-fplc" data-cat="bioprocessing">
-        <img src="images/products/dac.webp" alt="Welch production-scale EX-HPLC and DAC purification system" width="1800" height="1607">
-        <span class="plinth"></span>
+      <div class="hsp-info" id="hspInfo" aria-live="polite">
+        <p class="hsp-n"><span id="hspN">01</span> / 13</p>
+        <h2 class="hsp-t" id="hspT">Production Scale<br> EX-HPLC &amp; DAC Systems</h2>
+        <p class="hsp-b" id="hspB">Welch Materials</p>
+        <a class="btn btn-primary" id="hspGo" href="cat-preparative-flash-dac.html">View product <svg><use href="#ic-arrow"/></svg></a>
       </div>
-      <div class="stage stage-lc" data-cat="chromatography">
-        <img src="images/products/lc.webp?v=3" alt="Welch Sail1000 preparative HPLC system" width="529" height="696">
-        <span class="plinth"></span>
-      </div>
-      <div class="stage stage-flowcam" data-cat="particle">
-        <img src="images/products/flowcam.webp?v=3" alt="FlowCam flow imaging particle analyser" width="595" height="603">
-        <span class="plinth"></span>
-      </div>
-      <div class="stage stage-life" data-cat="life">
-        <img src="images/products/stunner.webp?v=3" alt="Unchained Labs Stunner" width="563" height="527">
-        <span class="plinth"></span>
-      </div>
-
-      <a href="partner-welch-materials.html" class="hotspot hs-fplc" data-cat="bioprocessing">
-        <span class="hs-title">Production Scale<br> EX-HPLC &amp; DAC Systems</span>
-        <span class="hs-brand hs-accent">Welch Materials</span>
-        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
-      </a>
-      <a href="partner-inscinstech.html" class="hotspot hs-dpcr" data-cat="molecular">
-        <span class="hs-title">Protein Purification<br> FPLC Systems</span>
-        <span class="hs-brand">Inscinstech</span>
-        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
-      </a>
-      <a href="partner-welch-materials.html" class="hotspot hs-lc" data-cat="chromatography">
-        <span class="hs-title">Chromatography<br> Solutions</span>
-        <span class="hs-brand">Welch Materials</span>
-        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
-      </a>
-      <a href="partner-flowcam.html" class="hotspot hs-flowcam" data-cat="particle">
-        <span class="hs-title">Particle Analysis<br> &amp; Imaging</span>
-        <span class="hs-brand">FlowCam</span>
-        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
-      </a>
-      <a href="partner-unchained-labs.html" class="hotspot hs-life" data-cat="life">
-        <span class="hs-title">Life Sciences<br> Instruments</span>
-        <span class="hs-brand">Unchained Labs</span>
-        <span class="arrow-btn sm"><svg><use href="#ic-arrow"/></svg></span>
-      </a>
+      <div class="hsp-thumbs" id="hspThumbs"></div>
     </div>
   </div>
 
@@ -318,6 +283,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="hero-spot.js"></script>
 <script>
 (function () {
   var noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -399,7 +365,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   // scroll-linked: progress bar, hero parallax, drifting photo
   scroll(animate('#scrollBar', { scaleX: [0, 1] }, { ease: 'linear' }));
   const hero = document.getElementById('spotlight');
-  scroll(animate('.hero-scene', { y: [0, 90], scale: [1, 0.94] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
+  scroll(animate('.hsp', { y: [0, 90], scale: [1, 0.94] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
   scroll(animate('.hero-copy', { y: [0, -40], opacity: [1, 0.3] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
 }
 </script>
