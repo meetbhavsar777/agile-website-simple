@@ -722,3 +722,10 @@ main { padding-top: 0; }
   .hsp-pic img { transition: opacity .3s; }
   .hsp-pic img.out, .hsp-pic img.pre { transform: none; }
 }
+
+/* phones: small all-caps labels stay readable */
+@media (max-width: 600px) {
+  .sp-chip small, .sp-rail small, .b-card small, .cat-card strong small, .pt-panel small, .pg-text small, .pc-panel small, .pp-card small, .pl-panel small { font-size: 11px; }
+  .eyebrow { font-size: 11px; }
+  .footer-bottom a, .footer-col a { display: inline-block; padding: 9px 4px; }
+}
