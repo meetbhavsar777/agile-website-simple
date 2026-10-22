@@ -116,7 +116,7 @@
     revealEls.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
   }
 
-  // Enquiry form: opens the visitor's email app with the message filled in
+  // Enquiry form: opens Gmail (or the email app on a phone) with the message filled in
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -125,8 +125,8 @@
       var f = form.elements;
       var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value,
                   'Interested in: ' + f.interest.value, '', f.message.value].join('\n');
-      window.location.href = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent('Enquiry: ' + f.interest.value) + '&body=' + encodeURIComponent(body);
-      document.getElementById('formNote').textContent = 'Your email app should now be open. If it is not, write to sales@agilescitech.in.';
+      (window.sendMail || window.location.assign.bind(window.location))('mailto:sales@agilescitech.in?subject=' + encodeURIComponent('Enquiry: ' + f.interest.value) + '&body=' + encodeURIComponent(body));
+      document.getElementById('formNote').textContent = 'Gmail (or your email app) should now be open with your message. If it is not, write to sales@agilescitech.in.';
     });
   }
 
