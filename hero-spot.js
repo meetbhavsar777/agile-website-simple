@@ -31,7 +31,7 @@
     var b = document.createElement('button');
     b.type = 'button';
     b.setAttribute('aria-label', plain(i) + ' — ' + p[2]);
-    b.innerHTML = '<img src="' + DIR + p[0] + '" alt="" loading="lazy">';
+    b.innerHTML = '<img src="' + DIR + 'thumbs/' + p[0] + '" alt="" loading="lazy">';
     b.addEventListener('click', function () { show(i); restart(); });
     thumbs.appendChild(b);
   });
