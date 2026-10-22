@@ -1,4 +1,4 @@
-/* Home hero: one product in the spotlight, a new one every 4 seconds; the thumbnails below jump to any product. */
+/* Home hero: one product in the spotlight, a new one every 3 seconds; the thumbnails below jump to any product. */
 (function () {
   var root = document.getElementById('heroSpot');
   if (!root) return;
@@ -19,7 +19,7 @@
     ['consumables.webp', 'Chromatography|Consumables', 'Welch Materials', 'cat-lab-consumables-equipment.html'],
     ['stunner.webp', 'Life Sciences|Instruments', 'Unchained Labs', 'partner-unchained-labs.html']
   ];
-  var DIR = 'images/products/', MS = 4000;
+  var DIR = 'images/products/', MS = 3000;
   var noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var pic = document.getElementById('hspPic'), img = pic.querySelector('img'), info = document.getElementById('hspInfo');
   var name = document.getElementById('hspT'), brand = document.getElementById('hspB');
