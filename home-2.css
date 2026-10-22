@@ -534,7 +534,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display:
 
 /* ############ Navbar hidden at the top of the hero, appears after a slight scroll ############ */
 main { padding-top: 0; }
-.site-header, .site-header.stuck { position: fixed; left: 0; right: 0; top: 0; animation: none; background: rgba(255, 255, 255, .95); backdrop-filter: blur(14px); box-shadow: 0 6px 24px rgba(13, 26, 69, .08); transition: transform .5s var(--ease), opacity .35s ease, visibility .5s; }
+.site-header, .site-header.stuck { position: fixed; left: 0; right: 0; top: 0; animation: none; background: rgba(255, 255, 255, .8); -webkit-backdrop-filter: saturate(1.6) blur(18px); backdrop-filter: saturate(1.6) blur(18px); box-shadow: 0 1px 0 rgba(217, 226, 236, .7), 0 6px 24px rgba(13, 26, 69, .06); transition: transform .5s var(--ease), opacity .35s ease, visibility .5s; }
 .site-header:not(.stuck) { transform: translateY(-100%); opacity: 0; visibility: hidden; pointer-events: none; }
 .site-header.stuck { transform: none; opacity: 1; visibility: visible; }
 .site-header .header-inner, .site-header.stuck .header-inner { height: 68px; }
