@@ -67,8 +67,13 @@
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     var f = form.elements;
-    var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value, 'Interested in: ' + f.interest.value, '', f.message.value].join('\n');
-    (window.sendMail || window.location.assign.bind(window.location))('mailto:sales@agilescitech.in?subject=' + encodeURIComponent('Enquiry: ' + f.interest.value) + '&body=' + encodeURIComponent(body));
+    // products from the quote list (products.js adds them to the form) go in the same message
+    var products = f.products ? f.products.value : '';
+    var count = products ? products.split('\n').length : 0;
+    var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value, 'Interested in: ' + f.interest.value]
+      .concat(products ? ['', 'Products for quotation:', products] : []).concat(['', f.message.value]).join('\n');
+    var subject = count ? 'Quote request: ' + count + (count === 1 ? ' product' : ' products') + ' — ' + (f.company.value || f.name.value) : 'Enquiry: ' + f.interest.value;
+    (window.sendMail || window.location.assign.bind(window.location))('mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
     document.getElementById('formNote').textContent = 'Gmail (or your email app) should now be open with your message. If it is not, write to sales@agilescitech.in.';
   });
 })();

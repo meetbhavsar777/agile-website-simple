@@ -157,8 +157,40 @@
     });
   }
 
+  // ---------- contact form: products in the quote list are shown and sent with the enquiry
+  function quoteIntoForm(form) {
+    var head = form.querySelector('h3'), box = el('div', 'cf-quote full'), field = document.createElement('input');
+    field.type = 'hidden'; field.name = 'products';
+    head.insertAdjacentElement('afterend', box);
+    function paint() {
+      var items = getList().map(byId).filter(Boolean);
+      field.value = items.map(function (p) { return '- ' + p.name + ' (' + p.partner + ')'; }).join('\n');
+      box.textContent = ''; box.appendChild(field); box.hidden = !items.length;
+      if (!items.length) return;
+      var top = el('div', 'cf-quote-head'), more = el('a', '', 'Add more');
+      top.appendChild(el('b', '', 'Products for your quotation (' + items.length + ')'));
+      more.href = 'products.html'; top.appendChild(more);
+      var ul = el('ul');
+      items.forEach(function (p) {
+        var li = el('li'), x = el('button', '', 'Remove');
+        li.appendChild(el('span', '', p.name)); li.appendChild(el('small', '', p.partner));
+        x.type = 'button'; x.addEventListener('click', function () { toggle(p.id); paint(); });
+        li.appendChild(x); ul.appendChild(li);
+      });
+      box.appendChild(top); box.appendChild(ul);
+    }
+    paint();
+    if (getList().length) {
+      head.textContent = 'Request your quotation';
+      form.querySelector('button[type="submit"]').firstChild.textContent = 'Send quote request ';
+      if (!form.elements.message.value) form.elements.message.value = 'Please send your best quotation for the products listed above.';
+      if (location.hash === '#contact') setTimeout(function () { form.elements.name.focus({ preventScroll: true }); }, 600);
+    }
+  }
+
   function common() {
     paintCount();
+    if ($('contactForm')) quoteIntoForm($('contactForm'));
     var t = $('menuToggle'), nav = $('mainNav');
     if (t) t.addEventListener('click', function () { var o = nav.classList.toggle('open'); t.setAttribute('aria-expanded', String(o)); });
     var f = $('rfq');
@@ -188,11 +220,11 @@
       search.addEventListener('input', run);
       document.querySelectorAll('.cat-try button').forEach(function (b) { b.addEventListener('click', function () { search.value = b.textContent; run(); search.focus(); }); });
       $('resClear').addEventListener('click', function () { search.value = ''; partner = ''; history.replaceState(null, '', location.pathname); run(); });
+      // review and send: the list goes with the visitor's details from the contact form
       $('quoteSend').addEventListener('click', function (e) {
         e.preventDefault();
-        var items = getList().map(byId).filter(Boolean);
-        if (!items.length) { toast('Your quote list is empty'); return; }
-        mail('Quote request: ' + items.length + ' products', ['Please send pricing for:', ''].concat(items.map(function (p) { return '- ' + p.name + ' (' + p.partner + ')'; })).concat(['', 'Name:', 'Company:', 'Phone:']));
+        if (!getList().map(byId).filter(Boolean).length) { toast('Your quote list is empty'); return; }
+        location.href = 'about.html#contact';
       });
       // category explorer: list on the left, live preview on the right
       var view = $('cxView'), links = [].slice.call(document.querySelectorAll('#cxList a'));
