@@ -699,7 +699,7 @@ main { padding-top: 0; }
 .hsp-thumbs { grid-area: thumbs; position: relative; z-index: 2; display: flex; gap: 12px; margin-top: 22px; padding: 6px 2px 8px; overflow-x: auto; scrollbar-width: none;
   -webkit-mask-image: linear-gradient(90deg, #000 90%, transparent); mask-image: linear-gradient(90deg, #000 90%, transparent); }
 .hsp-thumbs::-webkit-scrollbar { display: none; }
-.hsp-thumbs button { flex: none; width: 84px; height: 84px; padding: 10px; border-radius: 16px; border: 1px solid var(--line); background: #fff; cursor: pointer;
+.hsp-thumbs button { flex: none; width: 102px; height: 102px; padding: 12px; border-radius: 18px; border: 1px solid var(--line); background: #fff; cursor: pointer;
   box-shadow: 0 2px 8px rgba(11, 30, 70, .05); transition: border-color .25s, box-shadow .25s, transform .25s; }
 .hsp-thumbs button img { width: 100%; height: 100%; object-fit: contain; }
 .hsp-thumbs button:hover { border-color: #A9BBEC; transform: translateY(-2px); }
@@ -716,7 +716,7 @@ main { padding-top: 0; }
   .hero .eyebrow-rule::after { display: none; }
   .hsp-t { font-size: 22px; }
   .hsp-thumbs { gap: 10px; }
-  .hsp-thumbs button { width: 72px; height: 72px; padding: 8px; border-radius: 14px; }
+  .hsp-thumbs button { width: 86px; height: 86px; padding: 10px; border-radius: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hsp-pic img { transition: opacity .3s; }
