@@ -22,7 +22,7 @@
   var DIR = 'images/products/', MS = 4000;
   var noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var pic = document.getElementById('hspPic'), img = pic.querySelector('img'), info = document.getElementById('hspInfo');
-  var num = document.getElementById('hspN'), name = document.getElementById('hspT'), brand = document.getElementById('hspB');
+  var name = document.getElementById('hspT'), brand = document.getElementById('hspB');
   var go = document.getElementById('hspGo'), thumbs = document.getElementById('hspThumbs');
   var plain = function (i) { return P[i][1].replace('|', ' '); };
   var esc = function (s) { return s.replace(/&/g, '&amp;'); };
@@ -59,7 +59,6 @@
       img.src = next.src; img.alt = plain(i) + ' — ' + p[2];
       img.removeAttribute('width'); img.removeAttribute('height');
       pic.href = go.href = p[3];
-      num.textContent = (i < 9 ? '0' : '') + (i + 1);
       name.innerHTML = esc(p[1]).replace('|', '<br> ');
       brand.textContent = p[2];
       img.classList.remove('out'); img.classList.add('pre');
