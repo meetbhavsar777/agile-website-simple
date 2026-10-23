@@ -689,7 +689,7 @@ a.sx-tr:hover { background: #F5F8FE; } a.sx-tr:hover strong { color: var(--brand
 .pp-row { position: relative; }
 .pp-rlogo { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: min(420px, 34%); pointer-events: none; }
 .pp-rlogo::before { content: ''; position: absolute; inset: -70px -90px; z-index: -1; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .86), rgba(255, 255, 255, .5) 55%, rgba(255, 255, 255, 0)); }
-.pp-rlogo img { width: 100%; max-height: 170px; object-fit: contain; }
+.pp-rlogo img { width: 100%; height: auto; max-height: 170px; object-fit: contain; }
 @media (max-width: 1100px) { .pp-rlogo { position: relative; right: auto; top: auto; transform: none; width: min(260px, 60%); margin: 0 0 22px; place-items: center start; justify-items: start; } .pp-rlogo::before { display: none; } .pp-rlogo img { max-height: 90px; object-position: left center; } }
 
 /* phones: application areas two per row, workflow cards with a shorter picture */

@@ -742,3 +742,7 @@ main { padding-top: 0; }
   .hsp-stage { height: clamp(280px, min(32vw, 100vh - 250px), 450px); }
   .hsp-thumbs { margin-top: 16px; }
 }
+
+/* keep the thumbnail row's space before hero-spot.js fills it, so nothing below jumps while the page loads */
+.hsp-thumbs { min-height: 116px; }
+@media (max-width: 600px) { .hsp-thumbs { min-height: 100px; } }

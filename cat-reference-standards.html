@@ -6,7 +6,7 @@
 <title>Reference standards | Agile SciTech</title>
 <meta name="description" content="TLC Pharmaceutical Standards — 24,000+ characterised compounds from an ISO 17034 / 17025 / 9001 manufacturer, each supplied with a full Certificate of Analysis.">
 <!-- share, canonical and security -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com; connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self' https://mail.google.com mailto:">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com; connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self' https://mail.google.com mailto:">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="https://meetbhavsar777.github.io/agile-website-simple/cat-reference-standards.html">
 <meta property="og:type" content="website">
@@ -23,9 +23,8 @@
 <!-- /share, canonical and security -->
 <meta name="theme-color" content="#14265C">
 <link rel="icon" type="image/png" href="images/brand/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="home-2.css">
 <link rel="stylesheet" href="products.css">
@@ -75,8 +74,8 @@
       <div class="help"><strong>Have a full impurity list?</strong><p>Send an Excel list of compounds and get one consolidated quote.</p><a href="#rfq">Send your list <svg><use href="#ic-arrow"/></svg></a></div>
     </aside>
     <div>
-      <p class="cat-count" id="catCount"></p>
-      <div class="pg" id="grid"></div>
+      <p class="cat-count" id="catCount">Showing 4 of 4 product lines</p>
+      <div class="pg" id="grid"><article class="pc"><a class="pc-link" href="product.html?id=pharmaceutical-impurity-standards"><span class="pc-pic"><img src="images/catalog/tlc-pharmaceutical-standards-pharmaceutical-impurity-standards.webp" alt="" loading="lazy"></span><span class="pc-meta"><small>TLC Pharmaceutical Standards</small><i>Impurities</i></span><strong>Pharmaceutical impurity standards</strong><span class="pc-desc">Characterised API impurities for profiling, validation and filings.</span></a><div class="pc-act"><a class="btn btn-primary" href="product.html?id=pharmaceutical-impurity-standards">Details</a><button class="btn btn-line" type="button">+ Quote</button></div></article><article class="pc"><a class="pc-link" href="product.html?id=stable-isotope-labelled-standards"><span class="pc-pic"><img src="images/catalog/tlc-pharmaceutical-standards-stable-isotope-labelled-standards.webp" alt="" loading="lazy"></span><span class="pc-meta"><small>TLC Pharmaceutical Standards</small><i>SIL</i></span><strong>Stable isotope-labelled standards</strong><span class="pc-desc">¹³C and deuterated analogues for LC-MS internal standards.</span></a><div class="pc-act"><a class="btn btn-primary" href="product.html?id=stable-isotope-labelled-standards">Details</a><button class="btn btn-line" type="button">+ Quote</button></div></article><article class="pc"><a class="pc-link" href="product.html?id=catalogue-reference-standards"><span class="pc-pic"><img src="images/catalog/tlc-pharmaceutical-standards-catalogue-reference-standards.webp" alt="" loading="lazy"></span><span class="pc-meta"><small>TLC Pharmaceutical Standards</small><i>Catalogue</i></span><strong>Catalogue reference standards</strong><span class="pc-desc">24,000+ compounds in stock, each with a full CoA.</span></a><div class="pc-act"><a class="btn btn-primary" href="product.html?id=catalogue-reference-standards">Details</a><button class="btn btn-line" type="button">+ Quote</button></div></article><article class="pc"><a class="pc-link" href="product.html?id=custom-synthesis"><span class="pc-pic"><img src="images/catalog/tlc-pharmaceutical-standards-custom-synthesis.webp" alt="" loading="lazy"></span><span class="pc-meta"><small>TLC Pharmaceutical Standards</small><i>Made to order</i></span><strong>Custom synthesis</strong><span class="pc-desc">Synthesis, characterisation and certification of new compounds.</span></a><div class="pc-act"><a class="btn btn-primary" href="product.html?id=custom-synthesis">Details</a><button class="btn btn-line" type="button">+ Quote</button></div></article></div>
       <p class="cat-empty" id="resEmpty" hidden>No products match these filters.</p>
       <div class="used"><h2>Used in these applications</h2><div><a href="app-pharma-qc.html">Pharma QC &amp; impurity analysis <svg><use href="#ic-arrow"/></svg></a><a href="app-bioanalysis-lc-ms.html">Bioanalysis &amp; LC-MS <svg><use href="#ic-arrow"/></svg></a></div></div>
       <form class="rfq" id="rfq" data-subject="Reference standards">
