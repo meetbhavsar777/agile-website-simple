@@ -727,3 +727,12 @@ a.sx-tr:hover { background: #F5F8FE; } a.sx-tr:hover strong { color: var(--brand
   .map-head { flex-direction: column; align-items: flex-start; }
   .map-frame { height: 300px; border-radius: 16px; }
 }
+
+/* "All applications" back link: a finger-sized tap area without moving anything */
+.ap-back { padding: 10px 0; margin-top: -10px; margin-bottom: 12px; }
+/* touch screens have no hover, so the application tiles show their line of detail straight away */
+@media (hover: none) { .sx-area em { max-height: 5em; opacity: 1; } }
+/* page-top photo on computers: only on the right, where it shows through the white fade, so it is never stretched */
+@media (min-width: 981px) {
+  .pp-bgimg { left: auto; width: min(64%, 960px); -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%); mask-image: linear-gradient(90deg, transparent, #000 45%); }
+}

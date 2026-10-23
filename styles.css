@@ -594,3 +594,11 @@ button.arrow-btn:hover { background: var(--navy); color: #fff; border-color: var
 
 /* hero flowcam render (squarer picture) */
 .stage-flowcam { --img: 60%; }
+
+/* touch screens (phones and tablets): form text of 16px, so phones don't zoom in when a box is tapped,
+   and finger-sized contact and footer links (the negative margin keeps the layout where it was) */
+@media (pointer: coarse) {
+  .contact-form input, .contact-form select, .contact-form textarea { font-size: 16px; }
+  .contact-list a { display: inline-block; padding: 7px 0; margin: -7px 0; }
+  .footer-bottom a, .footer-col a { display: inline-block; padding: 9px 4px; }
+}

@@ -415,3 +415,19 @@ html.fx-open { overflow: hidden; }
    so nothing jumps while it loads (shown after 2.5 s in any case) */
 .pd-wait main { visibility: hidden; min-height: 100vh; animation: pd-show 0s 2.5s forwards; }
 @keyframes pd-show { to { visibility: visible; } }
+
+/* touch screens (phones and tablets): 16px form text (no zoom on tap) and finger-sized filters and links */
+@media (pointer: coarse) {
+  .rfq input, .cat-search input { font-size: 16px; }
+  .side label { min-height: 32px; }
+  .help a { min-height: 40px; }
+  .crumb a { display: inline-block; padding: 9px 2px; margin: -9px 0; }
+}
+/* the smallest phones (320px): logo, quote button and menu fit on one line */
+@media (max-width: 380px) {
+  .header-actions { gap: 8px; }
+  .header-actions .btn { padding: 0 10px; }
+  .header-actions .btn svg { display: none; }
+  .logo img { height: 40px; }
+}
+@media (max-width: 640px) { .quote-act { flex-wrap: wrap; gap: 10px 20px; } }

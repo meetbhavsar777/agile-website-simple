@@ -735,3 +735,10 @@ main { padding-top: 0; }
   .eyebrow { font-size: 11px; }
   .footer-bottom a, .footer-col a { display: inline-block; padding: 9px 4px; }
 }
+
+/* home hero on short laptop screens (such as 1920x1080 at 150%): the spotlight and its thumbnails fit the first screen */
+@media (min-width: 981px) and (max-height: 760px) {
+  .hero .hero-inner { padding-top: 40px; padding-bottom: 36px; }
+  .hsp-stage { height: clamp(280px, min(32vw, 100vh - 250px), 450px); }
+  .hsp-thumbs { margin-top: 16px; }
+}
