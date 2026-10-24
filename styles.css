@@ -821,3 +821,9 @@ button.arrow-btn:hover { background: var(--navy); color: #fff; border-color: var
   .contact-list a { display: inline-block; padding: 7px 0; margin: -7px 0; }
   .footer-bottom a, .footer-col a { display: inline-block; padding: 9px 4px; }
 }
+
+/* no browser-blue highlights: soft grey when text is selected, no blue flash when a link is tapped on phones,
+   and buttons, menus and thumbnails don't get highlighted by quick clicks (keyboard focus rings stay) */
+::selection { background: #DDE2EA; color: #0B1635; }
+html { -webkit-tap-highlight-color: transparent; }
+button, .btn, .nav-link, .menu-toggle, .hsp-thumbs, .cat-tabs, .pl-list, .arrow-btn { -webkit-user-select: none; user-select: none; }
