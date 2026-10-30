@@ -266,7 +266,7 @@
 /* ############ Picked designs: products A, categories A, about A, partners B, contact A ############ */
 
 /* ---------- Products: pop-out cards ---------- */
-.pp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 86px 18px; padding-top: 64px; }
+.pp { display: grid; grid-template-columns: repeat(4, 1fr); gap: 86px 18px; padding-top: 64px; }
 .pp-card { position: relative; display: flex; flex-direction: column; padding: 132px 26px 26px; border-radius: 26px; background: #fff; border: 1px solid #E3E9F6; transition: background .35s, border-color .35s, transform .45s var(--ease), box-shadow .45s var(--ease); }
 .pp-card i { position: absolute; left: 50%; top: -44px; width: 168px; height: 168px; border-radius: 50%; transform: translateX(-50%); background: var(--c, #DCE6FA); transition: transform .5s var(--ease), background .35s; }
 .pp-card img { position: absolute; left: 50%; top: -64px; width: 190px; height: 196px; object-fit: contain; transform: translateX(-50%); filter: drop-shadow(0 18px 16px rgba(13, 26, 69, .22)); transition: transform .55s var(--ease); }
@@ -367,7 +367,13 @@
   .pl-panel img { height: 200px; }
 }
 @media (max-width: 640px) {
-  .pp { grid-template-columns: 1fr; gap: 80px; }
+  .pp { gap: 64px 12px; padding-top: 48px; }
+  .pp-card { padding: 92px 14px 16px; border-radius: 20px; }
+  .pp-card i { top: -32px; width: 112px; height: 112px; }
+  .pp-card img { top: -46px; width: 132px; height: 136px; }
+  .pp-card img.round { top: -32px; width: 112px; height: 112px; }
+  .pp-card strong { font-size: 15.5px; }
+  .pp-card span { font-size: 12.5px; }
   .kc { grid-template-columns: 1fr; }
   .kc-card { min-height: 190px; }
   .ab-photo b { right: 0; }
