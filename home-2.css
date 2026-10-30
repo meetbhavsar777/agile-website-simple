@@ -266,22 +266,18 @@
 /* ############ Picked designs: products A, categories A, about A, partners B, contact A ############ */
 
 /* ---------- Products: pop-out cards ---------- */
-.pp { display: grid; grid-template-columns: repeat(4, 1fr); gap: 86px 18px; padding-top: 64px; }
-.pp-card { position: relative; display: flex; flex-direction: column; padding: 132px 26px 26px; border-radius: 26px; background: #fff; border: 1px solid #E3E9F6; transition: background .35s, border-color .35s, transform .45s var(--ease), box-shadow .45s var(--ease); }
-.pp-card i { position: absolute; left: 50%; top: -44px; width: 168px; height: 168px; border-radius: 50%; transform: translateX(-50%); background: var(--c, #DCE6FA); transition: transform .5s var(--ease), background .35s; }
-.pp-card img { position: absolute; left: 50%; top: -64px; width: 190px; height: 196px; object-fit: contain; transform: translateX(-50%); filter: drop-shadow(0 18px 16px rgba(13, 26, 69, .22)); transition: transform .55s var(--ease); }
-.pp-card img.blend { mix-blend-mode: multiply; filter: none; }
-.pp-card img.round { top: -44px; width: 168px; height: 168px; border-radius: 50%; object-fit: cover; filter: none; box-shadow: 0 16px 30px rgba(13, 26, 69, .18); }
-.pp-card small { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); transition: color .35s; }
+.pp { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.pp-card { position: relative; display: flex; flex-direction: column; padding: 0 26px 26px; border-radius: 24px; background: #fff; border: 1px solid #E3E9F6; transition: border-color .35s, transform .45s var(--ease), box-shadow .45s var(--ease); }
+/* the product alone, centred on a fixed stage so every card lines up */
+.pp-card img { display: block; width: 100%; height: 210px; margin: 26px 0 22px; object-fit: contain; filter: drop-shadow(0 16px 18px rgba(13, 26, 69, .16)); transition: transform .55s var(--ease); }
+.pp-card small { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
 .pp-card strong { font-size: 19px; font-weight: 600; line-height: 1.2; letter-spacing: -.01em; margin: 7px 0 9px; }
-.pp-card span { font-size: 13.5px; line-height: 1.55; color: var(--slate); transition: color .35s; flex: 1; }
-.pp-card em { font-style: normal; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 13px; font-weight: 500; color: var(--blue); transition: color .35s; }
+.pp-card span { font-size: 13.5px; line-height: 1.55; color: var(--slate); flex: 1; }
+.pp-card em { font-style: normal; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 13px; font-weight: 500; color: var(--blue); }
 .pp-card em svg { width: 13px; height: 13px; transition: transform .3s; }
-.pp-card:hover { background: var(--brand); border-color: var(--brand); color: #fff; transform: translateY(-6px); box-shadow: 0 26px 56px rgba(33, 58, 130, .32); }
-.pp-card:hover span { color: rgba(255, 255, 255, .82); }
-.pp-card:hover small, .pp-card:hover em { color: #C9D6FB; }
-.pp-card:hover i { transform: translateX(-50%) scale(1.08); background: #fff; }
-.pp-card:hover img:not(.round) { transform: translateX(-50%) translateY(-10px) scale(1.06); }
+.pp-card:hover { border-color: #C9D6F2; transform: translateY(-6px); box-shadow: 0 26px 56px rgba(33, 58, 130, .16); }
+.pp-card img.wide { width: calc(100% + 36px); max-width: none; margin-inline: -18px; }
+.pp-card:hover img { transform: translateY(-6px) scale(1.04); }
 .pp-card:hover em svg { transform: translateX(5px); }
 
 /* ---------- Categories: icon cards ---------- */
@@ -367,11 +363,10 @@
   .pl-panel img { height: 200px; }
 }
 @media (max-width: 640px) {
-  .pp { gap: 64px 12px; padding-top: 48px; }
-  .pp-card { padding: 92px 14px 16px; border-radius: 20px; }
-  .pp-card i { top: -32px; width: 112px; height: 112px; }
-  .pp-card img { top: -46px; width: 132px; height: 136px; }
-  .pp-card img.round { top: -32px; width: 112px; height: 112px; }
+  .pp { gap: 12px; }
+  .pp-card { padding: 0 14px 16px; border-radius: 20px; }
+  .pp-card img { height: 130px; margin: 16px 0 14px; }
+  .pp-card img.wide { width: calc(100% + 20px); margin-inline: -10px; }
   .pp-card strong { font-size: 15.5px; }
   .pp-card span { font-size: 12.5px; }
   .kc { grid-template-columns: 1fr; }
@@ -531,7 +526,6 @@ main { padding-top: var(--header-h); }
 /* ############ Motion ############ */
 .scroll-bar { position: fixed; left: 0; right: 0; top: 0; height: 3px; z-index: 100; background: var(--grad); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
 .motion-on .reveal { opacity: 1; transform: none; transition: none; }
-.pp-card i { transform: translateX(-50%); translate: none; }
 
 /* hide the browser scrollbar (the page still scrolls) */
 html { scrollbar-width: none; -ms-overflow-style: none; }
