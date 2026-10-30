@@ -1,8 +1,17 @@
-/* Email: on a computer every email link and enquiry opens Gmail's compose window with the address,
-   subject and message filled in. Phones keep the normal email link, which opens the mail app (usually Gmail). */
+/* Email from the website. Once FORM below is filled in, nothing opens Gmail: every form, email address and
+   "Book a demo" button sends straight to the business inbox (sales@agilescitech.in) through the Google Apps Script
+   (google-script-for-website-forms.txt), after Cloudflare Turnstile ("Verify you are human"), and a "Message sent"
+   notice appears. Until then, email links and forms open Gmail's compose window (on a phone, the mail app). */
 (function () {
+  var INBOX = 'sales@agilescitech.in';
+  var FORM = {
+    endpoint: '',   // the Apps Script web app address, https://script.google.com/macros/s/…/exec
+    sitekey: ''     // the Turnstile site key (public)
+  };
+  var direct = function () { var c = window.AGILE_FORM || FORM; return c.endpoint && c.sitekey ? c : null; };
   var phone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
 
+  // ---------- before the inbox is connected: Gmail's compose window, or the phone's mail app
   function gmail(mailto) {
     var u = new URL(mailto), p = new URLSearchParams(u.search);
     var q = new URLSearchParams({ view: 'cm', fs: '1', to: decodeURIComponent(u.pathname) });
@@ -10,8 +19,6 @@
     if (p.get('body')) q.set('body', p.get('body'));
     return 'https://mail.google.com/mail/?' + q.toString();
   }
-
-  // sendMail('mailto:…?subject=…&body=…')
   window.sendMail = function (mailto) {
     if (phone) { window.location.href = mailto; return; }
     var w = window.open(gmail(mailto), '_blank');
@@ -19,22 +26,29 @@
     else window.location.href = mailto;   // pop-up blocked: fall back to the mail app
   };
 
+  // email addresses and "Book a demo": a message box on the page once the inbox is connected, Gmail before that
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
     if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
-    window.sendMail(a.href);
+    if (direct()) openBox(a.href); else window.sendMail(a.href);
   });
 
-  /* Forms straight to the company inbox. With both values below filled in, an enquiry or quote request is sent
-     by the Google Apps Script (contact-form-google-script.txt) to sales@agilescitech.in once Cloudflare Turnstile
-     ("Verify you are human") has passed. Until then, or if sending fails, the form opens Gmail as above. */
-  var FORM = {
-    endpoint: '',   // the Apps Script web app address, https://script.google.com/macros/s/…/exec
-    sitekey: ''     // the Turnstile site key (public)
-  };
-  var direct = function () { var c = window.AGILE_FORM || FORM; return c.endpoint && c.sitekey ? c : null; };
+  // ---------- "Message sent" notice
+  var toastEl, toastTimer;
+  function toast(text, ok) {
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'mail-toast'; toastEl.setAttribute('role', 'status'); toastEl.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = (ok ? '✓ ' : '') + text;
+    toastEl.classList.toggle('bad', !ok);
+    toastEl.classList.add('on');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { toastEl.classList.remove('on'); }, ok ? 6000 : 8000);
+  }
 
+  // ---------- Cloudflare Turnstile, "Verify you are human"
   var widgets = new Map(), loading;
   function turnstile() {
     if (window.turnstile) return Promise.resolve(window.turnstile);
@@ -46,7 +60,7 @@
     });
     return loading;
   }
-  // the human check sits above the enquiry form's send button, and on its own line under a quote form's row;
+  // the human check sits above the send button, and on its own line under a quote form's row;
   // dark forms get the dark version, and narrow phones the compact one
   function addCheck(form) {
     if (widgets.has(form)) return;
@@ -63,25 +77,31 @@
       widgets.set(form, t.render(box, { sitekey: direct().sitekey, theme: light ? 'dark' : 'light', size: compact ? 'compact' : 'flexible', appearance: 'always' }));
     }).catch(function () { box.remove(); });
   }
+  // a hidden field people never see: robots that fill in every box give themselves away
+  function addTrap(form) {
+    if (form.elements.website) return;
+    var hp = document.createElement('input');
+    hp.type = 'text'; hp.name = 'website'; hp.tabIndex = -1; hp.autocomplete = 'off'; hp.className = 'cf-hp'; hp.setAttribute('aria-hidden', 'true');
+    form.appendChild(hp);
+  }
   function note(form, text, ok) {
     var n = form.querySelector('.form-note, .cf-note');
     if (!n) { n = document.createElement('p'); n.className = 'cf-note full'; form.appendChild(n); }
     n.textContent = text; n.classList.toggle('cf-ok', !!ok);
   }
-  var GMAIL_NOTE = 'Gmail (or your email app) should now be open with your message. If it is not, write to sales@agilescitech.in.';
 
-  // sendForm(form, { subject, body, email, name }, 'mailto:…') sends straight to the inbox, or opens Gmail
-  window.sendForm = function (form, msg, mailto) {
+  // ---------- sendForm(form, { subject, body, email, name }, 'mailto:…', done): straight to the inbox
+  window.sendForm = function (form, msg, mailto, done) {
     var c = direct(), id = widgets.get(form);
-    if (!c || id == null || !window.turnstile) {
+    if (!c) {
       window.sendMail(mailto);
-      if (form.querySelector('.form-note')) note(form, GMAIL_NOTE);
+      if (form.querySelector('.form-note')) note(form, 'Gmail (or your email app) should now be open with your message. If it is not, write to ' + INBOX + '.');
       return;
     }
-    var token = window.turnstile.getResponse(id);
+    var token = id != null && window.turnstile ? window.turnstile.getResponse(id) : '';
     if (!token) { note(form, 'Please tick “Verify you are human” above the button, then send again.'); return; }
-    var btn = form.querySelector('[type=submit]');
-    btn.disabled = true;
+    var btn = form.querySelector('[type=submit]'), label = btn.innerHTML;
+    btn.disabled = true; btn.textContent = 'Sending…';
     var data = new URLSearchParams({ subject: msg.subject, body: msg.body, email: msg.email || '', name: msg.name || '',
       page: location.href, website: (form.elements.website || {}).value || '', 'cf-turnstile-response': token });
     fetch(c.endpoint, { method: 'POST', body: data })
@@ -90,28 +110,69 @@
         if (!r.ok) throw new Error(r.error || 'not sent');
         form.reset();
         if (form.elements.products) form.elements.products.value = '';
-        note(form, 'Thank you — your message has reached our sales team at sales@agilescitech.in. We will reply to you by email.', true);
+        note(form, 'Thank you — your message has reached our team at ' + INBOX + '. We will reply to you by email.', true);
+        toast('Message sent — we will reply to you by email.', true);
+        if (done) done();
       })
       .catch(function () {
-        note(form, 'It could not be sent from here, so Gmail (or your email app) has opened with your message — please press Send there.');
-        window.sendMail(mailto);
+        note(form, 'Your message was not sent. Please try again in a minute, or call +91 88661 01022.');
+        toast('Not sent — please try again.', false);
       })
-      .then(function () { btn.disabled = false; window.turnstile.reset(id); });
+      .then(function () { btn.disabled = false; btn.innerHTML = label; window.turnstile.reset(id); });
   };
 
-  // add the human check to each enquiry and quote form once it comes near the screen
+  // ---------- the message box for email addresses and "Book a demo"
+  var box;
+  function openBox(mailto) {
+    var u = new URL(mailto), p = new URLSearchParams(u.search), subject = p.get('subject') || '';
+    if (!box) {
+      box = document.createElement('dialog');
+      box.className = 'mail-box';
+      box.setAttribute('aria-labelledby', 'mbTitle');
+      box.innerHTML = '<form class="contact-form" id="mailBox" novalidate>' +
+        '<button type="button" class="mb-x" aria-label="Close">×</button>' +
+        '<h3 id="mbTitle">Write to us</h3>' +
+        '<p class="mb-to full"></p>' +
+        '<label>Name<input type="text" name="name" autocomplete="name" required></label>' +
+        '<label>Email<input type="email" name="email" autocomplete="email" required></label>' +
+        '<label class="full">Phone<input type="tel" name="phone" autocomplete="tel"></label>' +
+        '<label class="full">Message<textarea name="message" required></textarea></label>' +
+        '<button type="submit" class="btn btn-primary btn-lg full">Send message</button>' +
+        '<p class="form-note">Goes straight to our team; we reply by email.</p></form>';
+      document.body.appendChild(box);
+      var f = box.querySelector('form');
+      box.querySelector('.mb-x').addEventListener('click', function () { box.close(); });
+      box.addEventListener('click', function (e) { if (e.target === box) box.close(); });   // click outside the card
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+        var el = f.elements, subj = box.dataset.subject || 'Message from the website';
+        var body = ['Name: ' + el.name.value, 'Email: ' + el.email.value, 'Phone: ' + el.phone.value, '', el.message.value].join('\n');
+        window.sendForm(f, { subject: subj, body: body, email: el.email.value, name: el.name.value }, '', function () { box.close(); });
+      });
+      addTrap(f);
+    }
+    var form = box.querySelector('form');
+    // a different button than last time starts a fresh message; reopening the same one keeps what was typed
+    if (box.dataset.subject !== subject || !form.elements.message.value)
+      form.elements.message.value = p.get('body') || (/^Demo request: (.+)/i.test(subject) ? 'I would like to book a demo of ' + subject.replace(/^Demo request: /i, '') + '.' : '');
+    box.dataset.subject = subject;
+    box.querySelector('#mbTitle').textContent = /^Demo request/i.test(subject) ? 'Book a demo' : 'Write to us';
+    box.querySelector('.mb-to').textContent = 'To: Agile SciTech team (' + INBOX + ')' + (subject ? ' · ' + subject : '');
+    note(form, 'Goes straight to our team; we reply by email.');
+    box.showModal();
+    addCheck(form);
+    form.elements.name.focus();
+  }
+
+  // ---------- connect the page's forms: the human check once a form comes near the screen
   function setup() {
     if (!direct()) return;
     var forms = document.querySelectorAll('#contactForm, #rfq');
     forms.forEach(function (f) {
-      // a hidden field people never see: robots that fill in every box give themselves away
-      if (!f.elements.website) {
-        var hp = document.createElement('input');
-        hp.type = 'text'; hp.name = 'website'; hp.tabIndex = -1; hp.autocomplete = 'off'; hp.className = 'cf-hp'; hp.setAttribute('aria-hidden', 'true');
-        f.appendChild(hp);
-      }
+      addTrap(f);
       var n = f.querySelector('.form-note');
-      if (n) n.textContent = 'Your message goes straight to our sales team at sales@agilescitech.in.';
+      if (n) n.textContent = 'Your message goes straight to our team at ' + INBOX + '.';
     });
     if (!('IntersectionObserver' in window)) { forms.forEach(addCheck); return; }
     var io = new IntersectionObserver(function (es) {

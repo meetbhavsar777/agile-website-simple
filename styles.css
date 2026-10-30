@@ -834,3 +834,16 @@ button, .btn, .nav-link, .menu-toggle, .hsp-thumbs, .cat-tabs, .pl-list, .arrow-
 .cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .cf-note { grid-column: 1 / -1; margin: 0; font-size: 13px; line-height: 1.5; }
 .cf-ok { font-weight: 600; }
+
+/* the message box for email addresses and "Book a demo", and the "Message sent" notice (mail.js) */
+.mail-box { width: min(480px, calc(100% - 24px)); max-height: calc(100% - 24px); padding: 0; border: 0; border-radius: 22px; background: transparent; overflow: auto; }
+.mail-box::backdrop { background: rgba(11, 22, 53, .5); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.mail-box .contact-form { position: relative; box-shadow: none; }
+.mb-x { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; font-size: 26px; line-height: 1; color: var(--slate); background: transparent; }
+.mb-x:hover { background: var(--ice); color: var(--navy); }
+.mb-to { grid-column: 1 / -1; margin: -6px 0 2px; font-size: 13px; color: var(--slate); }
+.mail-toast { position: fixed; left: 50%; bottom: 24px; z-index: 1000; max-width: calc(100% - 32px); padding: 14px 22px; border-radius: 14px; background: #0B1635; color: #fff;
+  font-size: 14.5px; font-weight: 500; box-shadow: 0 16px 40px rgba(11, 22, 53, .3); opacity: 0; transform: translate(-50%, 20px); pointer-events: none; transition: opacity .3s, transform .3s; }
+.mail-toast.on { opacity: 1; transform: translate(-50%, 0); }
+.mail-toast.bad { background: #8A1C1C; }
+@media (max-width: 640px) { .mail-box .contact-form { grid-template-columns: 1fr; padding: 24px 20px; } }
