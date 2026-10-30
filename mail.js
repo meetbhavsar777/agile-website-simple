@@ -5,7 +5,7 @@
 (function () {
   var INBOX = 'sales@agilescitech.in';
   var FORM = {
-    endpoint: '',   // the Apps Script web app address, https://script.google.com/macros/s/…/exec
+    endpoint: 'https://script.google.com/macros/s/AKfycbwvuVNW8GSWp5U95XO37AT26QEA27DzcXM6VYgoGLjNIour4RU4xeC3XyEwEdu1rcDY/exec',   // the Apps Script web app address
     sitekey: '1x00000000000000000000AA'     // the Turnstile site key (public); this one is Cloudflare's test key, for the GitHub test copy
   };
   var direct = function () { var c = window.AGILE_FORM || FORM; return c.endpoint && c.sitekey ? c : null; };
