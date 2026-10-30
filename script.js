@@ -116,7 +116,7 @@
     revealEls.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
   }
 
-  // Enquiry form: opens Gmail (or the email app on a phone) with the message filled in
+  // Enquiry form: goes straight to the sales inbox (mail.js), or opens Gmail with the message filled in
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -125,8 +125,10 @@
       var f = form.elements;
       var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value,
                   'Interested in: ' + f.interest.value, '', f.message.value].join('\n');
-      (window.sendMail || window.location.assign.bind(window.location))('mailto:sales@agilescitech.in?subject=' + encodeURIComponent('Enquiry: ' + f.interest.value) + '&body=' + encodeURIComponent(body));
-      document.getElementById('formNote').textContent = 'Gmail (or your email app) should now be open with your message. If it is not, write to sales@agilescitech.in.';
+      var subject = 'Enquiry: ' + f.interest.value;
+      var mailto = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      if (window.sendForm) window.sendForm(form, { subject: subject, body: body, email: f.email.value, name: f.name.value }, mailto);
+      else window.location.assign(mailto);
     });
   }
 

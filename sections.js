@@ -61,7 +61,7 @@
     }, { rootMargin: '-40% 0px -50% 0px' });
     [].forEach.call(document.querySelectorAll('.sv'), function (s) { io.observe(s); });
   }
-  // enquiry form (same as the home page): opens Gmail (or the email app on a phone) with the message filled in
+  // enquiry form (same as the home page): goes straight to the sales inbox (mail.js), or opens Gmail with the message filled in
   var form = document.getElementById('contactForm');
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -73,7 +73,8 @@
     var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value, 'Interested in: ' + f.interest.value]
       .concat(products ? ['', 'Products for quotation:', products] : []).concat(['', f.message.value]).join('\n');
     var subject = count ? 'Quote request: ' + count + (count === 1 ? ' product' : ' products') + ' — ' + (f.company.value || f.name.value) : 'Enquiry: ' + f.interest.value;
-    (window.sendMail || window.location.assign.bind(window.location))('mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
-    document.getElementById('formNote').textContent = 'Gmail (or your email app) should now be open with your message. If it is not, write to sales@agilescitech.in.';
+    var mailto = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    if (window.sendForm) window.sendForm(form, { subject: subject, body: body, email: f.email.value, name: f.name.value }, mailto);
+    else window.location.assign(mailto);
   });
 })();

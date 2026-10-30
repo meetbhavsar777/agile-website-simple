@@ -34,8 +34,11 @@
     t.textContent = msg; t.classList.add('on');
     clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove('on'); }, 1800);
   }
-  function mail(subject, lines) {
-    (window.sendMail || window.location.assign.bind(window.location))('mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n')));
+  // quote request: straight to the sales inbox (mail.js), or Gmail with the message filled in
+  function mail(form, subject, lines, email) {
+    var body = lines.join('\n'), mailto = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    if (window.sendForm) window.sendForm(form, { subject: subject, body: body, email: email }, mailto);
+    else window.location.assign(mailto);
   }
 
   // ---------- product card
@@ -197,7 +200,7 @@
     if (f) f.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!f.checkValidity()) { f.reportValidity(); return; }
-      mail('Quote request: ' + (f.dataset.subject || document.title.split(' | ')[0]), ['Email: ' + f.elements.email.value, 'Details: ' + f.elements.what.value]);
+      mail(f, 'Quote request: ' + (f.dataset.subject || document.title.split(' | ')[0]), ['Email: ' + f.elements.email.value, 'Details: ' + f.elements.what.value, '', 'Page: ' + location.href], f.elements.email.value);
     });
   }
 

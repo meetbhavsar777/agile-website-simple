@@ -827,3 +827,10 @@ button.arrow-btn:hover { background: var(--navy); color: #fff; border-color: var
 ::selection { background: #DDE2EA; color: #0B1635; }
 html { -webkit-tap-highlight-color: transparent; }
 button, .btn, .nav-link, .menu-toggle, .hsp-thumbs, .cat-tabs, .pl-list, .arrow-btn { -webkit-user-select: none; user-select: none; }
+
+/* forms sent straight to the sales inbox (mail.js): Cloudflare's "Verify you are human" box, a hidden field
+   only robots fill in, and the sent / not-sent message */
+.cf-human { grid-column: 1 / -1; }
+.cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.cf-note { grid-column: 1 / -1; margin: 0; font-size: 13px; line-height: 1.5; }
+.cf-ok { font-weight: 600; }

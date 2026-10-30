@@ -423,11 +423,12 @@ html.fx-open { overflow: hidden; }
   .help a { min-height: 40px; }
   .crumb a { display: inline-block; padding: 9px 2px; margin: -9px 0; }
 }
-/* the smallest phones (320px): logo, quote button and menu fit on one line */
+/* the smallest phones (320px): logo, quote button (with its count) and menu fit on one line */
 @media (max-width: 380px) {
+  .header-inner { gap: 10px; }
   .header-actions { gap: 8px; }
   .header-actions .btn { padding: 0 10px; }
   .header-actions .btn svg { display: none; }
-  .logo img { height: 40px; }
+  .site-header .logo img, .site-header.stuck .logo img, .site-header.scrolled .logo img { height: 38px; }
 }
 @media (max-width: 640px) { .quote-act { flex-wrap: wrap; gap: 10px 20px; } }
