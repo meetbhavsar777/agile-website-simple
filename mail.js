@@ -6,7 +6,7 @@
   var INBOX = 'sales@agilescitech.in';
   var FORM = {
     endpoint: '',   // the Apps Script web app address, https://script.google.com/macros/s/…/exec
-    sitekey: ''     // the Turnstile site key (public)
+    sitekey: '1x00000000000000000000AA'     // the Turnstile site key (public); this one is Cloudflare's test key, for the GitHub test copy
   };
   var direct = function () { var c = window.AGILE_FORM || FORM; return c.endpoint && c.sitekey ? c : null; };
   var phone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
