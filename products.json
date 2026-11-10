@@ -391,6 +391,7 @@
  "products": [
   {
    "id": "ultisil-ultimate-series",
+   "site": "https://www.welch-us.com/collections/normal-phase-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "HPLC",
@@ -401,6 +402,7 @@
   },
   {
    "id": "xtimate-series",
+   "site": "https://www.welch-us.com/collections/normal-phase-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "HPLC",
@@ -411,6 +413,7 @@
   },
   {
    "id": "topsil-series",
+   "site": "https://www.welch-us.com/collections/normal-phase-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "HPLC",
@@ -421,6 +424,7 @@
   },
   {
    "id": "welchrom-series",
+   "site": "https://www.welch-us.com/collections/normal-phase-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "HPLC",
@@ -431,6 +435,7 @@
   },
   {
    "id": "boltimate-core-shell",
+   "site": "https://www.welch-us.com/collections/normal-phase-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "HPLC / UHPLC",
@@ -441,6 +446,7 @@
   },
   {
    "id": "blossmate-chiral",
+   "site": "https://www.welch-us.com/collections/chiral-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "Chiral",
@@ -451,6 +457,7 @@
   },
   {
    "id": "advanchrom-c18",
+   "site": "https://www.welch-us.com/collections/normal-phase-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "HPLC",
@@ -461,6 +468,7 @@
   },
   {
    "id": "advanchrom-hic-butyl-bio-hic-butyl",
+   "site": "https://www.welch-us.com/collections/hic-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "Bio · HIC",
@@ -471,6 +479,7 @@
   },
   {
    "id": "advanchrom-amine-scx",
+   "site": "https://www.welch-us.com/collections/ion-exchange-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "Specialty",
@@ -481,6 +490,7 @@
   },
   {
    "id": "dlc-columns",
+   "site": "https://www.welch-us.com/collections/hplc-column",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "LC-MS",
@@ -491,6 +501,7 @@
   },
   {
    "id": "hilic-iex-sec-hic-mixed-mode",
+   "site": "https://www.welch-us.com/collections/hilic",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "Specialty phases",
@@ -501,6 +512,7 @@
   },
   {
    "id": "ghost-buster-columns",
+   "site": "https://www.welch-us.com/collections/hplc-column",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "Accessory",
@@ -511,6 +523,7 @@
   },
   {
    "id": "gc-columns-wm-series",
+   "site": "https://www.welch-us.com/collections/gc-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "GC",
@@ -521,6 +534,7 @@
   },
   {
    "id": "gc-columns-wel-series",
+   "site": "https://www.welch-us.com/collections/gc-columns",
    "cat": "hplc-uhplc-gc-columns",
    "partner": "Welch Materials",
    "tag": "GC",
@@ -531,6 +545,7 @@
   },
   {
    "id": "preppack-ultisil-prep-columns",
+   "site": "https://www.welch-us.com/collections/preparative-columns",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Prep column",
@@ -541,6 +556,7 @@
   },
   {
    "id": "preppack-xtimate-prep-columns",
+   "site": "https://www.welch-us.com/collections/preparative-columns",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Prep column",
@@ -551,6 +567,7 @@
   },
   {
    "id": "blossmate-chiral-prep-columns",
+   "site": "https://www.welch-us.com/collections/preparative-columns",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Chiral prep",
@@ -561,6 +578,7 @@
   },
   {
    "id": "welflash-flash-cartridges",
+   "site": "https://www.welch-us.com/collections/flash-cartige",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Flash",
@@ -571,6 +589,7 @@
   },
   {
    "id": "chromatography-packing-materials",
+   "site": "https://www.welch-us.com/collections/packing-material",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Bulk media",
@@ -581,6 +600,7 @@
   },
   {
    "id": "sail-1000-modular-prep-lc-system",
+   "site": "https://www.welch-us.com/collections/prep-lc-system",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Lab system",
@@ -591,6 +611,7 @@
   },
   {
    "id": "sail-1000-collectors-accessories",
+   "site": "https://www.welch-us.com/collections/prep-lc-system",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Accessory",
@@ -601,6 +622,7 @@
   },
   {
    "id": "welpacker-dac-columns",
+   "site": "https://www.welch-us.com/products/welpacker-dac-lc-system",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "DAC",
@@ -611,6 +633,7 @@
   },
   {
    "id": "welpacker-purification-skids-lc5-lc80",
+   "site": "https://www.welch-us.com/collections/purification-solutions",
    "cat": "preparative-flash-dac",
    "partner": "Welch Materials",
    "tag": "Production system",
@@ -621,6 +644,7 @@
   },
   {
    "id": "preparative-hplc-system-lab",
+   "site": "http://en.inscinstech.com.cn/products/31.html",
    "cat": "preparative-flash-dac",
    "partner": "Inscinstech",
    "tag": "Lab system",
@@ -631,6 +655,7 @@
   },
   {
    "id": "pilot-scale-preparative-lc-system",
+   "site": "http://en.inscinstech.com.cn/products/50.html",
    "cat": "preparative-flash-dac",
    "partner": "Inscinstech",
    "tag": "Pilot system",
@@ -641,6 +666,7 @@
   },
   {
    "id": "wa-series-agarose-resins",
+   "site": "https://www.welch-us.com/collections/wa-wh-series",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Resin",
@@ -651,6 +677,7 @@
   },
   {
    "id": "wh-series-highly-rigid-agarose",
+   "site": "https://www.welch-us.com/collections/wa-wh-series",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Resin",
@@ -661,6 +688,7 @@
   },
   {
    "id": "wd-series-dextran-media",
+   "site": "https://www.welch-us.com/collections/protein-purification-gel-filtration",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Resin",
@@ -671,6 +699,7 @@
   },
   {
    "id": "wi-series-inorganic-media",
+   "site": "https://www.welch-us.com/collections/protein-purification",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Resin",
@@ -681,6 +710,7 @@
   },
   {
    "id": "wk-col-prepacked-columns",
+   "site": "https://www.welch-us.com/collections/protein-purification",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Column",
@@ -691,6 +721,7 @@
   },
   {
    "id": "affinity-media",
+   "site": "https://www.welch-us.com/collections/protein-purification-gel-filtration-1",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Affinity",
@@ -701,6 +732,7 @@
   },
   {
    "id": "ion-exchange-hic-media",
+   "site": "https://www.welch-us.com/collections/protein-purification-ion-exchange",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "IEX · HIC",
@@ -711,6 +743,7 @@
   },
   {
    "id": "empty-columns-accessories",
+   "site": "https://www.welch-us.com/collections/protein-purification",
    "cat": "protein-purification-media",
    "partner": "Welch Materials",
    "tag": "Accessory",
@@ -721,6 +754,7 @@
   },
   {
    "id": "welchrom-brp-spe-cartridges",
+   "site": "https://www.welch-us.com/collections/spe",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "SPE · polymer",
@@ -731,6 +765,7 @@
   },
   {
    "id": "welchrom-hlb-spe-cartridges",
+   "site": "https://www.welch-us.com/collections/spe",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "SPE · polymer",
@@ -741,6 +776,7 @@
   },
   {
    "id": "silica-inorganic-mixed-mode-spe",
+   "site": "https://www.welch-us.com/collections/spe",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "SPE",
@@ -751,6 +787,7 @@
   },
   {
    "id": "96-well-spe-plates",
+   "site": "https://www.welch-us.com/collections/spe",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "Plate",
@@ -761,6 +798,7 @@
   },
   {
    "id": "quechers-bags-clean-up-tubes",
+   "site": "https://www.welch-us.com/collections/quechers",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "QuEChERS",
@@ -771,6 +809,7 @@
   },
   {
    "id": "immunoaffinity-cartridges",
+   "site": "https://www.welch-us.com/collections/immunoaffinity-cartridge",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "Immunoaffinity",
@@ -781,6 +820,7 @@
   },
   {
    "id": "ic-cartridges",
+   "site": "https://www.welch-us.com/collections/sample-preparation",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "Ion chromatography",
@@ -791,6 +831,7 @@
   },
   {
    "id": "spe-manifold-oil-free-vacuum-pump",
+   "site": "https://www.welch-us.com/collections/sample-preparation",
    "cat": "sample-preparation",
    "partner": "Welch Materials",
    "tag": "Equipment",
@@ -801,6 +842,7 @@
   },
   {
    "id": "autosampler-vials",
+   "site": "https://www.welch-us.com/collections/sample-vials",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Vials",
@@ -811,6 +853,7 @@
   },
   {
    "id": "headspace-shell-scintillation-toc-vials",
+   "site": "https://www.welch-us.com/collections/sample-vials",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Vials",
@@ -821,6 +864,7 @@
   },
   {
    "id": "caps-septa-inserts-vial-racks",
+   "site": "https://www.welch-us.com/collections/consumables",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Closures",
@@ -831,6 +875,7 @@
   },
   {
    "id": "syringe-filters",
+   "site": "https://www.welch-us.com/collections/syringe-filters",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Filtration",
@@ -841,6 +886,7 @@
   },
   {
    "id": "membranes-glass-solvent-filters",
+   "site": "https://www.welch-us.com/collections/membrane",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Filtration",
@@ -851,6 +897,7 @@
   },
   {
    "id": "bottles",
+   "site": "https://www.welch-us.com/collections/consumables",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Bottles",
@@ -861,6 +908,7 @@
   },
   {
    "id": "crimpers-decrimpers-syringes",
+   "site": "https://www.welch-us.com/collections/consumables",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Tools",
@@ -871,6 +919,7 @@
   },
   {
    "id": "welview-photochemical-reactor",
+   "site": "https://www.welch-us.com/collections/consumables",
    "cat": "lab-consumables-equipment",
    "partner": "Welch Materials",
    "tag": "Equipment",
@@ -881,6 +930,7 @@
   },
   {
    "id": "oligonucleotide-synthesizer-lab",
+   "site": "http://en.inscinstech.com.cn/products/10.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Synthesis",
@@ -891,6 +941,7 @@
   },
   {
    "id": "oligonucleotide-synthesizer-pilot",
+   "site": "http://en.inscinstech.com.cn/products/11.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Synthesis",
@@ -901,6 +952,7 @@
   },
   {
    "id": "oligo-columns-solid-supports",
+   "site": "http://en.inscinstech.com.cn/products/2.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Consumables",
@@ -911,6 +963,7 @@
   },
   {
    "id": "protein-purification-systems-fplc",
+   "site": "http://en.inscinstech.com.cn/products/16.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Purification",
@@ -921,6 +974,7 @@
   },
   {
    "id": "production-chromatography-columns",
+   "site": "http://en.inscinstech.com.cn/products/40.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Purification",
@@ -931,6 +985,7 @@
   },
   {
    "id": "crossflow-filtration-tff",
+   "site": "http://en.inscinstech.com.cn/products/4.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Filtration",
@@ -941,6 +996,7 @@
   },
   {
    "id": "lab-scale-bioreactors",
+   "site": "http://en.inscinstech.com.cn/products/37.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Upstream",
@@ -951,6 +1007,7 @@
   },
   {
    "id": "nanoparticle-assembly-systems",
+   "site": "http://en.inscinstech.com.cn/products/5.html",
    "cat": "bioprocess-systems",
    "partner": "Inscinstech",
    "tag": "Formulation",
@@ -961,6 +1018,7 @@
   },
   {
    "id": "stunner",
+   "site": "https://www.unchainedlabs.com/stunner/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "DLS + UV/Vis",
@@ -1005,6 +1063,7 @@
   },
   {
    "id": "stunner-af",
+   "site": "https://www.unchainedlabs.com/stunneraf/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "DLS + UV/Vis + fluorescence",
@@ -1015,6 +1074,7 @@
   },
   {
    "id": "aunty",
+   "site": "https://www.unchainedlabs.com/aunty/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "DSF + light scattering",
@@ -1025,6 +1085,7 @@
   },
   {
    "id": "lunatic",
+   "site": "https://www.unchainedlabs.com/lunatic/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "UV/Vis",
@@ -1035,6 +1096,7 @@
   },
   {
    "id": "honeybun",
+   "site": "https://www.unchainedlabs.com/honeybun/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "Viscosity",
@@ -1045,6 +1107,7 @@
   },
   {
    "id": "lil-tuna",
+   "site": "https://www.unchainedlabs.com/lil-tuna/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "Buffer exchange",
@@ -1055,6 +1118,7 @@
   },
   {
    "id": "leprechaun",
+   "site": "https://www.unchainedlabs.com/leprechaun/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "Single particle",
@@ -1065,6 +1129,7 @@
   },
   {
    "id": "sunscreen-sunshine-sunbather",
+   "site": "https://www.unchainedlabs.com/sunscreen/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "LNP synthesis",
@@ -1075,6 +1140,7 @@
   },
   {
    "id": "stuntman-ai-developability-workcell",
+   "site": "https://www.unchainedlabs.com/stuntman/",
    "cat": "biologics-characterization",
    "partner": "Unchained Labs",
    "tag": "Automation",
@@ -1085,6 +1151,7 @@
   },
   {
    "id": "simple-western",
+   "site": "https://www.bio-techne.com/instruments/simple-western",
    "cat": "biologics-characterization",
    "partner": "Bio-Techne",
    "tag": "Capillary western",
@@ -1095,6 +1162,7 @@
   },
   {
    "id": "simple-plex-ella",
+   "site": "https://www.bio-techne.com/instruments/simple-plex",
    "cat": "biologics-characterization",
    "partner": "Bio-Techne",
    "tag": "Immunoassay",
@@ -1105,6 +1173,7 @@
   },
   {
    "id": "maurice-ice",
+   "site": "https://www.bio-techne.com/instruments/ice",
    "cat": "biologics-characterization",
    "partner": "Bio-Techne",
    "tag": "Capillary electrophoresis",
@@ -1115,6 +1184,7 @@
   },
   {
    "id": "hplc-capillary-electrophoresis",
+   "site": "http://en.inscinstech.com.cn/products/41.html",
    "cat": "biologics-characterization",
    "partner": "Inscinstech",
    "tag": "Analytical",
@@ -1125,6 +1195,7 @@
   },
   {
    "id": "flowcam-8000",
+   "site": "https://www.fluidimaging.com/products/flowcam-8000-flow-imaging-microscope-and-particle-analyzer",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Instrument",
@@ -1135,6 +1206,7 @@
   },
   {
    "id": "flowcam-lo",
+   "site": "https://www.fluidimaging.com/products/flowcam-lo-flow-imaging-microscopy-and-light-obscuration",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Instrument",
@@ -1145,6 +1217,7 @@
   },
   {
    "id": "flowcam-nano",
+   "site": "https://www.fluidimaging.com/products/flowcam-nano-submicron-particle-imaging",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Instrument",
@@ -1155,6 +1228,7 @@
   },
   {
    "id": "flowcam-5000",
+   "site": "https://www.fluidimaging.com/products/flowcam-5000-streamlined-flow-imaging-microscopy",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Instrument",
@@ -1165,6 +1239,7 @@
   },
   {
    "id": "flowcam-cyano",
+   "site": "https://www.fluidimaging.com/products/flowcam-cyano-differentiate-cyanobacteria-and-other-algae",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Instrument",
@@ -1175,6 +1250,7 @@
   },
   {
    "id": "flowcam-macro",
+   "site": "https://www.fluidimaging.com/products/flowcam-macro-flow-imaging-microscopy-for-large-particles",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Instrument",
@@ -1185,6 +1261,7 @@
   },
   {
    "id": "visualspreadsheet",
+   "site": "https://www.fluidimaging.com/products",
    "cat": "particle-imaging",
    "partner": "FlowCam",
    "tag": "Software",
@@ -1195,6 +1272,7 @@
   },
   {
    "id": "rs32-all-in-one-dpcr-system",
+   "site": "https://www.rainsurebio.com/products-services/rs32-all-in-one-dpcr-systems-ce-ivdr",
    "cat": "digital-pcr-molecular",
    "partner": "RainSure",
    "tag": "dPCR instrument",
@@ -1205,6 +1283,7 @@
   },
   {
    "id": "dropdx-dpcr-system",
+   "site": "https://www.rainsurebio.com/products-services/dropdx-two-unit-dpcr-systems-ce-ivdr",
    "cat": "digital-pcr-molecular",
    "partner": "RainSure",
    "tag": "dPCR instrument",
@@ -1215,6 +1294,7 @@
   },
   {
    "id": "omniplex-dpx-system",
+   "site": "https://www.rainsurebio.com/products-services/rainsure-omniplex-dpx-system",
    "cat": "digital-pcr-molecular",
    "partner": "RainSure",
    "tag": "dPCR instrument",
@@ -1225,6 +1305,7 @@
   },
   {
    "id": "fast-16-qpcr-system",
+   "site": "https://www.rainsurebio.com/products-services/qpcr",
    "cat": "digital-pcr-molecular",
    "partner": "RainSure",
    "tag": "qPCR instrument",
@@ -1235,6 +1316,7 @@
   },
   {
    "id": "dpcr-assays-kits",
+   "site": "https://www.rainsurebio.com/products-services/dpcr",
    "cat": "digital-pcr-molecular",
    "partner": "RainSure",
    "tag": "Assays",
@@ -1245,6 +1327,7 @@
   },
   {
    "id": "lyophilised-master-mix",
+   "site": "https://www.rainsurebio.com/products-services/lyophilised-mastermix",
    "cat": "digital-pcr-molecular",
    "partner": "RainSure",
    "tag": "Reagent",
@@ -1255,6 +1338,7 @@
   },
   {
    "id": "antibodies",
+   "site": "https://www.bio-techne.com/reagents/antibodies",
    "cat": "reagents-elisa",
    "partner": "Bio-Techne",
    "tag": "Antibody",
@@ -1265,6 +1349,7 @@
   },
   {
    "id": "recombinant-proteins",
+   "site": "https://www.bio-techne.com/reagents/proteins",
    "cat": "reagents-elisa",
    "partner": "Bio-Techne",
    "tag": "Protein",
@@ -1275,6 +1360,7 @@
   },
   {
    "id": "gmp-proteins",
+   "site": "https://www.bio-techne.com/gmp-products/gmp-proteins",
    "cat": "reagents-elisa",
    "partner": "Bio-Techne",
    "tag": "Protein · GMP",
@@ -1285,6 +1371,7 @@
   },
   {
    "id": "elisa-kits",
+   "site": "https://www.bio-techne.com/reagents/elisa-kits",
    "cat": "reagents-elisa",
    "partner": "Bio-Techne",
    "tag": "Immunoassay",
@@ -1295,6 +1382,7 @@
   },
   {
    "id": "small-molecules-inhibitors",
+   "site": "https://www.bio-techne.com/reagents/small-molecules-and-peptides",
    "cat": "reagents-elisa",
    "partner": "Bio-Techne",
    "tag": "Small molecule",
@@ -1305,6 +1393,7 @@
   },
   {
    "id": "rnascope-ish-probes-assays",
+   "site": "https://www.bio-techne.com/spatial/reagents/rnascope-ish-technology",
    "cat": "reagents-elisa",
    "partner": "Bio-Techne",
    "tag": "Spatial biology",
@@ -1315,6 +1404,7 @@
   },
   {
    "id": "pharmaceutical-impurity-standards",
+   "site": "https://www.tlcstandards.com/products.aspx?cat=IMP",
    "cat": "reference-standards",
    "partner": "TLC Pharmaceutical Standards",
    "tag": "Impurities",
@@ -1325,6 +1415,7 @@
   },
   {
    "id": "stable-isotope-labelled-standards",
+   "site": "https://www.tlcstandards.com/products.aspx?cat=SIL",
    "cat": "reference-standards",
    "partner": "TLC Pharmaceutical Standards",
    "tag": "SIL",
@@ -1335,6 +1426,7 @@
   },
   {
    "id": "catalogue-reference-standards",
+   "site": "https://www.tlcstandards.com/products.aspx",
    "cat": "reference-standards",
    "partner": "TLC Pharmaceutical Standards",
    "tag": "Catalogue",
@@ -1345,6 +1437,7 @@
   },
   {
    "id": "custom-synthesis",
+   "site": "https://www.tlcstandards.com/quote.aspx",
    "cat": "reference-standards",
    "partner": "TLC Pharmaceutical Standards",
    "tag": "Made to order",
@@ -1355,6 +1448,7 @@
   },
   {
    "id": "cellist-basal3-3p",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/basal_media/basal3.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Basal medium",
@@ -1365,6 +1459,7 @@
   },
   {
    "id": "cellist-basal10-10p",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/basal_media/basal10.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Basal medium",
@@ -1375,6 +1470,7 @@
   },
   {
    "id": "cellist-basal-cho-mx",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/basal_media/basal_cho_mx.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Basal medium",
@@ -1385,6 +1481,7 @@
   },
   {
    "id": "cellist-feed2",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/feed_media/feed2.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Feed medium",
@@ -1395,6 +1492,7 @@
   },
   {
    "id": "cellist-f7",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/feed_media/f7.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Feed medium",
@@ -1405,6 +1503,7 @@
   },
   {
    "id": "aminosupplement",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/supplement/aminoSupplement.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Supplement",
@@ -1415,6 +1514,7 @@
   },
   {
    "id": "glycyl-l-tyrosine-dihydrate",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/supplement/Glycyl-L-Tyrosine.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Supplement",
@@ -1425,6 +1525,7 @@
   },
   {
    "id": "aav-production-supplement-1",
+   "site": "https://www.ajinomotocellistkorea.com/page/business/supplement/AAV-Production-Supplement-1.php",
    "cat": "cell-culture-media-feeds",
    "partner": "Ajinomoto CELLiST Korea",
    "tag": "Supplement",
