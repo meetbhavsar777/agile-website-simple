@@ -354,7 +354,7 @@
       add.addEventListener('click', function () { toggle(p.id); label(); }); label();
       // the same product on the manufacturer's own website
       var site = $('pdSite'), BRAND = { 'Welch Materials': 'Welch', 'Ajinomoto CELLiST Korea': 'CELLiST', 'TLC Pharmaceutical Standards': 'TLC' };
-      if (p.site) { site.href = p.site; site.firstChild.textContent = 'View on ' + (BRAND[p.partner] || p.partner) + ' site '; } else site.remove();
+      if (p.site) { site.href = p.site; site.firstChild.textContent = 'View on ' + (BRAND[p.partner] || p.partner) + ' site '; site.hidden = false; }
       $('ovTitle').textContent = 'Why labs choose ' + p.name;
       $('ovText').textContent = p.why || (p.desc + ' Supplied in India by Agile SciTech as an authorised partner of ' + p.partner + ', with application support, installation and service from our own team.');
       (p.tiles || []).forEach(function (t) { var d = el('div'); d.appendChild(el('small', '', t[0])); d.appendChild(el('strong', '', t[1])); d.appendChild(el('span', '', t[2])); $('ovTiles').appendChild(d); });
