@@ -9,6 +9,10 @@
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function byId(id) { return DATA.products.filter(function (p) { return p.id === id; })[0]; }
   function cat(slug) { return DATA.categories.filter(function (c) { return c.slug === slug; })[0]; }
+  // "View on Welch site": the same product on the manufacturer's own website
+  var BRAND = { 'Welch Materials': 'Welch', 'Ajinomoto CELLiST Korea': 'CELLiST', 'TLC Pharmaceutical Standards': 'TLC' };
+  var EXT = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5"/></svg>';
+  function siteLabel(p) { return 'View on ' + (BRAND[p.partner] || p.partner) + ' site '; }
 
   // ---------- quote list (kept in this browser)
   function getList() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } }
@@ -109,6 +113,7 @@
     add.addEventListener('click', function () { toggle(p.id); label(); renderQuote(); if (window.__refresh) window.__refresh(); });
     label(); row.appendChild(add);
     var full = el('a', 'btn btn-line btn-lg', 'Full details'); full.href = 'product.html?id=' + p.id; row.appendChild(full);
+    if (p.site) { var mk = el('a', 'btn btn-line btn-lg', siteLabel(p)); mk.href = p.site; mk.target = '_blank'; mk.rel = 'noopener'; mk.insertAdjacentHTML('beforeend', EXT); row.appendChild(mk); }
     info.appendChild(row);
     back.appendChild(info);
     var x = el('button', 'fx-close', '×'); x.type = 'button'; x.setAttribute('aria-label', 'Close'); back.appendChild(x);
@@ -353,8 +358,8 @@
       function label() { add.firstChild.textContent = inList(p.id) ? '✓ In your quote list ' : 'Add to quote list '; }
       add.addEventListener('click', function () { toggle(p.id); label(); }); label();
       // the same product on the manufacturer's own website
-      var site = $('pdSite'), BRAND = { 'Welch Materials': 'Welch', 'Ajinomoto CELLiST Korea': 'CELLiST', 'TLC Pharmaceutical Standards': 'TLC' };
-      if (p.site) { site.href = p.site; site.firstChild.textContent = 'View on ' + (BRAND[p.partner] || p.partner) + ' site '; site.hidden = false; }
+      var site = $('pdSite');
+      if (p.site) { site.href = p.site; site.firstChild.textContent = siteLabel(p); site.hidden = false; }
       $('ovTitle').textContent = 'Why labs choose ' + p.name;
       $('ovText').textContent = p.why || (p.desc + ' Supplied in India by Agile SciTech as an authorised partner of ' + p.partner + ', with application support, installation and service from our own team.');
       (p.tiles || []).forEach(function (t) { var d = el('div'); d.appendChild(el('small', '', t[0])); d.appendChild(el('strong', '', t[1])); d.appendChild(el('span', '', t[2])); $('ovTiles').appendChild(d); });
