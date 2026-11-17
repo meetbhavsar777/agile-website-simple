@@ -1,0 +1,202 @@
+# Agile SciTech
+
+> Agile SciTech Pvt. Ltd. (formerly Agile Diagnostics, established 2013, Ahmedabad, Gujarat, India) is an authorised channel partner in India for Welch Materials, Bio-Techne, Unchained Labs, FlowCam, RainSure, Inscinstech, TLC Pharmaceutical Standards and Ajinomoto CELLiST Korea. It supplies chromatography columns and consumables, preparative and bioprocess systems, biologics characterization instruments, digital PCR, reagents, reference standards and cell culture media, with demo, installation, training and service by its own field team.
+
+Contact: sales@agilescitech.in, info@agilescitech.in, phone +91-88661-01022. Address: B-402, S.G. Business Hub, S.G. Highway, Ahmedabad 380060, Gujarat, India.
+
+## Main pages
+
+- [Agile SciTech](https://meetbhavsar777.github.io/agile-website-simple/): Agile SciTech: authorised partner in India for Welch Materials, Bio-Techne, Unchained Labs, FlowCam, RainSure, Inscinstech, TLC and Ajinomoto CELLiST.
+- [Products](https://meetbhavsar777.github.io/agile-website-simple/products.html): Product catalogue: 101 product lines in 12 categories from eight global partners, supplied and supported by Agile SciTech.
+- [Applications](https://meetbhavsar777.github.io/agile-website-simple/applications.html): Twelve laboratory applications with the full workflow, the products for each step and the partners that supply them.
+- [About us](https://meetbhavsar777.github.io/agile-website-simple/about.html): Agile SciTech, founded in 2013 in Ahmedabad: authorised channel partner for global chromatography and life science brands. Awards, certificates and events.
+
+## Partners
+
+- [Ajinomoto CELLiST Korea](https://meetbhavsar777.github.io/agile-website-simple/partner-ajinomoto-cellist-korea.html): Basal media, feeds and supplements developed with Ajinomoto’s amino-acid science — compatible with CHO-K1, CHO-GS, CHO-S, CHO-DG44 and CHO-DXB11 cell lines.
+- [Bio-Techne](https://meetbhavsar777.github.io/agile-website-simple/partner-bio-techne.html): R&D Systems reagents for discovery labs, GMP proteins for cell and gene therapy, and automated Simple Western, Ella and Maurice platforms for biologics.
+- [FlowCam](https://meetbhavsar777.github.io/agile-website-simple/partner-flowcam.html): FlowCam images each particle as it flows past, then counts, sizes and classifies it, so you know not just how many particles there are but what they are.
+- [Inscinstech](https://meetbhavsar777.github.io/agile-website-simple/partner-inscinstech.html): Oligonucleotide synthesis, chromatography, prep HPLC, crossflow filtration, bioreactors and LNP assembly: one platform family from upstream to analytics.
+- [RainSure](https://meetbhavsar777.github.io/agile-website-simple/partner-rainsure.html): Compact all-in-one dPCR systems with ready multiplex assays for residual DNA, viral titre, copy number and rare-mutation detection in biopharma labs.
+- [TLC Pharmaceutical Standards](https://meetbhavsar777.github.io/agile-website-simple/partner-tlc-pharmaceutical-standards.html): 24,000+ characterised impurities and stable isotope-labelled standards, each with a full Certificate of Analysis, plus custom synthesis when you need it.
+- [Unchained Labs](https://meetbhavsar777.github.io/agile-website-simple/partner-unchained-labs.html): Plate-based instruments that measure stability, size, concentration and viscosity from microlitres, plus nanoparticle synthesis from screening to GMP.
+- [Welch Materials](https://meetbhavsar777.github.io/agile-website-simple/partner-welch-materials.html): Analytical and prep HPLC and GC columns, prep LC and DAC, purification media, sample prep and lab consumables from one supplier, with application support.
+
+## Product categories
+
+- [Biologics characterization](https://meetbhavsar777.github.io/agile-website-simple/cat-biologics-characterization.html): Measure concentration, size, stability, viscosity, charge and purity of proteins, vectors and nanoparticles with Unchained Labs, Bio-Techne and Inscinstech.
+- [Bioprocess systems](https://meetbhavsar777.github.io/agile-website-simple/cat-bioprocess-systems.html): Inscinstech systems for oligo, mRNA, peptide and protein manufacturing: synthesis, purification, filtration, cell culture and LNP assembly, lab to plant.
+- [Cell culture media & feeds](https://meetbhavsar777.github.io/agile-website-simple/cat-cell-culture-media-feeds.html): Ajinomoto CELLiST basal media, feeds and supplements for CHO-based antibody production and viral vector manufacturing.
+- [Digital PCR & molecular](https://meetbhavsar777.github.io/agile-website-simple/cat-digital-pcr-molecular.html): RainSure digital and real-time PCR systems, ready assays and reagents for absolute quantification and rare-target detection.
+- [HPLC, UHPLC & GC columns](https://meetbhavsar777.github.io/agile-website-simple/cat-hplc-uhplc-gc-columns.html): Welch Materials analytical columns — reversed-phase, chiral, HILIC, ion-exchange, SEC and GC — in 1.8–10 µm particles and USP L1–L134 classifications.
+- [Lab consumables & equipment](https://meetbhavsar777.github.io/agile-website-simple/cat-lab-consumables-equipment.html): Everyday chromatography supplies from Welch (Welchrom® and Doprah): vials, closures, syringe filters, membranes, bottles and tools, plus the WelView reactor.
+- [Particle imaging](https://meetbhavsar777.github.io/agile-website-simple/cat-particle-imaging.html): FlowCam flow imaging microscopes and software to image, count and classify particles in biopharma, water and materials samples.
+- [Preparative, flash & DAC](https://meetbhavsar777.github.io/agile-website-simple/cat-preparative-flash-dac.html): Prep and flash columns, packing materials, Sail 1000 lab systems, WelPacker DAC and explosion-proof skids. 100+ Welch purification installations in India.
+- [Protein purification media](https://meetbhavsar777.github.io/agile-website-simple/cat-protein-purification-media.html): Welch agarose, dextran and inorganic resins, prepacked WK-Col and empty columns for affinity, ion-exchange, HIC and gel filtration chromatography.
+- [Reagents & ELISA](https://meetbhavsar777.github.io/agile-website-simple/cat-reagents-elisa.html): Bio-Techne antibodies, proteins, immunoassays, small molecules and spatial biology reagents — delivered through a temperature-controlled supply chain.
+- [Reference standards](https://meetbhavsar777.github.io/agile-website-simple/cat-reference-standards.html): TLC Pharmaceutical Standards — 24,000+ characterised compounds from an ISO 17034 / 17025 / 9001 manufacturer, each supplied with a full Certificate of Analysis.
+- [Sample preparation](https://meetbhavsar777.github.io/agile-website-simple/cat-sample-preparation.html): Welch SPE cartridges and plates in 80+ phases, QuEChERS kits, immunoaffinity and IC cartridges, and the manifold and pump to run them.
+
+## Applications
+
+- [Bioanalysis & LC-MS](https://meetbhavsar777.github.io/agile-website-simple/app-bioanalysis-lc-ms.html): Quantify drugs and biomarkers in plasma and tissue: inert-hardware columns for stronger MS signal, isotope-labelled standards and automated immunoassays.
+- [Biologics developability](https://meetbhavsar777.github.io/agile-website-simple/app-biologics-developability.html): Pick candidates that survive manufacturing and storage. Screen stability, aggregation, viscosity, charge variants and particles early, from microlitres.
+- [Cell & gene therapy](https://meetbhavsar777.github.io/agile-website-simple/app-cell-gene-therapy.html): Six partners, one workflow: GMP reagents and media for production, nanoparticle formulation, and the analytics to measure titre, particle quality and purity.
+- [Digital PCR & molecular quantification](https://meetbhavsar777.github.io/agile-website-simple/app-digital-pcr.html): Count DNA and RNA molecules directly, with no standard curve: residual DNA, rare mutations, copy number and pathogen detection, plus spatial RNA in tissue.
+- [Downstream purification](https://meetbhavsar777.github.io/agile-website-simple/app-downstream-purification.html): Capture, polish, concentrate and buffer-exchange proteins, antibodies, peptides and oligos with systems, prep HPLC, TFF and columns that scale to the plant.
+- [Food & environmental testing](https://meetbhavsar777.github.io/agile-website-simple/app-food-residue-testing.html): Pesticides, mycotoxins and contaminants in food, feed, soil and water: QuEChERS, SPE and immunoaffinity clean-up, then GC and HPLC columns for trace work.
+- [Oligo, mRNA & peptide manufacturing](https://meetbhavsar777.github.io/agile-website-simple/app-oligo-mrna-peptide.html): From solid-phase synthesis to purified, formulated product: synthesizers, prep chromatography, TFF and LNP assembly that scale from lab to production.
+- [Pharma QC & impurity analysis](https://meetbhavsar777.github.io/agile-website-simple/app-pharma-qc.html): Robust HPLC/UHPLC methods, certified impurity standards and the instruments to run them, for QC and ARD release testing, stability studies and filings.
+- [Protein & cell biology research](https://meetbhavsar777.github.io/agile-website-simple/app-protein-cell-research.html): Antibodies, recombinant proteins, small molecules and immunoassays for discovery labs, plus automated protein analysis and spatial biology.
+- [Subvisible particle analysis](https://meetbhavsar777.github.io/agile-website-simple/app-subvisible-particles.html): Light obscuration counts particles; flow imaging shows what they are: protein aggregates, silicone oil, air bubbles or foreign matter. Find the root cause.
+- [Upstream cell culture](https://meetbhavsar777.github.io/agile-website-simple/app-upstream-cell-culture.html): Higher antibody titres start with the right media and a controlled bioreactor: CELLiST basal media, feeds and supplements with lab-scale bioreactors.
+- [Water & environmental monitoring](https://meetbhavsar777.github.io/agile-website-simple/app-water-environment.html): Automate microscope counts of algae, cyanobacteria and plankton. FlowCam images every cell so labs identify and count organisms faster and more reliably.
+
+## Services
+
+- [Annual maintenance, service & technical support](https://meetbhavsar777.github.io/agile-website-simple/service-amc.html): We provide complete service coverage for chromatography and bioprocess instruments across multiple brands.
+- [Application support & method development](https://meetbhavsar777.github.io/agile-website-simple/service-application-support.html): Our application scientists work on your samples and your method — before you buy and long after the instrument is installed.
+- [Compliance, documentation & qualification support](https://meetbhavsar777.github.io/agile-website-simple/service-compliance.html): We help clients meet global regulatory expectations, from equipment certification to software readiness.
+- [Custom instrumentation & system engineering](https://meetbhavsar777.github.io/agile-website-simple/service-custom.html): For unique applications or facility constraints, we offer tailored instrument development and system customization.
+- [Process & technology engineering](https://meetbhavsar777.github.io/agile-website-simple/service-process-engineering.html): We help clients select, configure and integrate the right technologies for efficient and compliant bioprocess and purification operations.
+- [Facility planning & end-to-end turnkey execution](https://meetbhavsar777.github.io/agile-website-simple/service-turnkey.html): We design operational spaces that enhance workflow efficiency and meet global quality and safety standards.
+
+## Products
+
+
+### HPLC, UHPLC & GC columns
+
+- [Ultisil® / Ultimate series](https://meetbhavsar777.github.io/agile-website-simple/product-ultisil-ultimate-series.html) (Welch Materials): Silica-based columns with a broad range of phases for small-molecule methods.
+- [Xtimate® series](https://meetbhavsar777.github.io/agile-website-simple/product-xtimate-series.html) (Welch Materials): Hybrid silica, pH 1.0–12.5, for robust methods on acidic, basic and neutral compounds.
+- [Topsil series](https://meetbhavsar777.github.io/agile-website-simple/product-topsil-series.html) (Welch Materials): Silica columns in Top-C18, Top-C8 and Top-Phenyl-Hexyl selectivities.
+- [Welchrom® series](https://meetbhavsar777.github.io/agile-website-simple/product-welchrom-series.html) (Welch Materials): General-purpose C18 and C8 columns for routine separations.
+- [Boltimate® core-shell](https://meetbhavsar777.github.io/agile-website-simple/product-boltimate-core-shell.html) (Welch Materials): Core-shell particles (e.g. Bol-C18, Bol-HILIC) for fast, high-efficiency runs.
+- [Blossmate® chiral](https://meetbhavsar777.github.io/agile-website-simple/product-blossmate-chiral.html) (Welch Materials): Cellu-D, Cellu-J, Amy-D, IMMA and IMMB chiral phases, analytical to prep.
+- [Advanchrom® C18](https://meetbhavsar777.github.io/agile-website-simple/product-advanchrom-c18.html) (Welch Materials): pH 1.0–12.5, 180 Å, USP L1; anti-fouling and highly reproducible — food, herbal and pharma QC.
+- [Advanchrom® HIC-Butyl / Bio HIC-Butyl](https://meetbhavsar777.github.io/agile-website-simple/product-advanchrom-hic-butyl-bio-hic-butyl.html) (Welch Materials): 1000 Å butyl phases for antibodies, proteins and ADC DAR analysis; MS-compatible mobile phases.
+- [Advanchrom® Amine & SCX](https://meetbhavsar777.github.io/agile-website-simple/product-advanchrom-amine-scx.html) (Welch Materials): Amine column for sugars by ELSD (ChP 2025 Poria cocos method); SCX for proteins.
+- [DLC columns](https://meetbhavsar777.github.io/agile-website-simple/product-dlc-columns.html) (Welch Materials): Diamond-like carbon coated hardware that reduces metal interaction.
+- [HILIC, IEX, SEC, HIC & mixed-mode](https://meetbhavsar777.github.io/agile-website-simple/product-hilic-iex-sec-hic-mixed-mode.html) (Welch Materials): Amide, NH2, diol, ion-exchange, size-exclusion, HIC and mixed-mode columns.
+- [Ghost-Buster™ columns](https://meetbhavsar777.github.io/agile-website-simple/product-ghost-buster-columns.html) (Welch Materials): Ghost-Buster, II, UP (100 MPa) and Plus; kits with PEEK fittings.
+- [GC columns — WM series](https://meetbhavsar777.github.io/agile-website-simple/product-gc-columns-wm-series.html) (Welch Materials): High-performance capillary GC: WM-1, -5, -17, -624, -1701, MS, WAX/FFAP and PLOT.
+- [GC columns — WEL series](https://meetbhavsar777.github.io/agile-website-simple/product-gc-columns-wel-series.html) (Welch Materials): Economical capillary GC columns in common phases (WEL-1, -5, -624, -1701…).
+
+### Preparative, flash & DAC
+
+- [PrepPack Ultisil® prep columns](https://meetbhavsar777.github.io/agile-website-simple/product-preppack-ultisil-prep-columns.html) (Welch Materials): C18, C8, C4, C1, phenyl, CN, NH2, diol, SAX, SCX, AQ-C18; 5, 10, 20 and 40–70 µm.
+- [PrepPack Xtimate® prep columns](https://meetbhavsar777.github.io/agile-website-simple/product-preppack-xtimate-prep-columns.html) (Welch Materials): pH 1.0–12.5; C18, C8, SiO2, NH2, phenyl-hexyl, CN; 5 and 10 µm.
+- [Blossmate® chiral prep columns](https://meetbhavsar777.github.io/agile-website-simple/product-blossmate-chiral-prep-columns.html) (Welch Materials): Cellu-D, Cellu-J, Amy-D, IMMA and IMMB; 10, 21.2, 30 and 50 mm ID.
+- [WelFlash® flash cartridges](https://meetbhavsar777.github.io/agile-website-simple/product-welflash-flash-cartridges.html) (Welch Materials): Silica, C18, phenyl, CN, NH2, diol, HILIC, SAX, SCX; 4 g to 1600 g and custom.
+- [Chromatography packing materials](https://meetbhavsar777.github.io/agile-website-simple/product-chromatography-packing-materials.html) (Welch Materials): Bonded and chiral silica, 5–70 µm, from kilograms to ton scale.
+- [Sail 1000 modular prep LC system](https://meetbhavsar777.github.io/agile-website-simple/product-sail-1000-modular-prep-lc-system.html) (Welch Materials): Pumps from 10 mL/min to 3 L/min, dual-wavelength UV-Vis and CDS with audit trails.
+- [Sail 1000 collectors & accessories](https://meetbhavsar777.github.io/agile-website-simple/product-sail-1000-collectors-accessories.html) (Welch Materials): 8-channel and 120-position fraction collectors, autosampler, column rack, online filters.
+- [WelPacker DAC columns](https://meetbhavsar777.github.io/agile-website-simple/product-welpacker-dac-columns.html) (Welch Materials): DAC50 to DAC2000 self-packing dynamic axial compression columns, 316L SS.
+- [WelPacker purification skids LC5–LC80](https://meetbhavsar777.github.io/agile-website-simple/product-welpacker-purification-skids-lc5-lc80.html) (Welch Materials): 5–80 L/min, 100 bar, explosion-proof Ex d II B T4, PLC + HMI control.
+- [Preparative HPLC system (lab)](https://meetbhavsar777.github.io/agile-website-simple/product-preparative-hplc-system-lab.html) (Inscinstech): Lab-scale prep HPLC for peptides, oligos and small molecules.
+- [Pilot-scale preparative LC system](https://meetbhavsar777.github.io/agile-website-simple/product-pilot-scale-preparative-lc-system.html) (Inscinstech): Pilot-scale prep liquid chromatography for scale-up batches.
+
+### Protein purification media
+
+- [WA series — agarose resins](https://meetbhavsar777.github.io/agile-website-simple/product-wa-series-agarose-resins.html) (Welch Materials): 4B, 6B, CL-4B, CL-6B and 4FF agarose bases with a wide choice of ligands.
+- [WH series — highly rigid agarose](https://meetbhavsar777.github.io/agile-website-simple/product-wh-series-highly-rigid-agarose.html) (Welch Materials): Rigid agarose for higher flow and process-scale purification.
+- [WD series — dextran media](https://meetbhavsar777.github.io/agile-website-simple/product-wd-series-dextran-media.html) (Welch Materials): Dextran-based media, incl. G25 / G50 grades for desalting and gel filtration.
+- [WI series — inorganic media](https://meetbhavsar777.github.io/agile-website-simple/product-wi-series-inorganic-media.html) (Welch Materials): Inorganic media such as calcium phosphate.
+- [WK-Col prepacked columns](https://meetbhavsar777.github.io/agile-website-simple/product-wk-col-prepacked-columns.html) (Welch Materials): Ready-to-use columns for screening and small-scale purification.
+- [Affinity media](https://meetbhavsar777.github.io/agile-website-simple/product-affinity-media.html) (Welch Materials): Protein A / G, Ni and IMAC, GST, heparin, blue, benzamidine and more.
+- [Ion-exchange & HIC media](https://meetbhavsar777.github.io/agile-website-simple/product-ion-exchange-hic-media.html) (Welch Materials): SP, Q, CM and DEAE exchangers; butyl and phenyl HIC media.
+- [Empty columns & accessories](https://meetbhavsar777.github.io/agile-website-simple/product-empty-columns-accessories.html) (Welch Materials): Empty columns for custom packing and supporting accessories.
+
+### Sample preparation
+
+- [Welchrom® BRP SPE cartridges](https://meetbhavsar777.github.io/agile-website-simple/product-welchrom-brp-spe-cartridges.html) (Welch Materials): Polymeric reversed-phase SPE, 10 mg to 2.5 g sorbent.
+- [Welchrom® HLB SPE cartridges](https://meetbhavsar777.github.io/agile-website-simple/product-welchrom-hlb-spe-cartridges.html) (Welch Materials): Hydrophilic-lipophilic balanced SPE for broad analyte coverage.
+- [Silica, inorganic & mixed-mode SPE](https://meetbhavsar777.github.io/agile-website-simple/product-silica-inorganic-mixed-mode-spe.html) (Welch Materials): 80+ phases incl. C18, Florisil, PSA, alumina and ion exchange; 1–60 mL barrels.
+- [96-well SPE plates](https://meetbhavsar777.github.io/agile-website-simple/product-96-well-spe-plates.html) (Welch Materials): High-throughput SPE for bioanalysis and screening labs.
+- [QuEChERS bags & clean-up tubes](https://meetbhavsar777.github.io/agile-website-simple/product-quechers-bags-clean-up-tubes.html) (Welch Materials): Extraction bags and dispersive clean-up tubes for residue analysis.
+- [Immunoaffinity cartridges](https://meetbhavsar777.github.io/agile-website-simple/product-immunoaffinity-cartridges.html) (Welch Materials): Selective clean-up, incl. mycotoxin-specific phases.
+- [IC cartridges](https://meetbhavsar777.github.io/agile-website-simple/product-ic-cartridges.html) (Welch Materials): Ag, Ba, H, Na and RP cartridges for IC sample pretreatment.
+- [SPE manifold & oil-free vacuum pump](https://meetbhavsar777.github.io/agile-website-simple/product-spe-manifold-oil-free-vacuum-pump.html) (Welch Materials): Manifold and Rex-series oil-free pump to run SPE.
+
+### Lab consumables & equipment
+
+- [Autosampler vials](https://meetbhavsar777.github.io/agile-website-simple/product-autosampler-vials.html) (Welch Materials): Screw, crimp and snap vials for HPLC and GC autosamplers.
+- [Headspace, shell, scintillation & TOC vials](https://meetbhavsar777.github.io/agile-website-simple/product-headspace-shell-scintillation-toc-vials.html) (Welch Materials): Specialty vials for GC headspace, TOC and counting.
+- [Caps, septa, inserts & vial racks](https://meetbhavsar777.github.io/agile-website-simple/product-caps-septa-inserts-vial-racks.html) (Welch Materials): Open and closed-top caps, individual septa, inserts and racks.
+- [Syringe filters](https://meetbhavsar777.github.io/agile-website-simple/product-syringe-filters.html) (Welch Materials): Nylon, PES, PTFE, PVDF, MCE, CA, RC and GF; 0.22–1.0 µm; 13–33 mm.
+- [Membranes & glass solvent filters](https://meetbhavsar777.github.io/agile-website-simple/product-membranes-glass-solvent-filters.html) (Welch Materials): Membrane discs from 47 to 293 mm and solvent inlet filters.
+- [Bottles](https://meetbhavsar777.github.io/agile-website-simple/product-bottles.html) (Welch Materials): Boston round, wide-mouth and laboratory reagent bottles.
+- [Crimpers, decrimpers & syringes](https://meetbhavsar777.github.io/agile-website-simple/product-crimpers-decrimpers-syringes.html) (Welch Materials): Hand tools and disposable HPLC lab syringes.
+- [WelView photochemical reactor](https://meetbhavsar777.github.io/agile-website-simple/product-welview-photochemical-reactor.html) (Welch Materials): Photochemical reactor used with LC detection.
+
+### Bioprocess systems
+
+- [Oligonucleotide synthesizer (lab)](https://meetbhavsar777.github.io/agile-website-simple/product-oligonucleotide-synthesizer-lab.html) (Inscinstech): Lab-scale solid-phase synthesis (AutoOligo® series).
+- [Oligonucleotide synthesizer (pilot)](https://meetbhavsar777.github.io/agile-website-simple/product-oligonucleotide-synthesizer-pilot.html) (Inscinstech): Pilot-scale synthesis for scale-up and clinical batches.
+- [Oligo columns & solid supports](https://meetbhavsar777.github.io/agile-website-simple/product-oligo-columns-solid-supports.html) (Inscinstech): Synthesis columns and supports for oligo runs.
+- [Protein purification systems (FPLC)](https://meetbhavsar777.github.io/agile-website-simple/product-protein-purification-systems-fplc.html) (Inscinstech): Lab and pilot-scale chromatography for proteins and antibodies.
+- [Production chromatography & columns](https://meetbhavsar777.github.io/agile-website-simple/product-production-chromatography-columns.html) (Inscinstech): Production-scale systems and columns for GMP downstream.
+- [Crossflow filtration (TFF)](https://meetbhavsar777.github.io/agile-website-simple/product-crossflow-filtration-tff.html) (Inscinstech): Lab, pilot and production systems for concentration and diafiltration.
+- [Lab-scale bioreactors](https://meetbhavsar777.github.io/agile-website-simple/product-lab-scale-bioreactors.html) (Inscinstech): Glass, stainless-steel and single-use cell culture.
+- [Nanoparticle assembly systems](https://meetbhavsar777.github.io/agile-website-simple/product-nanoparticle-assembly-systems.html) (Inscinstech): Lab and pilot-scale LNP assembly for mRNA and siRNA.
+
+### Biologics characterization
+
+- [Stunner](https://meetbhavsar777.github.io/agile-website-simple/product-stunner.html) (Unchained Labs): Concentration and size of biologics in one plate-based run.
+- [Stunner AF](https://meetbhavsar777.github.io/agile-website-simple/product-stunner-af.html) (Unchained Labs): Size and encapsulation for LNPs.
+- [Aunty](https://meetbhavsar777.github.io/agile-website-simple/product-aunty.html) (Unchained Labs): Thermal and colloidal stability screening.
+- [Lunatic](https://meetbhavsar777.github.io/agile-website-simple/product-lunatic.html) (Unchained Labs): Low-volume protein and nucleic-acid quantification.
+- [Honeybun](https://meetbhavsar777.github.io/agile-website-simple/product-honeybun.html) (Unchained Labs): Fast low-volume viscometer for high-concentration biologics.
+- [Lil’ Tuna](https://meetbhavsar777.github.io/agile-website-simple/product-lil-tuna.html) (Unchained Labs): Automated plate-based buffer exchange.
+- [Leprechaun](https://meetbhavsar777.github.io/agile-website-simple/product-leprechaun.html) (Unchained Labs): Characterization of lentivirus and exosomes.
+- [Sunscreen · Sunshine · Sunbather](https://meetbhavsar777.github.io/agile-website-simple/product-sunscreen-sunshine-sunbather.html) (Unchained Labs): Nanoparticle synthesis from screening to GMP production.
+- [Stuntman · AI Developability Workcell](https://meetbhavsar777.github.io/agile-website-simple/product-stuntman-ai-developability-workcell.html) (Unchained Labs): AI-driven automation for developability workflows.
+- [Simple Western™](https://meetbhavsar777.github.io/agile-website-simple/product-simple-western.html) (Bio-Techne): Automated, quantitative protein identity and expression.
+- [Simple Plex™ Ella](https://meetbhavsar777.github.io/agile-website-simple/product-simple-plex-ella.html) (Bio-Techne): Automated low-volume multiplex immunoassays.
+- [Maurice (iCE)](https://meetbhavsar777.github.io/agile-website-simple/product-maurice-ice.html) (Bio-Techne): Charge-variant and purity analysis of biologics.
+- [HPLC & capillary electrophoresis](https://meetbhavsar777.github.io/agile-website-simple/product-hplc-capillary-electrophoresis.html) (Inscinstech): In-process and release testing instruments.
+
+### Particle imaging
+
+- [FlowCam 8000](https://meetbhavsar777.github.io/agile-website-simple/product-flowcam-8000.html) (FlowCam): High-resolution flow imaging for all-round particle characterization.
+- [FlowCam LO](https://meetbhavsar777.github.io/agile-website-simple/product-flowcam-lo.html) (FlowCam): Flow imaging plus light obscuration in one instrument.
+- [FlowCam Nano](https://meetbhavsar777.github.io/agile-website-simple/product-flowcam-nano.html) (FlowCam): Submicron particle imaging for protein therapeutics.
+- [FlowCam 5000](https://meetbhavsar777.github.io/agile-website-simple/product-flowcam-5000.html) (FlowCam): Streamlined, entry-level flow imaging.
+- [FlowCam Cyano](https://meetbhavsar777.github.io/agile-website-simple/product-flowcam-cyano.html) (FlowCam): Differentiates cyanobacteria from other algae.
+- [FlowCam Macro](https://meetbhavsar777.github.io/agile-website-simple/product-flowcam-macro.html) (FlowCam): Flow imaging for larger particles and organisms.
+- [VisualSpreadsheet®](https://meetbhavsar777.github.io/agile-website-simple/product-visualspreadsheet.html) (FlowCam): Image analysis and particle classification software.
+
+### Digital PCR & molecular
+
+- [RS32 All-in-One dPCR System](https://meetbhavsar777.github.io/agile-website-simple/product-rs32-all-in-one-dpcr-system.html) (RainSure): Sample prep, amplification and readout in one compact box.
+- [DropDx dPCR System](https://meetbhavsar777.github.io/agile-website-simple/product-dropdx-dpcr-system.html) (RainSure): Two-unit droplet digital PCR for higher throughput.
+- [OmniPlex dPx System](https://meetbhavsar777.github.io/agile-website-simple/product-omniplex-dpx-system.html) (RainSure): High-multiplex digital PCR.
+- [Fast 16 qPCR System](https://meetbhavsar777.github.io/agile-website-simple/product-fast-16-qpcr-system.html) (RainSure): Compact real-time PCR for routine work.
+- [dPCR assays & kits](https://meetbhavsar777.github.io/agile-website-simple/product-dpcr-assays-kits.html) (RainSure): Multiplex assays incl. BCR-ABL, EGFR mutation and sepsis panels.
+- [Lyophilised master mix](https://meetbhavsar777.github.io/agile-website-simple/product-lyophilised-master-mix.html) (RainSure): Stable master mix for custom assay development.
+
+### Reagents & ELISA
+
+- [Antibodies](https://meetbhavsar777.github.io/agile-website-simple/product-antibodies.html) (Bio-Techne): Primary and secondary antibodies for flow, WB, IHC and assays.
+- [Recombinant proteins](https://meetbhavsar777.github.io/agile-website-simple/product-recombinant-proteins.html) (Bio-Techne): Cytokines, growth factors and enzymes for cell culture and bioassays.
+- [GMP proteins](https://meetbhavsar777.github.io/agile-website-simple/product-gmp-proteins.html) (Bio-Techne): GMP-grade proteins for cell and gene therapy manufacturing.
+- [ELISA kits](https://meetbhavsar777.github.io/agile-website-simple/product-elisa-kits.html) (Bio-Techne): Quantitative kits for cytokines and biomarkers.
+- [Small molecules & inhibitors](https://meetbhavsar777.github.io/agile-website-simple/product-small-molecules-inhibitors.html) (Bio-Techne): Bioactive compounds for pathway research and screening.
+- [RNAscope™ ISH probes & assays](https://meetbhavsar777.github.io/agile-website-simple/product-rnascope-ish-probes-assays.html) (Bio-Techne): In situ hybridization for RNA detection in tissue.
+
+### Reference standards
+
+- [Pharmaceutical impurity standards](https://meetbhavsar777.github.io/agile-website-simple/product-pharmaceutical-impurity-standards.html) (TLC Pharmaceutical Standards): Characterised API impurities for profiling, validation and filings.
+- [Stable isotope-labelled standards](https://meetbhavsar777.github.io/agile-website-simple/product-stable-isotope-labelled-standards.html) (TLC Pharmaceutical Standards): ¹³C and deuterated analogues for LC-MS internal standards.
+- [Catalogue reference standards](https://meetbhavsar777.github.io/agile-website-simple/product-catalogue-reference-standards.html) (TLC Pharmaceutical Standards): 24,000+ compounds in stock, each with a full CoA.
+- [Custom synthesis](https://meetbhavsar777.github.io/agile-website-simple/product-custom-synthesis.html) (TLC Pharmaceutical Standards): Synthesis, characterisation and certification of new compounds.
+
+### Cell culture media & feeds
+
+- [CELLiST BASAL3 / 3P](https://meetbhavsar777.github.io/agile-website-simple/product-cellist-basal3-3p.html) (Ajinomoto CELLiST Korea): Basal medium for CHO fed-batch antibody production.
+- [CELLiST BASAL10 / 10P](https://meetbhavsar777.github.io/agile-website-simple/product-cellist-basal10-10p.html) (Ajinomoto CELLiST Korea): Basal medium for CHO fed-batch antibody production.
+- [CELLiST BASAL CHO MX](https://meetbhavsar777.github.io/agile-website-simple/product-cellist-basal-cho-mx.html) (Ajinomoto CELLiST Korea): Basal medium for CHO growth and production.
+- [CELLiST FEED2](https://meetbhavsar777.github.io/agile-website-simple/product-cellist-feed2.html) (Ajinomoto CELLiST Korea): Feed to extend culture and raise titre.
+- [CELLiST F7](https://meetbhavsar777.github.io/agile-website-simple/product-cellist-f7.html) (Ajinomoto CELLiST Korea): Single-agent feeding at neutral pH with stabilised cysteine.
+- [AminoSupplement](https://meetbhavsar777.github.io/agile-website-simple/product-aminosupplement.html) (Ajinomoto CELLiST Korea): Amino-acid enrichment for existing media.
+- [Glycyl-L-Tyrosine Dihydrate](https://meetbhavsar777.github.io/agile-website-simple/product-glycyl-l-tyrosine-dihydrate.html) (Ajinomoto CELLiST Korea): Soluble tyrosine source for concentrated feeds.
+- [AAV Production Supplement 1](https://meetbhavsar777.github.io/agile-website-simple/product-aav-production-supplement-1.html) (Ajinomoto CELLiST Korea): Supports AAV viral vector production.

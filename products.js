@@ -55,7 +55,7 @@
   }
   function card(p) {
     var a = el('article', 'pc');
-    var link = el('a', 'pc-link'); link.href = 'product.html?id=' + p.id;
+    var link = el('a', 'pc-link'); link.href = 'product-' + p.id + '.html';
     var pic = media(p, 'pc-pic');
     pic.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); flip(p, pic); });
     link.appendChild(pic);
@@ -112,7 +112,7 @@
     function label() { add.textContent = inList(p.id) ? '✓ In your quote list' : 'Add to quote list'; }
     add.addEventListener('click', function () { toggle(p.id); label(); renderQuote(); if (window.__refresh) window.__refresh(); });
     label(); row.appendChild(add);
-    var full = el('a', 'btn btn-line btn-lg', 'Full details'); full.href = 'product.html?id=' + p.id; row.appendChild(full);
+    var full = el('a', 'btn btn-line btn-lg', 'Full details'); full.href = 'product-' + p.id + '.html'; row.appendChild(full);
     if (p.site) { var mk = el('a', 'btn btn-line btn-lg', siteLabel(p)); mk.href = p.site; mk.target = '_blank'; mk.rel = 'noopener'; mk.insertAdjacentHTML('beforeend', EXT); row.appendChild(mk); }
     info.appendChild(row);
     back.appendChild(info);
@@ -247,12 +247,12 @@
         var pics = el('div', 'cx-pics'), seen = {};
         var withImg = items.filter(function (p) { if (!p.image || seen[p.image]) return false; seen[p.image] = 1; return true; }).slice(0, 4);
         withImg.forEach(function (p) {
-          var a = el('a'); a.href = 'product.html?id=' + p.id;
+          var a = el('a'); a.href = 'product-' + p.id + '.html';
           var im = document.createElement('img'); im.src = p.image; im.alt = ''; a.appendChild(im); a.appendChild(el('span', '', p.name)); pics.appendChild(a);
         });
         if (withImg.length) view.appendChild(pics);
         var chips = el('div', 'cx-chips');
-        items.filter(function (p) { return withImg.indexOf(p) < 0; }).slice(0, withImg.length ? 5 : 9).forEach(function (p) { var a = el('a', '', p.name); a.href = 'product.html?id=' + p.id; chips.appendChild(a); });
+        items.filter(function (p) { return withImg.indexOf(p) < 0; }).slice(0, withImg.length ? 5 : 9).forEach(function (p) { var a = el('a', '', p.name); a.href = 'product-' + p.id + '.html'; chips.appendChild(a); });
         if (chips.children.length) view.appendChild(chips);
         var foot = el('div', 'cx-foot'), lg = el('div', 'cx-logos');
         c.partners.forEach(function (p) {
@@ -341,10 +341,12 @@
 
     product: function () {
       common();
-      var p = byId(new URLSearchParams(location.search).get('id'));
+      var p = byId(new URLSearchParams(location.search).get('id') || document.body.dataset.id);
       if (!p) { location.replace('products.html'); return; }
       var c = cat(p.cat);
-      document.title = p.name + ' | Agile SciTech';
+      // product-<id>.html pages already carry the text for search engines: clear it, then draw as usual
+      ['crumb', 'pdMedia', 'pdPartner', 'pdPoints', 'ovTiles', 'specTable', 'appList', 'relGrid'].forEach(function (k) { $(k).textContent = ''; });
+      if (!document.body.dataset.id) document.title = p.name + ' | Agile SciTech';
       var crumb = $('crumb');
       [['Home', 'index.html'], ['Products', 'products.html'], [c.name, 'cat-' + c.slug + '.html']].forEach(function (x) { var a = el('a', '', x[0]); a.href = x[1]; crumb.appendChild(a); crumb.appendChild(document.createTextNode(' / ')); });
       crumb.appendChild(el('span', '', p.name));

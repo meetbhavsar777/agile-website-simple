@@ -11,8 +11,10 @@ Disallow: /agile-website-simple/hero2-options.html
 Disallow: /agile-website-simple/home-1.html
 Disallow: /agile-website-simple/home-2.html
 Disallow: /agile-website-simple/looks.html
+Disallow: /agile-website-simple/manufacturer-catalog-links.html
 Disallow: /agile-website-simple/partners-photo-options.html
 Disallow: /agile-website-simple/partners-section-options.html
+Disallow: /agile-website-simple/product-check-list.html
 Disallow: /agile-website-simple/products-section-options.html
 Disallow: /agile-website-simple/section-ideas.html
 Disallow: /agile-website-simple/*.md$
