@@ -72,9 +72,9 @@
     var rgb = (getComputedStyle(form).color.match(/\d+/g) || [0, 0, 0]).map(Number);
     var light = rgb[0] * .299 + rgb[1] * .587 + rgb[2] * .114 > 150;
     var compact = box.clientWidth < 300;
-    box.style.minHeight = compact ? '140px' : '65px';   // keep its space, so nothing jumps when it appears
+    // hidden mode: the check runs quietly and only shows itself if Cloudflare needs the visitor to tick it
     turnstile().then(function (t) {
-      widgets.set(form, t.render(box, { sitekey: direct().sitekey, theme: light ? 'dark' : 'light', size: compact ? 'compact' : 'flexible', appearance: 'always' }));
+      widgets.set(form, t.render(box, { sitekey: direct().sitekey, theme: light ? 'dark' : 'light', size: compact ? 'compact' : 'flexible', appearance: 'interaction-only' }));
     }).catch(function () { box.remove(); });
   }
   // a hidden field people never see: robots that fill in every box give themselves away
@@ -99,7 +99,7 @@
       return;
     }
     var token = id != null && window.turnstile ? window.turnstile.getResponse(id) : '';
-    if (!token) { note(form, 'Please tick “Verify you are human” above the button, then send again.'); return; }
+    if (!token) { note(form, 'One moment, we are checking the form is from a person. Please press send again in a second (if a “Verify you are human” box appears, tick it first).'); return; }
     var btn = form.querySelector('[type=submit]'), label = btn.innerHTML;
     btn.disabled = true; btn.textContent = 'Sending…';
     var data = new URLSearchParams({ subject: msg.subject, body: msg.body, email: msg.email || '', name: msg.name || '',
