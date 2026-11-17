@@ -1,0 +1,64 @@
+/* Hero polish: looks only. Same text, photos and layout as the live home page.
+   Loaded only by index-hero-new.html (preview) until approved. */
+
+/* 1. Softer premium light: blue halo behind the machine, soft contact shadow on the plinth */
+.hero {
+  background:
+    radial-gradient(900px 560px at 72% 40%, #ffffff 0%, rgba(255, 255, 255, 0) 70%),
+    radial-gradient(520px 380px at 12% 8%, rgba(214, 228, 250, .55) 0%, rgba(214, 228, 250, 0) 70%),
+    linear-gradient(180deg, #F2F7FD 0%, #E7F0FB 74%, #F6FAFE 100%);
+}
+.hsp-stage::before {
+  content: ''; position: absolute; z-index: 0; left: 50%; top: 46%; width: 92%; aspect-ratio: 1.25;
+  transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(120, 156, 232, .26), rgba(120, 156, 232, .10) 55%, rgba(120, 156, 232, 0));
+  filter: blur(6px);
+}
+.hsp-stage::after {
+  content: ''; position: absolute; z-index: 1; left: 50%; bottom: calc(22cqw - 10cqw); width: 56%; height: 5cqw;
+  transform: translateX(-50%); border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(11, 30, 70, .22), rgba(11, 30, 70, 0));
+}
+.hsp-pic img { filter: drop-shadow(0 2.6cqw 2.4cqw rgba(11, 30, 70, .16)) drop-shadow(0 .6cqw .6cqw rgba(11, 30, 70, .08)) saturate(1.04) contrast(1.02) blur(0); }
+.hsp .ring { border-color: rgba(255, 255, 255, .98); box-shadow: inset 0 0 60px rgba(255, 255, 255, .8), 0 0 40px rgba(110, 150, 230, .16); }
+
+/* 2. Smoother movement: softer product change, calm first appearance */
+@keyframes hp-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.hsp-pic img { transition: opacity .7s cubic-bezier(.22, .61, .36, 1), transform .9s cubic-bezier(.22, .61, .36, 1), filter .7s; }
+.hsp-pic img.out { filter: drop-shadow(0 2.6cqw 2.4cqw rgba(11, 30, 70, .16)) drop-shadow(0 .6cqw .6cqw rgba(11, 30, 70, .08)) saturate(1.04) contrast(1.02) blur(5px); }
+.hsp-pic img.pre { filter: drop-shadow(0 2.6cqw 2.4cqw rgba(11, 30, 70, .16)) drop-shadow(0 .6cqw .6cqw rgba(11, 30, 70, .08)) saturate(1.04) contrast(1.02) blur(5px); }
+.hsp-info { transition: opacity .45s cubic-bezier(.22, .61, .36, 1), transform .6s cubic-bezier(.22, .61, .36, 1); }
+.hero-copy > * { animation: hp-up .9s cubic-bezier(.22, .61, .36, 1) both; }
+.hero-copy > :nth-child(2) { animation-delay: .08s; }
+.hero-copy > :nth-child(3) { animation-delay: .16s; }
+.hero-copy > :nth-child(4) { animation-delay: .24s; }
+.hero .hero-copy .btn-lg { box-shadow: 0 14px 30px rgba(33, 58, 130, .26); transition: transform .3s cubic-bezier(.22, .61, .36, 1), box-shadow .3s; }
+.hero .hero-copy .btn-lg:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(33, 58, 130, .32); }
+
+/* 3. Cleaner text: balanced lines, crisper colour, calmer sub-line */
+.hero h1.h1-long { text-wrap: balance; -webkit-font-smoothing: antialiased; color: #0A1533; }
+.hero h1 .h1-accent { background: linear-gradient(90deg, #2340A6, #4A6FD8); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .06em; }
+.hero .hero-sub { color: #4A566B; text-wrap: pretty; }
+.hsp-t { text-wrap: balance; color: #0A1533; }
+
+/* 4. Nicer thumbnails: equal soft cards, clear selected state */
+.hsp-thumbs { gap: 14px; padding: 8px 4px 12px; }
+.hsp-thumbs button {
+  border-color: #E4EAF5; border-radius: 20px; background: linear-gradient(180deg, #FFFFFF 0%, #F7FAFF 100%);
+  box-shadow: 0 1px 2px rgba(11, 30, 70, .04), 0 6px 16px rgba(11, 30, 70, .05);
+  transition: border-color .3s, box-shadow .3s, transform .35s cubic-bezier(.22, .61, .36, 1);
+}
+.hsp-thumbs button img { transition: transform .35s cubic-bezier(.22, .61, .36, 1); }
+.hsp-thumbs button:hover { border-color: #B8C8EE; transform: translateY(-3px); box-shadow: 0 12px 24px rgba(11, 30, 70, .09); }
+.hsp-thumbs button:hover img { transform: scale(1.05); }
+.hsp-thumbs button.on {
+  border-color: #2F54B8; background: #fff; transform: translateY(-4px);
+  box-shadow: 0 0 0 4px rgba(47, 84, 184, .12), 0 14px 26px rgba(33, 58, 130, .14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > * { animation: none; }
+}
+
+/* the old product fades out within the script's 0.45 s; the new one settles in more slowly */
+.hsp-pic img.out { transition-duration: .42s, .5s, .42s; }
