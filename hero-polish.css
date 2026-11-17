@@ -1,128 +1,78 @@
-/* Premium hero: looks only. Same text, photos and layout as the live home page.
-   Loaded only by index-hero-new.html (preview) until approved. */
-
-/* ---------- 1. Background: soft studio light, fine dot texture, deep navy accents ---------- */
+/* Hallmark · redesign: home hero only · genre: editorial (catalogue) · theme: site DESIGN.md (locked)
+ * tone: quiet, exact, product-first · anchor hue: brand blue #213A82
+ * Removed the AI tells: glass panels, glow dots, decorative bubbles, gradient + italic headline accent, pill eyebrow, blur.
+ * Same text, photos and layout as the live home page. Loaded only by index-hero-new.html until approved.
+ * Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4
+ */
 .hero {
-  background:
-    radial-gradient(820px 620px at 70% 42%, #ffffff 0%, rgba(255, 255, 255, .85) 30%, rgba(255, 255, 255, 0) 70%),
-    radial-gradient(700px 520px at -6% -10%, rgba(176, 200, 245, .55) 0%, rgba(176, 200, 245, 0) 70%),
-    radial-gradient(640px 420px at 104% 108%, rgba(160, 188, 240, .45) 0%, rgba(160, 188, 240, 0) 70%),
-    linear-gradient(180deg, #EEF3FC 0%, #E6EEFA 70%, #F4F8FE 100%);
+  --hx-ink: #0E1A3D; --hx-navy: #14265C; --hx-brand: #213A82; --hx-blue: #2F54B8; --hx-slate: #4B5768; --hx-muted: #7A8698;
+  --hx-line: #DCE3F1; --hx-line-soft: #E8EDF7; --hx-paper: #F7F9FE; --hx-white: #FFFFFF;
+  --hx-ease: cubic-bezier(.22, .61, .36, 1);
 }
-/* fine dot grid that fades out toward the centre */
-.hero::before {
-  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image: radial-gradient(rgba(33, 58, 130, .16) 1px, transparent 1.2px); background-size: 22px 22px;
-  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 0% 100%, #000 0%, transparent 70%);
-  mask-image: radial-gradient(ellipse 60% 70% at 0% 100%, #000 0%, transparent 70%);
-}
-/* hairline that closes the hero off */
-.hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; z-index: 0;
-  background: linear-gradient(90deg, transparent, rgba(33, 58, 130, .16) 30%, rgba(33, 58, 130, .16) 70%, transparent); }
-.hero .hero-inner { position: relative; z-index: 1; }
 
-/* ---------- 2. Headline: refined type, gradient serif accent, pill eyebrow ---------- */
-.hero .eyebrow-rule {
-  display: inline-flex; width: max-content; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 999px;
-  background: rgba(255, 255, 255, .75); border: 1px solid rgba(33, 58, 130, .12);
-  box-shadow: 0 1px 2px rgba(11, 30, 70, .04), 0 8px 24px rgba(11, 30, 70, .06);
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #213A82; font-weight: 600;
-}
-.hero .eyebrow-rule::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #2F54B8; box-shadow: 0 0 0 4px rgba(47, 84, 184, .16); }
-.hero .eyebrow-rule::after { display: none; }
-.hero h1.h1-long { color: #08132F; text-wrap: balance; -webkit-font-smoothing: antialiased; letter-spacing: -.038em; }
+/* ---------- surface: one quiet tone, a floor line, nothing floating ---------- */
+.hero { background: linear-gradient(180deg, var(--hx-white) 0%, var(--hx-paper) 100%); border-bottom: 1px solid var(--hx-line-soft); }
+.hsp .ring { display: none; }
+
+/* ---------- copy: solid ink, the accent carried by colour and weight, not italic or gradient ---------- */
+.hero .eyebrow-rule { color: var(--hx-blue); }
+.hero .eyebrow-rule::after { background: var(--hx-line); }
+.hero h1.h1-long { color: var(--hx-ink); text-wrap: balance; }
 .hero h1 .h1-accent {
-  background: linear-gradient(100deg, #1E3A9E 0%, #3F66D6 55%, #6C8FEA 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
-  padding-right: .08em;
+  font-family: inherit; font-style: normal; font-size: 1em; line-height: inherit; letter-spacing: inherit;
+  font-weight: 700; color: var(--hx-brand);
 }
-.hero .hero-sub { color: #4A566B; text-wrap: pretty; }
-.hero .hero-copy .btn-lg {
-  border-radius: 16px; background: linear-gradient(180deg, #2A4AA8 0%, #172F78 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22), 0 1px 2px rgba(11, 30, 70, .2), 0 16px 34px rgba(23, 47, 120, .32);
-  transition: transform .35s cubic-bezier(.22, .61, .36, 1), box-shadow .35s;
-}
-.hero .hero-copy .btn-lg:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22), 0 2px 4px rgba(11, 30, 70, .2), 0 22px 44px rgba(23, 47, 120, .38); }
-.hero .hero-copy .btn-lg svg { transition: transform .35s cubic-bezier(.22, .61, .36, 1); }
-.hero .hero-copy .btn-lg:hover svg { transform: translateX(3px); }
+.hero .hero-sub { color: var(--hx-slate); text-wrap: pretty; }
+.hero .hero-copy .btn-lg { border-radius: 12px; background: var(--hx-brand); box-shadow: none; transition: background-color .25s var(--hx-ease); }
+.hero .hero-copy .btn-lg:hover { background: var(--hx-navy); }
+.hero .hero-copy .btn-lg svg { transition: transform .3s var(--hx-ease); }
+.hero .hero-copy .btn-lg:hover svg { transform: translateX(4px); }
 
-/* calm first appearance */
-@keyframes hp-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
-.hero-copy > * { animation: hp-up 1s cubic-bezier(.22, .61, .36, 1) both; }
-.hero-copy > :nth-child(2) { animation-delay: .08s; }
-.hero-copy > :nth-child(3) { animation-delay: .16s; }
-.hero-copy > :nth-child(4) { animation-delay: .24s; }
+/* ---------- product: standing on a real floor, like a catalogue photograph ---------- */
+.hsp-stage::before {   /* the floor: one hairline that fades out at both ends */
+  content: ''; position: absolute; z-index: 0; left: 0; right: 0; bottom: 12.5cqw; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--hx-line) 18%, var(--hx-line) 82%, transparent);
+}
+.hsp-stage .plinth::before { background: radial-gradient(closest-side, rgba(14, 26, 61, .20), rgba(14, 26, 61, 0)); box-shadow: none; border-radius: 50%;
+  top: 4cqw; height: 6cqw; left: 16%; right: 16%; }
+.hsp-stage .plinth::after { display: none; }
+.hsp-pic img { filter: drop-shadow(0 1.6cqw 1.6cqw rgba(14, 26, 61, .12)); transition: opacity .55s var(--hx-ease), transform .7s var(--hx-ease); }
+.hsp-pic img.out { transform: translateY(1.5cqw); }
+.hsp-pic img.pre { transform: translateY(-1.5cqw); }
 
-/* ---------- 3. Product stage: spotlight, hairline orbits, glossy plinth ---------- */
-.hsp-stage::before {
-  content: ''; position: absolute; z-index: 0; left: 50%; top: 44%; width: 100%; aspect-ratio: 1.2;
-  transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none;
-  background: radial-gradient(closest-side, rgba(110, 148, 232, .30), rgba(110, 148, 232, .12) 50%, rgba(110, 148, 232, 0));
-}
-/* soft contact shadow under the machine */
-.hsp-stage::after {
-  content: ''; position: absolute; z-index: 1; left: 50%; bottom: 12cqw; width: 58%; height: 5cqw;
-  transform: translateX(-50%); border-radius: 50%; pointer-events: none;
-  background: radial-gradient(closest-side, rgba(11, 30, 70, .24), rgba(11, 30, 70, 0));
-}
-/* the two white bubbles become fine hairline orbits */
-.hsp .ring { border: 1px solid rgba(47, 84, 184, .16); background: none; box-shadow: none; }
-.hsp .ring-2 { border-color: rgba(47, 84, 184, .10); }
-.hsp .ring-1::after { content: ''; position: absolute; width: 8px; height: 8px; border-radius: 50%; top: 14%; left: 85%;
-  background: #2F54B8; box-shadow: 0 0 0 5px rgba(47, 84, 184, .14), 0 0 18px rgba(47, 84, 184, .5); }
-/* glossy plinth top */
-.hsp-stage .plinth::before {
-  background: radial-gradient(ellipse at 50% 30%, #ffffff 0%, #ffffff 45%, #EAF0FB 100%);
-  box-shadow: inset 0 0 0 1px rgba(170, 192, 230, .55), inset 0 -3px 6px rgba(140, 168, 214, .25), 0 18px 40px rgba(33, 58, 130, .10);
-}
-.hsp-pic img { filter: drop-shadow(0 2.6cqw 2.4cqw rgba(11, 30, 70, .16)) drop-shadow(0 .6cqw .6cqw rgba(11, 30, 70, .08)) blur(0); }
-.hsp-pic img { transition: opacity .7s cubic-bezier(.22, .61, .36, 1), transform .9s cubic-bezier(.22, .61, .36, 1), filter .7s; }
-.hsp-pic img.out, .hsp-pic img.pre { filter: drop-shadow(0 2.6cqw 2.4cqw rgba(11, 30, 70, .16)) drop-shadow(0 .6cqw .6cqw rgba(11, 30, 70, .08)) blur(5px); }
-.hsp-pic img.out { transition-duration: .42s, .5s, .42s; }   /* the script swaps after 0.45 s */
+/* ---------- product name: a caption, set like a catalogue entry ---------- */
+.hsp-info { padding-left: 22px; border-left: 1px solid var(--hx-line); }
+.hsp-t { color: var(--hx-ink); text-wrap: balance; }
+.hsp-b { color: var(--hx-muted); letter-spacing: .16em; }
+.hsp-info .btn { border-radius: 12px; background: var(--hx-white); color: var(--hx-navy); border: 1px solid var(--hx-line); box-shadow: none;
+  transition: border-color .25s var(--hx-ease), color .25s var(--hx-ease); }
+.hsp-info .btn:hover { border-color: var(--hx-brand); color: var(--hx-brand); }
+.hsp-info .btn svg { transition: transform .3s var(--hx-ease); }
+.hsp-info .btn:hover svg { transform: translateX(4px); }
 
-/* ---------- 4. Product info: frosted glass card ---------- */
-.hsp-info {
-  padding: 24px 22px 22px; border-radius: 24px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .6));
-  border: 1px solid rgba(255, 255, 255, .9);
-  box-shadow: inset 0 0 0 1px rgba(33, 58, 130, .06), 0 1px 2px rgba(11, 30, 70, .04), 0 24px 50px rgba(11, 30, 70, .10);
-  -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
-  transition: opacity .45s cubic-bezier(.22, .61, .36, 1), transform .6s cubic-bezier(.22, .61, .36, 1);
-}
-.hsp-b { display: flex; align-items: center; gap: 10px; }
-.hsp-b::before { content: ''; width: 18px; height: 1px; background: currentColor; opacity: .7; }
-.hsp-t { color: #08132F; text-wrap: balance; font-size: clamp(20px, 1.75vw, 27px); }
-.hsp-info .btn { border-radius: 12px; background: linear-gradient(180deg, #2A4AA8 0%, #172F78 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 10px 22px rgba(23, 47, 120, .26); }
-
-/* ---------- 5. Thumbnails: glass rail, clear selected state, time bar ---------- */
-.hsp-thumbs { gap: 12px; margin-top: 26px; padding: 10px; border-radius: 26px;
-  background: rgba(255, 255, 255, .5); border: 1px solid rgba(255, 255, 255, .85);
-  box-shadow: inset 0 0 0 1px rgba(33, 58, 130, .05), 0 14px 34px rgba(11, 30, 70, .06);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+/* ---------- picker: bare products, a rule under the one on show ---------- */
+.hsp-thumbs { gap: 4px; border-top: 1px solid var(--hx-line-soft); padding: 14px 0 6px; margin-top: 24px; }
 .hsp-thumbs button {
-  position: relative; overflow: hidden; border: 1px solid #E6ECF6; border-radius: 18px; background: #fff;
-  box-shadow: 0 1px 2px rgba(11, 30, 70, .04);
-  transition: border-color .3s, box-shadow .3s, transform .35s cubic-bezier(.22, .61, .36, 1);
+  position: relative; width: 96px; height: 96px; padding: 12px 12px 16px; border: 0; border-radius: 12px; background: transparent; box-shadow: none;
+  opacity: .55; transition: opacity .25s var(--hx-ease), background-color .25s var(--hx-ease); transform: none;
 }
-.hsp-thumbs button img { transition: transform .4s cubic-bezier(.22, .61, .36, 1); }
-.hsp-thumbs button:hover { border-color: #BCCBEE; transform: translateY(-3px); box-shadow: 0 12px 24px rgba(11, 30, 70, .10); }
-.hsp-thumbs button:hover img { transform: scale(1.06); }
-.hsp-thumbs button.on { border-color: #2F54B8; transform: translateY(-3px); box-shadow: 0 0 0 3px rgba(47, 84, 184, .14), 0 14px 26px rgba(33, 58, 130, .16); }
-/* thin bar that fills while a product is shown (3 s, like the script) */
-@keyframes hp-time { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.hsp-thumbs button.on::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: 7px; height: 2px; border-radius: 2px;
-  background: #2F54B8; transform-origin: left; animation: hp-time 3s linear both; }
+.hsp-thumbs button:hover { opacity: 1; background: var(--hx-white); transform: none; border: 0; }
+.hsp-thumbs button.on { opacity: 1; transform: none; box-shadow: none; border: 0; }
+.hsp-thumbs button::after { content: ''; position: absolute; left: 22px; right: 22px; bottom: 4px; height: 2px; border-radius: 2px;
+  background: var(--hx-line); transform: scaleX(0); transform-origin: left; }
+/* the rule under the product on show fills while it is shown (3 s, matching the script) */
+@keyframes hx-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.hsp-thumbs button.on::after { background: var(--hx-brand); animation: hx-fill 3s linear both; }
 .hsp:hover .hsp-thumbs button.on::after, .hsp:focus-within .hsp-thumbs button.on::after { animation-play-state: paused; }
+.hsp-thumbs button:focus-visible { outline: 2px solid var(--hx-brand); outline-offset: 2px; opacity: 1; }
 
 @media (max-width: 980px) {
-  .hsp-info { margin-left: auto; margin-right: auto; max-width: 420px; }
+  .hsp-info { border-left: 0; padding-left: 0; }
 }
 @media (max-width: 600px) {
-  .hsp-info { padding: 20px 18px; border-radius: 20px; }
-  .hsp-thumbs { padding: 8px; border-radius: 22px; }
-  .hero::before { display: none; }
+  .hsp-thumbs button { width: 80px; height: 80px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-copy > * { animation: none; }
   .hsp-thumbs button.on::after { animation: none; transform: scaleX(1); }
+  .hsp-pic img.out, .hsp-pic img.pre { transform: none; }
 }
