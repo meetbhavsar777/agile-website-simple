@@ -136,7 +136,7 @@
         '<label><span class="lbl">Name <b class="req" aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" required></label>' +
         '<label><span class="lbl">Email <b class="req" aria-hidden="true">*</b></span><input type="email" name="email" autocomplete="email" required></label>' +
         '<label class="full">Phone<input type="tel" name="phone" autocomplete="tel"></label>' +
-        '<label class="full"><span class="lbl">Message <b class="req" aria-hidden="true">*</b></span><textarea name="message" required></textarea></label>' +
+        '<label class="full"><span class="lbl">Message</span><textarea name="message"></textarea></label>' +
         '<button type="submit" class="btn btn-primary btn-lg full">Send message</button>' +
         '<p class="form-note">Goes straight to our team; we reply by email.</p></form>';
       document.body.appendChild(box);
