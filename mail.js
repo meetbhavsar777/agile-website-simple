@@ -30,6 +30,18 @@
   };
 
   // email addresses and "Book a demo": a message box on the page once the inbox is connected, Gmail before that
+  // phone number on the About page: click copies it (there is no direct call link anywhere)
+  document.addEventListener('click', function (e) {
+    var c = e.target.closest && e.target.closest('[data-copy]');
+    if (!c) return;
+    var v = c.dataset.copy, label = c.textContent;
+    function done(ok) { c.textContent = ok ? 'Copied ✓' : 'Copy failed: ' + v; setTimeout(function () { c.textContent = label; }, 1600); }
+    var t = document.createElement('textarea'); t.value = v; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+    document.body.appendChild(t); t.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (err) {} t.remove();
+    if (ok || !navigator.clipboard) done(ok);
+    else navigator.clipboard.writeText(v).then(function () { done(true); }, function () { done(false); });
+  });
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
     if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;

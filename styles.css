@@ -850,3 +850,8 @@ button, .btn, .nav-link, .menu-toggle, .hsp-thumbs, .cat-tabs, .pl-list, .arrow-
 
 /* mandatory form fields: a small star after the label */
 .req { color: inherit; font-weight: 700; margin-left: 1px; }
+
+/* About contact: the phone number copies itself on click (no direct call) */
+.copy-num { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: copy; text-align: left; }
+.copy-num:hover { text-decoration: underline; }
+.copy-num:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
