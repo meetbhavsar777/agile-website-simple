@@ -247,9 +247,9 @@
     </div>
     <form class="contact-form" id="contactForm" novalidate>
       <h3>Send us your requirement</h3>
-      <label>Name<input type="text" name="name" autocomplete="name" required></label>
+      <label><span class="lbl">Name <b class="req" aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" required></label>
       <label>Company / institute<input type="text" name="company" autocomplete="organization"></label>
-      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label><span class="lbl">Email <b class="req" aria-hidden="true">*</b></span><input type="email" name="email" autocomplete="email" required></label>
       <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
       <label class="full">I am interested in
         <select name="interest">
@@ -257,7 +257,7 @@
           <option>Molecular Diagnostics</option><option>Particle Analysis &amp; Imaging</option><option>Sample Preparation &amp; Filtration</option><option>Service &amp; support</option>
         </select>
       </label>
-      <label class="full">Message<textarea name="message" required></textarea></label>
+      <label class="full"><span class="lbl">Message <b class="req" aria-hidden="true">*</b></span><textarea name="message" required></textarea></label>
       <button type="submit" class="btn btn-primary btn-lg full">Send enquiry <svg><use href="#ic-arrow"/></svg></button>
       <p class="form-note" id="formNote">This opens your email app with the message ready to send to sales@agilescitech.in.</p>
     </form>

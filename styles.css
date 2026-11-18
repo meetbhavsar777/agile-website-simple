@@ -847,3 +847,6 @@ button, .btn, .nav-link, .menu-toggle, .hsp-thumbs, .cat-tabs, .pl-list, .arrow-
 .mail-toast.on { opacity: 1; transform: translate(-50%, 0); }
 .mail-toast.bad { background: #8A1C1C; }
 @media (max-width: 640px) { .mail-box .contact-form { grid-template-columns: 1fr; padding: 24px 20px; } }
+
+/* mandatory form fields: a small star after the label */
+.req { color: inherit; font-weight: 700; margin-left: 1px; }
