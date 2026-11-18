@@ -3,7 +3,7 @@
    (google-script-for-website-forms.txt), after Cloudflare Turnstile ("Verify you are human"), and a "Message sent"
    notice appears. Until then, email links and forms open Gmail's compose window (on a phone, the mail app). */
 (function () {
-  var INBOX = 'sales@agilescitech.in';
+  var INBOX = 'sales@agilescitech.in', CC = 'info@agilescitech.in';
   var FORM = {
     endpoint: 'https://script.google.com/macros/s/AKfycbwvuVNW8GSWp5U95XO37AT26QEA27DzcXM6VYgoGLjNIour4RU4xeC3XyEwEdu1rcDY/exec',   // the Apps Script web app address
     sitekey: '1x00000000000000000000AA'     // the Turnstile site key (public); this one is Cloudflare's test key, for the GitHub test copy
@@ -17,9 +17,12 @@
     var q = new URLSearchParams({ view: 'cm', fs: '1', to: decodeURIComponent(u.pathname) });
     if (p.get('subject')) q.set('su', p.get('subject'));
     if (p.get('body')) q.set('body', p.get('body'));
+    if (p.get('cc')) q.set('cc', p.get('cc'));
     return 'https://mail.google.com/mail/?' + q.toString();
   }
   window.sendMail = function (mailto) {
+    // every enquiry also goes to info@ (copy)
+    if (/^mailto:sales@agilescitech\.in/i.test(mailto) && !/[?&]cc=/i.test(mailto)) mailto += (mailto.indexOf('?') > -1 ? '&' : '?') + 'cc=' + encodeURIComponent(CC);
     if (phone) { window.location.href = mailto; return; }
     var w = window.open(gmail(mailto), '_blank');
     if (w) w.opener = null;
