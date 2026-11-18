@@ -126,7 +126,7 @@
       var body = ['Name: ' + f.name.value, 'Company: ' + f.company.value, 'Email: ' + f.email.value, 'Phone: ' + f.phone.value,
                   'Interested in: ' + f.interest.value, '', f.message.value].join('\n');
       var subject = 'Enquiry: ' + f.interest.value;
-      var mailto = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var mailto = 'mailto:info@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       if (window.sendForm) window.sendForm(form, { subject: subject, body: body, email: f.email.value, name: f.name.value }, mailto);
       else window.location.assign(mailto);
     });

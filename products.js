@@ -40,7 +40,7 @@
   }
   // quote request: straight to the sales inbox (mail.js), or Gmail with the message filled in
   function mail(form, subject, lines, email) {
-    var body = lines.join('\n'), mailto = 'mailto:sales@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var body = lines.join('\n'), mailto = 'mailto:info@agilescitech.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     if (window.sendForm) window.sendForm(form, { subject: subject, body: body, email: email }, mailto);
     else window.location.assign(mailto);
   }

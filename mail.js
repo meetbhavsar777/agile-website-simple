@@ -1,9 +1,9 @@
 /* Email from the website. Once FORM below is filled in, nothing opens Gmail: every form, email address and
-   "Book a demo" button sends straight to the business inbox (sales@agilescitech.in) through the Google Apps Script
+   "Book a demo" button sends straight to the business inbox (info@agilescitech.in) through the Google Apps Script
    (google-script-for-website-forms.txt), after Cloudflare Turnstile ("Verify you are human"), and a "Message sent"
    notice appears. Until then, email links and forms open Gmail's compose window (on a phone, the mail app). */
 (function () {
-  var INBOX = 'sales@agilescitech.in', CC = 'info@agilescitech.in';
+  var INBOX = 'info@agilescitech.in';
   var FORM = {
     endpoint: 'https://script.google.com/macros/s/AKfycbwvuVNW8GSWp5U95XO37AT26QEA27DzcXM6VYgoGLjNIour4RU4xeC3XyEwEdu1rcDY/exec',   // the Apps Script web app address
     sitekey: '1x00000000000000000000AA'     // the Turnstile site key (public); this one is Cloudflare's test key, for the GitHub test copy
@@ -21,8 +21,8 @@
     return 'https://mail.google.com/mail/?' + q.toString();
   }
   window.sendMail = function (mailto) {
-    // every enquiry also goes to info@ (copy)
-    if (/^mailto:sales@agilescitech\.in/i.test(mailto) && !/[?&]cc=/i.test(mailto)) mailto += (mailto.indexOf('?') > -1 ? '&' : '?') + 'cc=' + encodeURIComponent(CC);
+    // every enquiry goes to info@ only
+    mailto = mailto.replace(/^mailto:sales@agilescitech\.in/i, 'mailto:' + INBOX);
     if (phone) { window.location.href = mailto; return; }
     var w = window.open(gmail(mailto), '_blank');
     if (w) w.opener = null;
