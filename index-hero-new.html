@@ -32,6 +32,7 @@
 <link rel="stylesheet" href="home-2.css">
 <link rel="stylesheet" href="loader.css">
 <link rel="stylesheet" href="hero-polish.css">
+<script>(function(){var l=(location.search.match(/look=([abc])/)||[])[1]||'a';document.documentElement.setAttribute('data-look',l)})()</script>
 <script>try{if(sessionStorage.getItem('agile-ld'))document.documentElement.classList.add('ld-skip')}catch(e){}</script>
 </head>
 <body class="hv-light">
@@ -385,5 +386,9 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   scroll(animate('.hero-copy', { y: [0, -40], opacity: [1, 0.3] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
 }
 </script>
+<div class="look-pick" role="group" aria-label="Hero options">
+  <button type="button" data-l="a">A · Studio light</button><button type="button" data-l="b">B · Dark showroom</button><button type="button" data-l="c">C · Spotlight panel</button>
+</div>
+<script>(function(){var r=document.documentElement,b=document.querySelectorAll('.look-pick button');function set(l){r.setAttribute('data-look',l);b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.l===l)});history.replaceState(null,'','?look='+l)}b.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.l)})});set(r.getAttribute('data-look'))})()</script>
 </body>
 </html>

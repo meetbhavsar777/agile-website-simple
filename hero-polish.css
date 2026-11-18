@@ -1,78 +1,89 @@
-/* Hallmark · redesign: home hero only · genre: editorial (catalogue) · theme: site DESIGN.md (locked)
- * tone: quiet, exact, product-first · anchor hue: brand blue #213A82
- * Removed the AI tells: glass panels, glow dots, decorative bubbles, gradient + italic headline accent, pill eyebrow, blur.
- * Same text, photos and layout as the live home page. Loaded only by index-hero-new.html until approved.
- * Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4
- */
-.hero {
-  --hx-ink: #0E1A3D; --hx-navy: #14265C; --hx-brand: #213A82; --hx-blue: #2F54B8; --hx-slate: #4B5768; --hx-muted: #7A8698;
-  --hx-line: #DCE3F1; --hx-line-soft: #E8EDF7; --hx-paper: #F7F9FE; --hx-white: #FFFFFF;
-  --hx-ease: cubic-bezier(.22, .61, .36, 1);
-}
+/* Hero spotlight options (preview only: index-hero-new.html). Same text, photos and layout as the live home page.
+   A = studio light · B = dark showroom · C = spotlight stage panel. Pick with the switcher at the bottom of the preview. */
 
-/* ---------- surface: one quiet tone, a floor line, nothing floating ---------- */
-.hero { background: linear-gradient(180deg, var(--hx-white) 0%, var(--hx-paper) 100%); border-bottom: 1px solid var(--hx-line-soft); }
+/* ---------- shared: one spotlight beam from above + a pool of light on the floor ---------- */
 .hsp .ring { display: none; }
-
-/* ---------- copy: solid ink, the accent carried by colour and weight, not italic or gradient ---------- */
-.hero .eyebrow-rule { color: var(--hx-blue); }
-.hero .eyebrow-rule::after { background: var(--hx-line); }
-.hero h1.h1-long { color: var(--hx-ink); text-wrap: balance; }
-.hero h1 .h1-accent {
-  font-family: inherit; font-style: normal; font-size: 1em; line-height: inherit; letter-spacing: inherit;
-  font-weight: 700; color: var(--hx-brand);
+.hsp-stage::before {   /* the beam */
+  content: ''; position: absolute; z-index: 0; left: 50%; top: -16%; width: 96%; height: 112%; transform: translateX(-50%);
+  clip-path: polygon(41% 0, 59% 0, 100% 100%, 0 100%); pointer-events: none;
+  background: linear-gradient(180deg, var(--beam, rgba(255, 255, 255, .95)) 0%, rgba(255, 255, 255, 0) 92%);
+  filter: blur(14px); opacity: var(--beam-o, .9);
 }
-.hero .hero-sub { color: var(--hx-slate); text-wrap: pretty; }
-.hero .hero-copy .btn-lg { border-radius: 12px; background: var(--hx-brand); box-shadow: none; transition: background-color .25s var(--hx-ease); }
-.hero .hero-copy .btn-lg:hover { background: var(--hx-navy); }
-.hero .hero-copy .btn-lg svg { transition: transform .3s var(--hx-ease); }
-.hero .hero-copy .btn-lg:hover svg { transform: translateX(4px); }
-
-/* ---------- product: standing on a real floor, like a catalogue photograph ---------- */
-.hsp-stage::before {   /* the floor: one hairline that fades out at both ends */
-  content: ''; position: absolute; z-index: 0; left: 0; right: 0; bottom: 12.5cqw; height: 1px; pointer-events: none;
-  background: linear-gradient(90deg, transparent, var(--hx-line) 18%, var(--hx-line) 82%, transparent);
+.hsp-stage::after {    /* the pool of light where the beam lands */
+  content: ''; position: absolute; z-index: 1; left: 50%; bottom: 7cqw; width: 92%; height: 18cqw; transform: translateX(-50%);
+  border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, var(--pool, rgba(255, 255, 255, 1)), rgba(255, 255, 255, 0));
 }
-.hsp-stage .plinth::before { background: radial-gradient(closest-side, rgba(14, 26, 61, .20), rgba(14, 26, 61, 0)); box-shadow: none; border-radius: 50%;
-  top: 4cqw; height: 6cqw; left: 16%; right: 16%; }
-.hsp-stage .plinth::after { display: none; }
-.hsp-pic img { filter: drop-shadow(0 1.6cqw 1.6cqw rgba(14, 26, 61, .12)); transition: opacity .55s var(--hx-ease), transform .7s var(--hx-ease); }
-.hsp-pic img.out { transform: translateY(1.5cqw); }
-.hsp-pic img.pre { transform: translateY(-1.5cqw); }
+.hsp-pic { z-index: 2; }
+.hsp-pic img { transition: opacity .55s cubic-bezier(.22, .61, .36, 1), transform .75s cubic-bezier(.22, .61, .36, 1); }
 
-/* ---------- product name: a caption, set like a catalogue entry ---------- */
-.hsp-info { padding-left: 22px; border-left: 1px solid var(--hx-line); }
-.hsp-t { color: var(--hx-ink); text-wrap: balance; }
-.hsp-b { color: var(--hx-muted); letter-spacing: .16em; }
-.hsp-info .btn { border-radius: 12px; background: var(--hx-white); color: var(--hx-navy); border: 1px solid var(--hx-line); box-shadow: none;
-  transition: border-color .25s var(--hx-ease), color .25s var(--hx-ease); }
-.hsp-info .btn:hover { border-color: var(--hx-brand); color: var(--hx-brand); }
-.hsp-info .btn svg { transition: transform .3s var(--hx-ease); }
-.hsp-info .btn:hover svg { transform: translateX(4px); }
-
-/* ---------- picker: bare products, a rule under the one on show ---------- */
-.hsp-thumbs { gap: 4px; border-top: 1px solid var(--hx-line-soft); padding: 14px 0 6px; margin-top: 24px; }
-.hsp-thumbs button {
-  position: relative; width: 96px; height: 96px; padding: 12px 12px 16px; border: 0; border-radius: 12px; background: transparent; box-shadow: none;
-  opacity: .55; transition: opacity .25s var(--hx-ease), background-color .25s var(--hx-ease); transform: none;
+/* ================= A · Studio light ================= */
+[data-look="a"] .hero {
+  background:
+    radial-gradient(60% 75% at 68% 46%, #FFFFFF 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, #E9EFF9 0%, #DFE7F5 78%, #EEF3FB 100%);
 }
-.hsp-thumbs button:hover { opacity: 1; background: var(--hx-white); transform: none; border: 0; }
-.hsp-thumbs button.on { opacity: 1; transform: none; box-shadow: none; border: 0; }
-.hsp-thumbs button::after { content: ''; position: absolute; left: 22px; right: 22px; bottom: 4px; height: 2px; border-radius: 2px;
-  background: var(--hx-line); transform: scaleX(0); transform-origin: left; }
-/* the rule under the product on show fills while it is shown (3 s, matching the script) */
-@keyframes hx-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.hsp-thumbs button.on::after { background: var(--hx-brand); animation: hx-fill 3s linear both; }
-.hsp:hover .hsp-thumbs button.on::after, .hsp:focus-within .hsp-thumbs button.on::after { animation-play-state: paused; }
-.hsp-thumbs button:focus-visible { outline: 2px solid var(--hx-brand); outline-offset: 2px; opacity: 1; }
+[data-look="a"] .hsp-stage { --beam: rgba(255, 255, 255, 1); --beam-o: .95; --pool: rgba(255, 255, 255, 1); }
+[data-look="a"] .hsp-stage .plinth::before { background: radial-gradient(ellipse at 50% 35%, #FFFFFF 0%, #FFFFFF 50%, #E8EEF8 100%);
+  box-shadow: inset 0 0 0 1px rgba(170, 190, 225, .45), 0 22px 40px rgba(20, 38, 92, .10); }
+[data-look="a"] .hsp-pic img { filter: drop-shadow(0 2.2cqw 2cqw rgba(14, 26, 61, .18)); }
+[data-look="a"] .hsp-thumbs button { background: rgba(255, 255, 255, .85); border-color: #D9E2F2; }
+
+/* ================= B · Dark showroom ================= */
+[data-look="b"] .hero {
+  background:
+    radial-gradient(55% 70% at 68% 40%, #22397E 0%, rgba(34, 57, 126, 0) 70%),
+    linear-gradient(180deg, #0A1533 0%, #0E1C44 70%, #0B1736 100%);
+  color: #fff;
+}
+[data-look="b"] .hero .eyebrow-rule { color: #AFC2F2; }
+[data-look="b"] .hero .eyebrow-rule::after { background: rgba(175, 194, 242, .4); }
+[data-look="b"] .hero h1.h1-long { color: #FFFFFF; }
+[data-look="b"] .hero h1 .h1-accent { color: #9DB6F5; }
+[data-look="b"] .hero .hero-sub { color: #C3CFEC; }
+[data-look="b"] .hero .hero-copy .btn-lg { background: #FFFFFF; color: #0E1C44; box-shadow: 0 14px 34px rgba(0, 0, 0, .35); }
+[data-look="b"] .hsp-stage { --beam: rgba(196, 214, 255, .55); --beam-o: .55; --pool: rgba(170, 195, 255, .42); }
+[data-look="b"] .hsp-stage .plinth::before { background: radial-gradient(ellipse at 50% 35%, #2B4590 0%, #1A2D66 60%, #13224F 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22), inset 0 0 0 1px rgba(255, 255, 255, .06), 0 24px 50px rgba(0, 0, 0, .45); }
+[data-look="b"] .hsp-stage .plinth::after { background: linear-gradient(90deg, #0E1C44 0%, #1A2D66 30%, #22397E 50%, #1A2D66 70%, #0E1C44 100%); }
+[data-look="b"] .hsp-pic img { filter: drop-shadow(0 2.4cqw 2.4cqw rgba(0, 0, 0, .55)); }
+[data-look="b"] .hsp-t { color: #FFFFFF; }
+[data-look="b"] .hsp-b { color: #9DB6F5; }
+[data-look="b"] .hsp-info .btn { background: #FFFFFF; color: #0E1C44; }
+[data-look="b"] .hsp-thumbs { -webkit-mask-image: linear-gradient(90deg, #000 90%, transparent); }
+[data-look="b"] .hsp-thumbs button { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .12); box-shadow: none; }
+[data-look="b"] .hsp-thumbs button:hover { border-color: rgba(255, 255, 255, .35); }
+[data-look="b"] .hsp-thumbs button.on { background: rgba(255, 255, 255, .14); border-color: #FFFFFF; box-shadow: 0 0 0 3px rgba(157, 182, 245, .25); }
+
+/* ================= C · Spotlight stage panel ================= */
+[data-look="c"] .hero { background: linear-gradient(180deg, #F7F9FE 0%, #EEF3FB 100%); }
+/* a deep blue panel behind the product and its name; the page around it stays light */
+[data-look="c"] .hsp::before {
+  content: ''; grid-column: 1 / -1; grid-row: 1; align-self: stretch; z-index: 0; margin: -26px -26px -10px;
+  border-radius: 30px; box-shadow: 0 30px 70px rgba(14, 28, 68, .22);
+  background: radial-gradient(70% 90% at 38% 30%, #2A4796 0%, rgba(42, 71, 150, 0) 70%), linear-gradient(160deg, #13245A 0%, #0B1636 100%);
+}
+[data-look="c"] .hsp-stage, [data-look="c"] .hsp-info { z-index: 1; }
+[data-look="c"] .hsp-stage { --beam: rgba(205, 220, 255, .6); --beam-o: .6; --pool: rgba(180, 202, 255, .45); }
+[data-look="c"] .hsp-stage .plinth::before { background: radial-gradient(ellipse at 50% 35%, #33509F 0%, #1E3373 65%, #16285E 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 20px 40px rgba(0, 0, 0, .35); }
+[data-look="c"] .hsp-stage .plinth::after { display: none; }
+[data-look="c"] .hsp-pic img { filter: drop-shadow(0 2.4cqw 2.4cqw rgba(0, 0, 0, .5)); }
+[data-look="c"] .hsp-t { color: #FFFFFF; }
+[data-look="c"] .hsp-b { color: #A9BFF6; }
+[data-look="c"] .hsp-info .btn { background: #FFFFFF; color: #13245A; }
+[data-look="c"] .hsp-thumbs { margin-top: 34px; }
 
 @media (max-width: 980px) {
-  .hsp-info { border-left: 0; padding-left: 0; }
+  [data-look="c"] .hsp::before { grid-row: 1 / 3; margin: -14px -12px -6px; border-radius: 24px; }
+  [data-look="c"] .hsp-info { padding-bottom: 22px; }
+  [data-look="c"] .hsp-stage::before { top: 0; height: 100%; }
 }
-@media (max-width: 600px) {
-  .hsp-thumbs button { width: 80px; height: 80px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hsp-thumbs button.on::after { animation: none; transform: scaleX(1); }
-  .hsp-pic img.out, .hsp-pic img.pre { transform: none; }
-}
+@media (prefers-reduced-motion: reduce) { .hsp-pic img { transition: opacity .15s; } }
+
+/* preview switcher (only on the preview page) */
+.look-pick { position: fixed; z-index: 9000; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; gap: 6px; padding: 6px;
+  border-radius: 14px; background: #0E1A3D; box-shadow: 0 16px 40px rgba(0, 0, 0, .3); font: 600 13px/1 'Outfit', sans-serif; }
+.look-pick button { border: 0; border-radius: 10px; padding: 10px 14px; background: transparent; color: #C9D6F7; cursor: pointer; white-space: nowrap; }
+.look-pick button[aria-pressed="true"] { background: #FFFFFF; color: #0E1A3D; }
+@media (max-width: 480px) { .look-pick button { padding: 9px 9px; font-size: 12px; } }
