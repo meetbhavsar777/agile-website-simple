@@ -13,6 +13,7 @@ Disallow: /agile-website-simple/home-2.html
 Disallow: /agile-website-simple/index-hero-new.html
 Disallow: /agile-website-simple/looks.html
 Disallow: /agile-website-simple/manufacturer-catalog-links.html
+Disallow: /agile-website-simple/partners-new.html
 Disallow: /agile-website-simple/partners-photo-options.html
 Disallow: /agile-website-simple/partners-section-options.html
 Disallow: /agile-website-simple/product-check-list.html
