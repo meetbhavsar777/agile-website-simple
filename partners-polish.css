@@ -1,50 +1,11 @@
-/* Partner photo options (preview only: partners-new.html). Same text and logos; the left photo shows each brand's real products.
-   A = the brand's main product on a lit stage · B = three products side by side · C = the lab photo, darkened, with the main product in front. */
-
-.ps-prods { display: none; }
-.pl-panel.ps .ps-photo .ps-prods img, .pl-panel.ps.on .ps-photo .ps-prods img { display: block; position: static; inset: auto; width: 100%; height: 100%;
-  min-width: 0; object-fit: contain; object-position: 50% 100%; transform: none; transition: none; animation: none; }
-
-/* ---------- A · main product on a lit stage ---------- */
-[data-look="a"] .ps-photo { background:
-    radial-gradient(60% 55% at 50% 38%, #FFFFFF 0%, rgba(255, 255, 255, 0) 72%),
-    linear-gradient(180deg, #E8EEF9 0%, #DCE5F4 100%); }
-[data-look="a"] .ps-photo > img { display: none; }
-[data-look="a"] .ps-photo::after {   /* soft floor where the product stands */
-  content: ''; position: absolute; left: 14%; right: 14%; bottom: 12%; height: 8%; border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(20, 38, 92, .22), rgba(20, 38, 92, 0)); }
-[data-look="a"] .ps-prods { display: grid; place-items: center; position: absolute; inset: 17% 17% 16%; z-index: 1; }
-[data-look="a"] .ps-prods img { max-height: 100%; filter: drop-shadow(0 18px 22px rgba(14, 26, 61, .16)); }
-[data-look="a"] .ps-prods img:not(:first-child) { display: none; }
-
-/* ---------- B · three products side by side on a light shelf ---------- */
-[data-look="b"] .ps-photo { background: linear-gradient(180deg, #F3F6FC 0%, #E6ECF7 68%, #D9E2F2 68.2%, #E3EAF6 100%); }
-[data-look="b"] .ps-photo > img { display: none; }
-[data-look="b"] .ps-prods { display: flex; align-items: flex-end; justify-content: center; gap: 4%; position: absolute; left: 6%; right: 6%; top: 24%; bottom: 33%; z-index: 1; }
-[data-look="b"] .ps-prods img { flex: 1 1 0; min-width: 0; max-height: 100%; filter: drop-shadow(0 14px 14px rgba(14, 26, 61, .16)); }
-[data-look="b"] .ps-prods img:first-child { order: 2; flex-grow: 1.5; }   /* the main product in the middle, a little bigger */
-[data-look="b"] .ps-prods img:nth-child(2) { order: 1; }
-[data-look="b"] .ps-prods img:nth-child(3) { order: 3; }
-[data-look="b"] .ps-prods.n2 img { flex-grow: 1; }
-
-/* ---------- C · lab photo, darkened, with the main product in front ---------- */
-[data-look="c"] .ps-photo::after { content: ''; position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(180deg, rgba(10, 21, 51, .55) 0%, rgba(10, 21, 51, .72) 100%); }
-[data-look="c"] .ps-photo::before {   /* light pool under the product */
-  content: ''; position: absolute; z-index: 2; left: 10%; right: 10%; bottom: 8%; height: 16%; border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0)); }
-[data-look="c"] .ps-prods { display: grid; place-items: center; position: absolute; inset: 17% 17% 14%; z-index: 3; }
-[data-look="c"] .ps-prods img { max-height: 100%; filter: drop-shadow(0 22px 26px rgba(0, 0, 0, .45)); }
-[data-look="c"] .ps-prods img:not(:first-child) { display: none; }
-
-@media (max-width: 980px) {
-  [data-look] .ps-photo { min-height: 280px; }
-  [data-look="b"] .ps-prods { top: 10%; bottom: 30%; }
-}
+/* Partner photos preview (partners-new.html only): real photos from each brand's own website.
+   Bio-Techne and Unchained Labs keep their current photo for now. */
+[data-look="new"] .ps-photo:has(.np) > img:not(.np) { display: none; }
+.ps-photo .np { display: none; }
+[data-look="new"] .ps-photo .np { display: block; }
 
 /* preview switcher (only on the preview page) */
 .look-pick { position: fixed; z-index: 9000; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; gap: 6px; padding: 6px;
   border-radius: 14px; background: #0E1A3D; box-shadow: 0 16px 40px rgba(0, 0, 0, .3); font: 600 13px/1 'Outfit', sans-serif; }
 .look-pick button { border: 0; border-radius: 10px; padding: 10px 14px; background: transparent; color: #C9D6F7; cursor: pointer; white-space: nowrap; }
 .look-pick button[aria-pressed="true"] { background: #FFFFFF; color: #0E1A3D; }
-@media (max-width: 480px) { .look-pick button { padding: 9px 9px; font-size: 12px; } }
